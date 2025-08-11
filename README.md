@@ -46,4 +46,4 @@
 @dsf/cli-core
 @dsf/cli-iagent
 @dsf/cli-platform
-这三个包是私有内部包
+这三个为私有依赖包
