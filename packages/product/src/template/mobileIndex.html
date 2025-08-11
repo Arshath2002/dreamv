@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html style="font-size:50px;" lang="zh-cmn-Hans" class="notranslate" translate="no">
+
+<head><meta name="google" value="notranslate"/>
+  <title></title>
+  <meta charset="utf-8" />
+  <meta name="google" value="notranslate"/>
+  <!-- 默认浏览器内核 -->
+  <meta name="renderer" content="webkit" />
+  <!-- 设置屏幕模式 -->
+  <meta name="x5-page-mode" content="app" />
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="true" />
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+  <!-- 使用了application这种应用模式后，页面默认全屏，禁止长按菜单，禁止收缩，标准排版，以及强制图片显示。 -->
+  <meta name="browsermode" content="application" />
+  <!-- Web应用会以全屏模式运行，可以通过只读属性window.navigator.standalone来确定网页是否以全屏模式显示 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 格式检测 telephone:主要作用是是否设置自动将你的数字转化为拨号连接,email:告诉设备不识别邮箱，点击之后不自动发送,adress:点击地址禁止跳转至地图-->
+  <meta name="format-detection" content="telephone=yes,email=no,adress=no" />
+  <!--在web app应用下状态条（屏幕顶部条）的颜色；默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）；若值为“black-translucent”将会占据页面px位置，浮在页面上方（会覆盖页面20px高度–iphone4和itouch4的Retina屏幕为40px）。-->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+  <style>
+    .init-div {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      margin-top: -20px;
+      top: 50%;
+      left: 0;
+      font-size: 16px;
+      color: #7f7a7a;
+      text-align: center;
+    }
+  </style>
+  <%if(htmlWebpackPlugin.options.includeCss){
+    htmlWebpackPlugin.options.includeCss.forEach((el)=>{%>
+    <%if(el){%>
+    <link href="<%=el%>" rel="stylesheet">
+    <%}%>
+  <%})}%>
+    <!--后端插入css预留 start-->
+    <!--后端插入css预留 end-->
+</head>
+
+<body>
+  <div id="app">
+    <div class="init-div">正在初始化...</div>
+  </div>
+  <%if(htmlWebpackPlugin.options.includeScripts){
+    htmlWebpackPlugin.options.includeScripts.forEach((el)=>{%>
+  <%if(el){%>
+  <script type="text/javascript" src="<%=el%>"></script>
+  <%}%>
+  <%})}%>
+  <!--后端插入js预留 start-->
+  <!--后端插入js预留 end-->
+</body>
+
+</html>

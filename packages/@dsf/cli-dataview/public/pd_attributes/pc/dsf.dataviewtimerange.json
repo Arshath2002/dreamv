@@ -1,0 +1,443 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "高",
+        "bindControlAttr": "inputHeight",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "内边距",
+              "bindControlAttr": "padding"
+            },
+            {
+              "text": "外边距",
+              "bindControlAttr": "margin"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "报告期设置",
+        "showType": "dv_dialog",
+        "bindControlAttr": "reportTab",
+        "config": {
+          "content": "DesDVReportDateTabEdit",
+          "width": "1000px",
+          "height": "60vh",
+          "title": "报告期设置",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "组件设置",
+    "attributes": [
+      {
+        "text": "排列",
+        "bindControlAttr": "align",
+        "showType": "dv_text_align",
+        "config": {
+          "isShowVAlign": false
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "名称",
+        "bindControlAttr": "nameTextStyle.isShow",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "内容",
+        "showType": "dv_text",
+        "showExpress": "@[nameTextStyle.isShow]",
+        "bindControlAttr": "nameTextStyle.content",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "文字样式",
+        "showExpress": "@[nameTextStyle.isShow]",
+        "bindControlAttr": "nameTextStyle",
+        "showType": "dv_text_style",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "默认",
+        "showType": "select",
+        "bindControlAttr": "dateActive",
+        "dictionary": [
+          {
+            "text": "年度",
+            "value": "year"
+          },
+          {
+            "text": "季度",
+            "value": "quarter"
+          },
+          {
+            "text": "月度",
+            "value": "month"
+          },
+          {
+            "text": "半年",
+            "value": "halfYear"
+          },
+          {
+            "text": "日期",
+            "value": "date"
+          },
+          {
+            "text": "月旬",
+            "value": "periodMonth"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "标签",
+        "bindControlAttr": "labelShow",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "风格",
+        "bindControlAttr": "fontDependent",
+        "showExpress": "@[labelShow]",
+        "showType": "dv_switch",
+        "itemClass": "ml20",
+        "desc": "字体颜色是否依赖于风格",
+        "inCommonUse": true
+      },
+      {
+        "text": "默认",
+        "bindControlAttr": "labelTextStyle",
+        "showExpress": "@[labelShow]",
+        "showType": "dv_text_style",
+        "itemClass": "ml20",
+        "inCommonUse": true
+      },
+      {
+        "text": "选中",
+        "bindControlAttr": "labelActiveTextStyle",
+        "showExpress": "@[labelShow]",
+        "showType": "dv_text_style",
+        "itemClass": "ml20",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景",
+        "bindControlAttr": "backgroundDependent",
+        "showExpress": "@[labelShow]",
+        "showType": "dv_switch",
+        "itemClass": "ml20",
+        "desc": "背景是否依赖于风格",
+        "inCommonUse": true
+      },
+      {
+        "text": "默认颜色",
+        "bindControlAttr": "defaultBackground",
+        "showExpress": "@[labelShow&&!backgroundDependent]",
+        "showType": "dv_color",
+        "itemClass": "ml20",
+        "inCommonUse": true
+      },
+      {
+        "text": "默认图片",
+        "bindControlAttr": "defaultBackground",
+        "showExpress": "@[labelShow&&!backgroundDependent]",
+        "showType": "dv_more_img",
+        "itemClass": "ml20",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "选中颜色",
+        "bindControlAttr": "activeBackground",
+        "showExpress": "@[labelShow&&!backgroundDependent]",
+        "showType": "dv_color",
+        "itemClass": "ml20",
+        "inCommonUse": true
+      },
+      {
+        "text": "选中图片",
+        "bindControlAttr": "activeBackground",
+        "showExpress": "@[labelShow&&!backgroundDependent]",
+        "showType": "dv_more_img",
+        "itemClass": "ml20",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "时间宽度",
+        "bindControlAttr": "totalWidth",
+        "showType": "dv_pixel",
+        "inCommonUse": true
+      },
+      {
+        "text": "时间样式",
+        "showType": "dv_text_style",
+        "bindControlAttr": "timeTextStyle",
+        "config": {
+          "isShowColor": false,
+          "isShowFontWeight": false,
+          "isShowItalics": false,
+          "isShowUnderline": false,
+          "isShowShadow": false
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "依赖风格",
+        "bindControlAttr": "relationStyle",
+        "showType": "dv_switch",
+        "desc": "依赖-部分样式无法设置，将会根据风格设定",
+        "inCommonUse": true
+      },
+      {
+        "text": "内容样式",
+        "showExpress": "@[!relationStyle]",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "背景",
+        "bindControlAttr": "customThemeStyle.--dv-input-bg",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "边框",
+        "bindControlAttr": "customThemeStyle.--dv-input-border-color",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "悬浮边框",
+        "bindControlAttr": "customThemeStyle.--dv-active-input-border-color",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle && dateActive === 'date']",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "边框圆角",
+        "bindControlAttr": "customThemeStyle.--dv-input-border-radius",
+        "showType": "dv_border_radius",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "字体",
+        "bindControlAttr": "customThemeStyle.--dv-input-text-color",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "showType": "dv_line",
+        "spacingNumber": 1,
+        "showExpress": "@[!relationStyle]",
+        "inCommonUse": true
+      },
+      {
+        "text": "下拉样式",
+        "showExpress": "@[!relationStyle]",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "背景",
+        "bindControlAttr": "customThemeStyle.--dv-select-dropdown-bg",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "默认字体",
+        "bindControlAttr": "customThemeStyle.--dv-select-dropdown-text-color",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "选中字体",
+        "bindControlAttr": "customThemeStyle.--dv-more-theme-active-tag-color",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "头部等",
+        "bindControlAttr": "customThemeStyle.--dv-more-theme-active-tag-bg",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle]",
+        "config": {
+          "type": "color",
+          "noInput": true
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true,
+        "desc": "头部字体颜色以及选中背景"
+      },
+      {
+        "text": "选中区间背景",
+        "bindControlAttr": "customThemeStyle.--dv-more-theme-date-range-more-wrap-date",
+        "showType": "dv_color",
+        "showExpress": "@[!relationStyle && dateActive !=='date']",
+        "config": {
+          "type": "color"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

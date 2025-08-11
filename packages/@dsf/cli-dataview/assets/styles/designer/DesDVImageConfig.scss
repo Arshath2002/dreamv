@@ -1,0 +1,52 @@
+.des-dv-image-config {
+  min-height: 200px;
+  width: 100%;
+  .image-tabs {
+    .el-tabs__content {
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  }
+  .des-dv-image-animation-effect-setting {
+    .image-info-effect {
+      width: 100%;
+      .min-width {
+        width: 70px;
+      }
+      .info-item {
+        width: 100%;
+        background-color: rgb(242, 242, 242);
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+
+        .info-title {
+          margin-bottom: 10px;
+          font-weight: bold;
+          color: black;
+        }
+
+        .info-attr {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .info-attr-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px 10px 0;
+
+            .text {
+              width: 60px;
+              text-align: right;
+            }
+
+            .space {
+              margin: 0 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

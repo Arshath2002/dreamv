@@ -1,0 +1,27 @@
+.designer-text-editor {
+  border: 1px solid transparent;
+  &:hover {
+    border: 1px dashed #aaa;
+  }
+}
+
+.dsf-dv-text {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+
+  .text-wrap {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+
+    .main-title {
+      position: relative;
+    }
+
+    .sub-title {
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+//数据设置边框
+.des-dv-data-origin {
+  &.des-dv-data-origin-border {
+    height: 100%;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+
+    > p {
+      box-sizing: border-box;
+      padding-bottom: 5px;
+      font-size: 14px;
+
+      border-bottom: 1px solid #ebebeb;
+      margin-bottom: 10px;
+    }
+
+    .des-dv-data-origin-card {
+      width: 360px;
+
+      .card-item {
+        margin-bottom: 10px;
+        > span {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        .card-item-common {
+          margin-right: 0px;
+          margin-bottom: 0px;
+        }
+
+        &.card-item-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        &.card-item-border {
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #dddddd;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        &.card-item-column {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .scroll-collapse-item {
+    .el-scrollbar__wrap {
+      overflow-x: hidden !important;
+      margin-bottom: 0px !important;
+    }
+  }
+
+  &-scroller {
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    .el-scrollbar__wrap {
+      overflow-x: hidden;
+    }
+
+    .custom-tree-node {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      > span:nth-child(2) {
+        margin-right: 5px;
+      }
+
+      .custom-tree-node-content-wrap {
+        display: inline-block;
+        width: 100%;
+        padding: 0 10px 0 0;
+
+        .custom-tree-node-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .el-checkbox {
+            display: flex;
+            align-items: center;
+            flex: 1;
+
+            .el-checkbox__label {
+              display: flex;
+
+              span {
+                overflow: hidden; //超出的文本隐藏
+                text-overflow: ellipsis; //溢出用省略号显示
+                white-space: nowrap; //溢出不换行
+                margin-left: 5px;
+                max-width: 240px;
+              }
+            }
+          }
+
+          .del-icon {
+            font-size: 14px;
+            color: #f56c6c;
+            cursor: pointer;
+            flex-shrink: 0;
+          }
+
+          .edit-icon {
+            font-size: 14px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-right: 5px;
+            @include font-theme("normal");
+          }
+        }
+      }
+
+      .custom-tree-node-label {
+        display: flex;
+        width: calc(100% - 40px);
+
+        span {
+          max-width: calc(100% - 20px);
+          overflow: hidden; //超出的文本隐藏
+          text-overflow: ellipsis; //溢出用省略号显示
+          white-space: nowrap; //溢出不换行
+        }
+      }
+
+      .root-color {
+        color: #ec9e37;
+        font-size: 14px;
+      }
+
+      .leaf-color {
+        color: #688bd4;
+        font-size: 14px;
+        margin: 0 2px 0 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "模型",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_three_model",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "配置总览",
+        "bindControlAttr": "threeOptions",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDVCustomThreeEdit",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

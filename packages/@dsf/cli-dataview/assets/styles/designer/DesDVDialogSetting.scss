@@ -1,0 +1,290 @@
+.des-dv-dialog-setting {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > .add-btn {
+    padding: 5px;
+    margin-left: 10px;
+  }
+
+  .dialog-list {
+    width: 100%;
+    height: calc(100% - 30px);
+  }
+
+  .dialog-scroller {
+    height: 100%;
+
+    .el-scrollbar__wrap {
+      overflow-x: hidden;
+    }
+
+    .el-scrollbar__view {
+      padding: 10px;
+    }
+
+    .dialog-item {
+      margin: 10px 0;
+      padding: 20px;
+      background-color: #f5f7fa;
+      border-radius: 4px;
+      position: relative;
+      display: flex;
+      .delete-icon {
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        top: 15px;
+        z-index: 10;
+      }
+      .dialog-item-view {
+        .dialog-item-instance {
+          border: 1px dashed #ccc;
+          width: 280px;
+          height: 240px;
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          background-size: 100% 100%;
+          .dialog-item-title {
+            border-bottom: 1px dashed #ccc;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &_inner {
+              display: flex;
+              height: 100%;
+              flex: 1;
+            }
+
+            .dialog-item-title_icon {
+              display: flex;
+              height: 100%;
+              position: relative;
+            }
+          }
+
+          .dialog-item-content {
+            flex: 1;
+            .dialog-item-content-inner {
+              color: #ededed;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 18px;
+              font-weight: 600;
+              width: 100%;
+              height: 100%;
+              border: 1px dashed #ccc;
+              text-shadow: #000 0px 0px 3px;
+            }
+          }
+          &.popup {
+            border: none;
+            position: relative;
+          }
+          .arrow {
+            position: absolute;
+            &.bottom {
+              width: 0;
+              height: 0;
+              border-top: var(--arrow-size) solid transparent;
+              border-right: var(--arrow-size) solid transparent;
+              border-left: var(--arrow-size) solid transparent;
+              border-bottom: var(--arrow-size) solid var(--privacy-theme);
+              transform: translate(-50%, -100%);
+              left: 50%;
+            }
+            &.top {
+              width: 0;
+              height: 0;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              border-top: var(--arrow-size) solid var(--privacy-theme);
+              border-right: var(--arrow-size) solid transparent;
+              border-left: var(--arrow-size) solid transparent;
+              border-bottom: var(--arrow-size) solid transparent;
+            }
+            &.right {
+              width: 0;
+              height: 0;
+              border-top: var(--arrow-size) solid transparent;
+              border-right: var(--arrow-size) solid var(--privacy-theme);
+              border-left: var(--arrow-size) solid transparent;
+              border-bottom: var(--arrow-size) solid transparent;
+              transform: translate(-100%, -50%);
+              top: 50%;
+            }
+            &.left {
+              width: 0;
+              height: 0;
+              top: 50%;
+              left: 100%;
+              transform: translateY(-50%);
+              border-top: var(--arrow-size) solid transparent;
+              border-right: var(--arrow-size) solid transparent;
+              border-left: var(--arrow-size) solid var(--privacy-theme);
+              border-bottom: var(--arrow-size) solid transparent;
+            }
+          }
+        }
+      }
+      .dialog-item-setting {
+        .el-row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .ml-20 {
+          margin-left: 20px;
+        }
+        .icon-image-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .icon-wrap {
+            padding: 4px;
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+          .img-wrap {
+            position: relative;
+            padding: 0 5px;
+            .img {
+              display: block;
+            }
+            .delete {
+              position: absolute;
+              right: -10px;
+              top: -15px;
+              cursor: pointer;
+            }
+          }
+          .btn {
+            margin-left: 15px;
+          }
+        }
+        .dialog-item-sign {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          span {
+            position: relative;
+
+            &::before {
+              content: "*";
+              position: absolute;
+              color: red;
+              left: -10px;
+              top: 0;
+            }
+          }
+
+          .el-input {
+            width: 240px;
+          }
+        }
+        .data-view-ds-one-line {
+          background-color: #ddd;
+          margin-bottom: 5px;
+        }
+        .property-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          &.title {
+            > span {
+              font-weight: bold;
+              text-align: left;
+            }
+          }
+
+          &.sign {
+            span {
+              position: relative;
+
+              &::before {
+                content: "*";
+                position: absolute;
+                color: red;
+                left: -10px;
+                top: 0;
+              }
+            }
+
+            .el-input {
+              width: 240px;
+            }
+          }
+          .dialog-border-color {
+            width: auto;
+
+            .ds-preview-color {
+              width: 66px;
+            }
+          }
+          .el-radio-button__inner {
+            padding: 7px 5px;
+          }
+          > span {
+            width: 80px;
+            text-align: right;
+            flex-shrink: 0;
+            margin-left: 10px;
+          }
+
+          &.flex-start {
+            align-items: flex-start;
+          }
+
+          .position-text-align {
+            width: 100px;
+
+            &.des-text-align {
+              .align-wrap {
+                .vertical-items {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 关闭弹窗设置
+.des-dv-dialog-close-config {
+  height: 100%;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  .el-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .el-tabs__header {
+    flex: none;
+  }
+
+  .el-tabs__content {
+    flex: auto;
+    height: 0;
+    padding: 0;
+
+    .el-tab-pane {
+      height: 100%;
+    }
+  }
+
+  .ds-virtual-scroll-box {
+    padding: 10px;
+  }
+}

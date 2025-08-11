@@ -1,0 +1,82 @@
+.dsf-dv-text-search {
+  box-sizing: border-box;
+  .text-search-inner {
+    .name-left {
+      margin-right: 5px;
+    }
+    .text-search {
+      &:hover {
+        border-color: var(--dv-active-input-border-color) !important;
+      }
+    }
+  }
+  .search-icon-prefix-suffix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .el-select {
+    border-color: inherit;
+  }
+
+  .el-input {
+    border-color: inherit;
+    height: inherit;
+  }
+
+  .el-autocomplete {
+    border-color: inherit;
+    height: inherit;
+  }
+
+  .select-box .el-input__inner,
+  .el-input--small > input,
+  .el-dialog input,
+  input {
+    background: transparent;
+    border-color: inherit;
+    color: inherit;
+    height: inherit;
+    border: none;
+  }
+
+  .el-select:hover .el-input__inner {
+    border-color: inherit;
+  }
+
+  .el-select .el-input.is-focus .el-input__inner {
+    border-color: inherit;
+  }
+
+  &.not-relation {
+    .el-input .el-input__inner {
+      background-color: transparent;
+    }
+  }
+
+  .el-input .el-input__inner {
+    // &::placeholder {
+    //   color: inherit;
+    // }
+
+    &:focus {
+      border-color: inherit;
+    }
+  }
+
+  .el-icon-search.el-input__icon {
+    line-height: inherit;
+  }
+
+  .bar-content {
+    display: flex;
+    flex-wrap: wrap;
+    border-color: inherit;
+
+    li {
+      border-color: inherit;
+      cursor: pointer;
+    }
+  }
+}

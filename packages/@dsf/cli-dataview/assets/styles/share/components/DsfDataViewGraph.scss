@@ -1,0 +1,13 @@
+//图表
+.dsf-dv-graph {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .slot-top {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}

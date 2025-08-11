@@ -1,0 +1,2 @@
+export DsfMobileTest from './test';
+

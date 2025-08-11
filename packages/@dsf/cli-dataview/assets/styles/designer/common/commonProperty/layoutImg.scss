@@ -1,0 +1,42 @@
+.des-dv-layout-img-wrapper {
+  .single-layout-item {
+    display: flex;
+    border: 1px dashed #eee;
+    padding: 5px;
+    box-sizing: border-box;
+    .dsf-dv-more-img {
+      align-items: flex-start;
+    }
+    .single-layout-item-img-wrapper {
+      .single-layout-item-color-picker {
+        position: relative;
+        top: 10px;
+        .ds-preview-color {
+          width: 48px;
+        }
+      }
+    }
+    &-info {
+      flex: 1;
+      .el-col {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        > span {
+          width: 60px;
+          text-align: center;
+        }
+        .el-radio-button--mini .el-radio-button__inner {
+          padding: 4px;
+        }
+        .el-input-number.el-input-number--mini {
+          .el-input__inner {
+            padding: 6px;
+            height: 25px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

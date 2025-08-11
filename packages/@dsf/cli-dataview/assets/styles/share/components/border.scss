@@ -1,0 +1,153 @@
+.view-border-common {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .border-box-content {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  .view-border-svg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+
+    >polyline {
+      fill: none;
+    }
+  }
+}
+
+.view-border-1 {
+  .border {
+    position: absolute;
+    display: block;
+  }
+
+  .right-top {
+    right: 0px;
+    transform: rotateY(180deg);
+  }
+
+  .left-bottom {
+    bottom: 0px;
+    transform: rotateX(180deg);
+  }
+
+  .right-bottom {
+    right: 0px;
+    bottom: 0px;
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}
+
+.view-border-2>polyline {
+  fill: none;
+  stroke-width: 1;
+}
+
+.view-border-3 {
+  .view-bb3-line2 {
+    stroke-width: 1;
+  }
+}
+
+.view-border-4 {
+  .view-reverse {
+    transform: rotate(180deg);
+  }
+
+  .sw1 {
+    stroke-width: 1;
+  }
+
+  .sw3 {
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+
+  .view-bb4-line-1,
+  .view-bb4-line-2,
+  .view-bb4-line-5,
+  .view-bb4-line-6,
+  .view-bb4-line-7 {
+    stroke-width: 1;
+  }
+
+  .view-bb4-line-3 {
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+
+  .view-bb4-line-4 {
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+
+  .view-bb4-line-8 {
+    stroke-width: 3px;
+    stroke-linecap: round;
+  }
+
+  .view-bb4-line-9 {
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 100 250;
+  }
+
+  .view-bb4-line-10 {
+    stroke-width: 1;
+    stroke-dasharray: 80 270;
+  }
+}
+
+.view-border-5 {
+  .view-reverse {
+    transform: rotate(180deg);
+  }
+
+  .view-bb5-line-1,
+  .view-bb5-line-2 {
+    stroke-width: 1;
+  }
+
+  .view-bb5-line-3,
+  .view-bb5-line-6 {
+    stroke-width: 5;
+  }
+
+  .view-bb5-line-4,
+  .view-bb5-line-5 {
+    stroke-width: 2;
+  }
+}
+.view-border-7 {
+  .view-reverse {
+    transform: rotate(180deg);
+  }
+  .view-bb7-line-2 {
+    stroke-width: 2;
+  }
+
+  .view-bb7-line-5 {
+    stroke-width: 5;
+  }
+}
+.view-border-box-10 {
+  .right-top {
+    right: 0px;
+    transform: rotateY(180deg);
+  }
+  .left-bottom {
+    bottom: 0px;
+    transform: rotateX(180deg);
+  }
+  .right-bottom {
+    right: 0px;
+    bottom: 0px;
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+}

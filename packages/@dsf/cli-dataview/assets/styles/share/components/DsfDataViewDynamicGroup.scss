@@ -1,0 +1,57 @@
+.dsf-dv-dynamic-group {
+  height: 100%;
+  .ds-virtual-scroll {
+    &.top {
+      >.ds-virtual-scroll-box.__virtual {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+    &.middle {
+      >.ds-virtual-scroll-box.__virtual {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    &.bottom {
+      >.ds-virtual-scroll-box.__virtual {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .component-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .component-wrap-item {
+      position: relative;
+      box-sizing: border-box;
+
+      .empty-slot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+      }
+      &:has(.empty-slot) {
+        background-color: #c1c1c1;
+        border: 1px dashed #a7b1bd;
+        font-size: 20px;
+        box-sizing: border-box;
+      }
+    }
+
+  }
+}
+.ds-designer .dsf-dv-dynamic-group {
+  .component-wrap-item {
+    border: 1px dashed #a7b1bd;
+  }
+}

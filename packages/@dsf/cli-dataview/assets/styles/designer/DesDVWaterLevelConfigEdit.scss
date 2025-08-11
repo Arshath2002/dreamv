@@ -1,0 +1,95 @@
+.des-dv-water-level-config-setting {
+  $commonWidth: 180px;
+  .header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .common-card {
+    margin-bottom: 10px;
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left-title {
+        font-size: 20px;
+      }
+    }
+    .common-width {
+      width: $commonWidth;
+      .el-color-picker__trigger {
+        width: $commonWidth;
+      }
+    }
+    .el-card__header {
+      padding: 10px;
+      flex-shrink: 0;
+    }
+    .el-card__body {
+      padding: 12px;
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+  .bg-form-item {
+    display: flex;
+    width: 100%;
+    .el-form-item__label {
+      flex-shrink: 0;
+    }
+    .el-form-item__content {
+      flex: 1;
+    }
+  }
+  .common-form-item {
+    margin-bottom: 10px;
+    .common-bg-icon-wrap {
+      display: flex;
+      flex-direction: column;
+      line-height: 0;
+      .bg-icon-btn {
+        margin-bottom: 10px;
+        width: $commonWidth;
+      }
+      .bg-icon-items {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow-y: auto;
+        max-height: 120px;
+        .bg-icon-wrap {
+          position: relative;
+          margin: 0 10px 10px 0;
+          .close {
+            position: absolute;
+            top: -2px;
+            right: -9px;
+            z-index: 1000;
+            font-size: 16px;
+            color: #ccc;
+            cursor: pointer;
+          }
+          .now-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 32px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            i {
+              font-size: 28px;
+            }
+          }
+          .bg-color-item {
+            width: 100px;
+            .el-color-picker__trigger {
+              width: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.dsf-dv-text-roll {
+  box-sizing: border-box;
+  .text-roll-outer {
+    width: 100%;
+    overflow: hidden;
+    .scroll-item {
+      display: inline-grid;
+      grid-auto-flow: column; /* 强制子项横向排列 */
+      grid-auto-columns: max-content;
+      align-items: center;
+    }
+  }
+}

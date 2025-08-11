@@ -1,0 +1,41 @@
+.dsf-dv-input-select {
+  box-sizing: border-box;
+  .select-wrap {
+    box-sizing: border-box;
+    label {
+      margin-right: 5px;
+    }
+  }
+  .el-select {
+    height: inherit;
+    .el-input {
+      border-radius: inherit;
+    }
+    .el-input__inner {
+      background-color: transparent;
+      border-radius: inherit !important;
+    }
+  }
+  &.not-relation {
+    .el-input__inner {
+      border: inherit;
+      color: inherit;
+      &::placeholder {
+        color: inherit;
+      }
+    }
+  }
+  .select-box .el-input__inner,
+  .el-input--small > input,
+  .el-dialog input,
+  input {
+    width: 100%;
+    height: inherit;
+  }
+  .el-input {
+    height: inherit;
+    .el-input__icon {
+      line-height: inherit !important;
+    }
+  }
+}

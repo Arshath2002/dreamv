@@ -1,0 +1,10 @@
+.data-view-item-wrap {
+  width: 100%;
+  user-select: none;
+}
+.chart-empty-data {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@import "./components/DsfDataViewGraph.scss"

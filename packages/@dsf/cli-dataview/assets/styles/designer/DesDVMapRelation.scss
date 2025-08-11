@@ -1,0 +1,201 @@
+.des-dv-chart-edit-container {
+  display: flex;
+  height: 100%;
+
+  .data-setting {
+    width: 400px;
+    border: 1px solid #e6e6e6;
+    overflow-y: auto;
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  .right {
+    flex: 1;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .right-scroller {
+      height: 100%;
+
+      .el-scrollbar__wrap {
+        overflow-x: hidden;
+      }
+
+      .title {
+        margin-bottom: 10px;
+      }
+
+      .el-row {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .cell-item-particular {
+        display: flex;
+        align-items: center;
+
+        .config-title {
+          margin-right: 10px;
+          flex-shrink: 0;
+          position: relative;
+        }
+
+        .des-dv-icon-add {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #ffffff;
+          border: 1px solid rgba(194, 207, 228, 1);
+          border-radius: 50%;
+          box-sizing: border-box;
+          margin: 0 8px 0 0;
+          cursor: pointer;
+
+          &:hover {
+            border: 1px solid var(--t--normal);
+          }
+
+          .add-btn {
+            font-size: 10px;
+            @include font-theme("normal");
+          }
+        }
+      }
+
+      .map-relation__item {
+        border-bottom: 1px solid #e6e6e6;
+        margin: 20px 0;
+        position: relative;
+
+        &.no-border-bottom {
+          border-bottom: 0;
+        }
+
+        &.no-margin {
+          margin: 0;
+        }
+
+        .up-series {
+          position: absolute;
+          right: 40px;
+          top: 10px;
+          cursor: pointer;
+        }
+
+        .down-series {
+          position: absolute;
+          right: 26px;
+          top: 10px;
+          cursor: pointer;
+        }
+
+        .delete-series {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+        }
+
+        .cell-item {
+          display: flex;
+          align-items: center;
+          margin: 10px;
+
+          .config-title {
+            margin-right: 10px;
+            flex-shrink: 0;
+            position: relative;
+
+            &:not(.first)::before {
+              content: "*";
+              position: absolute;
+              left: -8px;
+              top: 0;
+              display: block;
+              color: red;
+            }
+          }
+        }
+
+        &-name {
+          font-size: 14px;
+          color: #222;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+
+          .item-type {
+            margin-right: 5px;
+          }
+
+          .item-name {
+            color: #999;
+          }
+          .margin-right {
+            margin-right: 5px;
+          }
+        }
+
+        &-input {
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+
+          &.wrapper {
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      .map-relation__item_column {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+
+        .cell-item {
+          .config-title {
+            text-align: right;
+            min-width: 75px;
+
+            .red-point {
+              color: red;
+            }
+
+            &.common-width {
+              width: 160px;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-btn__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      &-item {
+        padding: 7px 15px;
+        font-size: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        background: #fff;
+        margin-right: 10px;
+        cursor: pointer;
+        @include font-theme("normal");
+        @include border-theme(1px, solid, "normal");
+
+        &.active {
+          color: #ffffff;
+          @include background-theme("normal");
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,473 @@
+.ds-color-picker-panel {
+  background-color: white;
+
+  .ds-picker-panel {
+    margin-bottom: 12px;
+
+    .ds-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+
+      .ds-panel-change-btn {
+        .ds-icon {
+          cursor: pointer;
+          font-size: 18px;
+          color: #8f8f8f;
+
+          & + .ds-icon {
+            margin-left: 10px;
+          }
+
+          &.active {
+            color: var(--t--normal);
+          }
+        }
+
+      }
+    }
+
+    // <Card />
+    .ds-color-cards {
+      width: 100%;
+      border: 1px solid #e4e4e4;
+      box-sizing: border-box;
+      padding: 8px 12px;
+
+      .color-rows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & + .color-rows {
+          margin-top: 8px;
+        }
+
+        .color-item {
+          width: 24px;
+          height: 24px;
+          box-sizing: border-box;
+          border-radius: 2px;
+          border: 1px solid #dedede;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // <Points />
+    .dsf-color-slider {
+      padding: 0;
+      box-sizing: border-box;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #bdbcbf;
+      font-weight: bold;
+
+      .ds-suffix {
+        .suffix-icon {
+          cursor: pointer;
+          margin-left: 10px;
+        }
+      }
+
+      .dsf-color-slider__bar {
+        width: 100%;
+        height: 8px;
+        // border: 1px solid #999;
+        border-radius: 5px;
+        background-size: 8px 8px;
+        background-position: 0 0, 4px 4px;
+        margin: 0 10px;
+        flex-shrink: 1;
+
+        .dsf-color-slider__point {
+          top: 0;
+          width: 14px;
+          height: 14px;
+          transform: translate(-50%, -3px);
+          border-radius: 50%;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+          border: 2.5px solid #fff;
+          border-radius: 50%;
+          box-sizing: border-box;
+
+          &.active {
+            outline: 2px solid #4296e7;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%), linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%);
+            // background-size: 10px 10px;
+            // background-position: 0 0, 5px 5px;
+            background-color: #ddd;
+            opacity: 0.3;
+            z-index: 1;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: 2;
+          }
+
+          .remove {
+            bottom: 85%;
+            left: 85%;
+            transform: none;
+            border: none;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    // <Panel />
+    .dsf-color-select-panel {
+      border: 1px solid #b3b1be;
+      border-radius: 2px;
+
+      .slider {
+        width: 8px;
+        height: 8px;
+        // border: 2.5px solid #fff;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .ds-picker-slider {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    label.quick-btn {
+      width: 25px;
+      flex-shrink: 0;
+      text-align: center;
+      color: #8f8f8f;
+      cursor: pointer;
+
+      & + label {
+        margin: 0 -5px 0 5px;
+      }
+
+      .ds-icon {
+        font-size: 18px;
+      }
+    }
+
+    .ds-slider-wrap {
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      height: 100%;
+      padding: 0 15px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .dsf-color-select-hue {
+        position: relative;
+        width: 100%;
+        height: 8px;
+        left: 0;
+        background-image: linear-gradient(90deg,
+            red 0,
+            #ff0 17%,
+            #0f0 33%,
+            #0ff 50%,
+            #00f 67%,
+            #f0f 83%,
+            red);
+        border-radius: 5px;
+        margin-bottom: 6px;
+
+        .slider {
+          width: 14px;
+          height: 14px;
+          transform: translate(-50%, -3px);
+          border-radius: 50%;
+          border: 2.5px solid #fff;
+          box-sizing: border-box;
+        }
+      }
+
+      .dsf-color-select-alpha {
+        margin-bottom: 0;
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background-size: 8px 8px;
+        background-position: 0 0, 4px 4px;
+
+        .slider {
+          top: 0;
+          width: 14px;
+          height: 14px;
+          transform: translate(-50%, -3px);
+          border-radius: 50%;
+          border: 2.5px solid #fff;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    .ds-preview-panel {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background-image: linear-gradient(45deg,
+          #ddd 25%,
+          transparent 25%,
+          transparent 75%,
+          #ddd 75%),
+        linear-gradient(45deg,
+          #ddd 25%,
+          transparent 25%,
+          transparent 75%,
+          #ddd 75%);
+      background-size: 12px 12px;
+      background-position: 0 0, 6px 6px;
+      position: relative;
+      border-radius: 50%;
+      transform-origin: center center;
+
+      // 径向渐变 椭圆
+      &.radial {
+        &.ellipse {
+          height: 30px;
+        }
+
+        &:hover {
+          .ds-icon {
+            display: block;
+          }
+        }
+
+        .ds-pos-select {
+          width: 100%;
+          height: 100%;
+
+          .slider {
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 1px 2px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            box-sizing: border-box;
+          }
+        }
+
+        .ds-icon {
+          display: none;
+          cursor: pointer;
+          position: absolute;
+          font-weight: bold;
+          font-size: 14px;
+          right: 0;
+          top: 0;
+          transform: translate(30%, -30%);
+        }
+      }
+
+      span.ds-preview-value {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        background-color: #fff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
+
+      .ds-linear-pointer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        opacity: 0.95;
+        transform-origin: center center;
+        transform: rotateZ(90deg);
+
+        &::before {
+          content: "";
+          bottom: 100%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          border-radius: 50%;
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background-color: #4296e7;
+          z-index: 1;
+        }
+
+        &::after {
+          content: "";
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          position: absolute;
+          width: 3px;
+          height: 100%;
+          background-color: white;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+
+  .ds-picker-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #454545;
+    // font-weight: bold;
+    padding: 0 4px;
+    box-sizing: border-box;
+
+    label {
+      &.str {
+        width: 6em;
+
+        .el-input .el-input__inner {
+          padding: 0 10px;
+        }
+      }
+
+      .el-input-number--mini {
+        width: 3em;
+      }
+
+      .el-input .el-input__inner {
+        padding: 0;
+        color: inherit;
+        border-radius: 6px;
+        border-color: #ededed;
+        background-color: #ededed;
+        outline: 2px solid transparent;
+        transition: outline 0.3s ease-in;
+
+        &:focus {
+          outline-color: #4296e7;
+        }
+
+        &::selection {
+          color: white;
+          background-color: #4296e7;
+        }
+      }
+
+      span {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .ds-picker-record {
+    margin-top: 12px;
+    width: 100%;
+
+    .ds-record-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      p {
+        white-space: nowrap;
+        flex-shrink: 0;
+        line-height: 24px;
+      }
+
+      .ds-color-list {
+        height: auto;
+        min-height: 36px;
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        flex-wrap: wrap;
+
+        span {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          border: #999;
+          margin-left: 8px;
+          margin-bottom: 8px;
+          border-radius: 3px;
+          flex-shrink: 0;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(45deg,
+                #ddd 25%,
+                transparent 25%,
+                transparent 75%,
+                #ddd 75%),
+              linear-gradient(45deg,
+                #ddd 25%,
+                transparent 25%,
+                transparent 75%,
+                #ddd 75%);
+            background-size: 12px 12px;
+            background-position: 0 0, 6px 6px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

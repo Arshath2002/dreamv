@@ -1,0 +1,63 @@
+//数字翻牌器
+.dsf-dv-scroll-digital {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .split-digital {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .common-icon {
+    font-size: inherit;
+  }
+
+  .common-img {
+    max-width: 50px;
+  }
+
+  .digital-prefix-suffix {
+    margin: 0 5px;
+  }
+
+  .split-digital-item {
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-clip: padding-box;
+
+    .split-digital-inner-item {
+      box-sizing: border-box;
+      padding: 5px 10px;
+
+      .split-digital-item-num {
+        position: relative;
+      }
+    }
+
+    &.split-digital-symbol {
+      background: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+
+  .split-digital-item-total {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .split-digital-inner-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

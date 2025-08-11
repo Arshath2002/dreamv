@@ -1,0 +1,43 @@
+.des-dv-border-style-setting {
+  width: 100%;
+  height: 100%;
+
+  .ds-virtual-scroll-box_warp {
+    display: flex;
+    flex-wrap: wrap;
+
+    .des-dv-border-style-setting-preview-item {
+      cursor: pointer;
+      height: 400px;
+      width: calc((100% - 100px) / 5);
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .preview-wrap {
+        width: 100%;
+        flex: 1 0;
+        background-color: #000c1f;
+
+        .data-view-item-wrap {
+          padding: 0;
+        }
+
+        .data-view-item-wrap-inner-box {
+          height: 100%;
+
+          .view-border-svg-container {
+            height: 100%;
+          }
+        }
+      }
+
+      .el-radio {
+        @include font-size(14);
+        margin: 10px 0;
+      }
+    }
+  }
+}

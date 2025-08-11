@@ -1,0 +1,165 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "bindControlAttr": "threeOptions",
+        "showType": "dv_dialog",
+        "dialogType":"relation",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVThreeEarthRelation",
+          "width": "1200px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_three_earth",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "系列类型",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_three_earth_series",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "marker提示框",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_three_map_tooltip",
+        "inCommonUse": true,
+        "config": {
+          "tooltip": "markerTooltip"
+        }
+      },
+      {
+        "text": "背景图片",
+        "bindControlAttr": "tooltipBackground",
+        "showType": "dv_more_img",
+        "showExpress": "@[threeOptions.markerTooltip.show]",
+        "inCommonUse": true,
+        "config": {
+          "isEffect": false,
+          "limitImg": 1,
+          "backgroundTypes": []
+        }
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "showExpress":"@[isRunningDataViewPage]",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "配置总览",
+        "bindControlAttr": "threeOptions",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDVCustomThreeEdit",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "showExpress":"@[isRunningDataViewPage]",
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

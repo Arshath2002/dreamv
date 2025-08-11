@@ -1,0 +1,20 @@
+.dsf-dataview-date-time-weather {
+  .dsf-dataview-date-time-inner-weather {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & > div {
+      flex-shrink: 0;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    .col {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

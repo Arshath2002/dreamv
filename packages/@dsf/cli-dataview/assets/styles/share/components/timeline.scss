@@ -1,0 +1,68 @@
+.dsf-input-timeline {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 80px;
+  .time-line {
+    width: 100%;
+    .h-line {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: aqua;
+      .play-pause-wrap {
+        position: absolute;
+        top: -32px;
+        left: -28px;
+        .play-pause-icon {
+          color: #409eff;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+      .v-line-wrap {
+        position: relative;
+        top: -12px;
+        .v-line-outer {
+          position: absolute;
+          padding: 0 6px;
+          cursor: pointer;
+          margin-left: -6px;
+          .v-line {
+            position: relative;
+            width: 1px;
+            height: 14px;
+            background-color: aqua;
+          }
+        }
+      }
+      .des-wrap {
+        position: relative;
+        top: 0;
+        .des {
+          position: absolute;
+          margin-top: 10px;
+          transform: translateX(-50%);
+          cursor: pointer;
+          width: max-content;
+        }
+      }
+      .slider-wrap {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        top: -28px;
+        .slider {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          margin-left: -5px;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 1px solid #409eff;
+          cursor: grab;
+        }
+      }
+    }
+  }
+}

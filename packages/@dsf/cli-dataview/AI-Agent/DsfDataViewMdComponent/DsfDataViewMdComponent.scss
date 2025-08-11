@@ -1,0 +1,76 @@
+.dsf-dv-md-component {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 35px;
+  margin-bottom: 20px;
+  &.has-title {
+    padding-top: 60px;
+
+    .ds-title-bar {
+      display: block;
+      height: 25px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-top: -25px;
+    }
+  }
+
+  .ds-chat-graph {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ds-control-bar {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 35px;
+    width: 100%;
+    z-index: 20000;
+    background-color: white;
+
+    .ds-change-select {
+      width: 120px;
+      margin-right: auto;
+    }
+
+    .tools-bt {
+      transition: background-color 0.3s ease-in;
+      background-color: inherit;
+      border-radius: 50%;
+      background-color: #ededed;
+      margin-left: 8px;
+      height: 24px;
+      width: 24px;
+      &:hover {
+        background-color: lightgray;
+      }
+    }
+  }
+
+  .ds-title-bar {
+    display: none;
+  }
+  img {
+    background-color: transparent;
+  }
+  // 切换图表下拉弹框覆盖样式
+ .el-select-dropdown.el-popper {
+    ul,
+    ol {
+      padding: 0;
+    }
+  }
+}

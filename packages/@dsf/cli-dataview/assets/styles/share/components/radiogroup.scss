@@ -1,0 +1,97 @@
+.dsf-dv-container-radiogroup {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  .radios-content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    &.v-radios-content {
+      display: flex;
+      align-items: center;
+      .name-left {
+        flex-shrink: 0;
+        margin-right: 5px;
+      }
+    }
+    // 按钮样式
+    .el-radio-group,
+    .el-checkbox-group {
+      border-radius: 5px;
+      overflow: hidden;
+      .el-radio__input,
+      .el-checkbox__input {
+        .el-radio__inner,
+        .el-checkbox__inner {
+          background-color: var(--dv-comp-default-background-color);
+          border-color: var(--dv-comp-default-border-color);
+        }
+        &.is-checked {
+          .el-radio__inner,
+          .el-checkbox__inner {
+            background-color: var(--dv-comp-ac-background-color);
+            border-color: var(--dv-comp-ac-border-color);
+          }
+        }
+      }
+    }
+
+    .el-radio-button__inner {
+      color: #fff;
+      border-color: inherit;
+      background: inherit;
+      font-size: inherit;
+    }
+
+    .is-active {
+      .el-radio-button__inner {
+        background: inherit;
+        box-shadow: -1px 0 0 0 transparent;
+        border-color: transparent;
+      }
+    }
+
+    // 单选横排样式
+    .is-checked {
+      .el-radio__label {
+        color: inherit;
+      }
+    }
+
+    .el-radio .el-radio__label {
+      font-size: inherit;
+    }
+
+    // 单选竖排样式
+    .radio-box {
+      .el-radio,
+      .el-checkbox {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+    }
+    .el-checkbox {
+      line-height: 1.2em;
+    }
+    .el-checkbox__inner {
+      width: 15px;
+      height: 15px;
+    }
+    // 块级
+    &.type-switch2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      .radio {
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+      }
+    }
+  }
+}

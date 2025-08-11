@@ -1,0 +1,52 @@
+.ds-shadow-wrapper {
+  .shadow-switch-wrap{
+    display: flex;
+    align-items: center;
+  }
+  .shadow-wrap {
+    font-size: 14px;
+    .shadow-offset {
+      display: flex;
+      align-items: center;
+
+      .ds-word-color {
+        margin-right: 5px;
+      }
+
+      >.data-view-dsf-number {
+        margin-right: 5px;
+      }
+    }
+    .radius-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+      .radius-item {
+        display: flex;
+        align-items: center;
+        .radius-item-name {
+          flex-shrink: 0;
+        }
+        .radius-input {
+          width: 60px;
+        }
+      }
+    }
+    .shadow-blur {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+
+      .el-slider {
+        flex: 1;
+        margin-left: 5px;
+
+        .el-slider__button {
+          border: none;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "外边距",
+        "showType": "dv_margins",
+        "bindControlAttr": "margin",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "装饰器风格",
+        "bindControlAttr": "comType",
+        "inCommonUse": true,
+        "showType": "dv_dialog",
+        "config": {
+          "width": "1600px",
+          "height": "650px",
+          "content": "DesDVBorderStyleSetting",
+          "title": "装饰器风格设置",
+          "isClear": "重置",
+          "params": {
+            "comType": "dsf.dataviewdecorateone",
+            "isdecorator": true
+          }
+        }
+      },
+      {
+        "text": "主颜色",
+        "bindControlAttr": "mainColor",
+        "showType": "dv_color",
+        "config": {
+          "type": "color"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "副颜色",
+        "bindControlAttr": "viceColor",
+        "showType": "dv_color",
+        "config": {
+          "type": "color"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "点行数",
+        "bindControlAttr": "rowNum",
+        "showType": "dv_number",
+        "inCommonUse": true
+      },
+      {
+        "text": "点密度数",
+        "bindControlAttr": "rowPoints",
+        "showType": "dv_number",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

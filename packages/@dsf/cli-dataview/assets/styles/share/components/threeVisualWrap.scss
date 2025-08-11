@@ -1,0 +1,45 @@
+.three-visual-wrap {
+  .three-visual {
+    position: absolute;
+    .three-visual-name {
+      text-align: center;
+    }
+    .three-visual-gradient {
+      position: relative;
+      margin: 20px;
+      .gradient {
+        width: 24px;
+        height: 150px;
+      }
+      .high {
+        position: absolute;
+        letter-spacing: 0;
+        line-height: 1.1;
+        right: 0;
+        top: 0;
+        transform: translate(110%, -50%);
+      }
+      .low {
+        position: absolute;
+        line-height: 1.1;
+        letter-spacing: 0;
+        right: 0;
+        bottom: 2px;
+        transform: translate(110%, 50%);
+      }
+    }
+    .three-visual-color-group {
+      padding: 20px;
+      .three-visual-color {
+        display: flex;
+        align-items: center;
+        margin: 0 10px 10px 0;
+        .color {
+          width: 20px;
+          height: 16px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}

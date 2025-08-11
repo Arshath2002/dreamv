@@ -1,0 +1,179 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "外边距",
+        "showType": "dv_margins",
+        "bindControlAttr": "margin",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "showType": "dv_dialog",
+        "bindControlAttr": "mapRelations",
+        "dialogType":"relation",
+        "inCommonUse": true,
+        "config": {
+          "title": "设置",
+          "content": "DesDVMapRelationSetting",
+          "width": "1100px",
+          "height": "60vh",
+          "buttonText": "设置",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "水位图配置",
+        "bindControlAttr": "configs",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVWaterLevelConfigEdit",
+          "width": "900px",
+          "height": "500px"
+        }
+      },
+      {
+        "text": "自定义宽高",
+        "showType": "dv_switch",
+        "bindControlAttr": "isCustomWH",
+        "inCommonUse": true
+      },
+      {
+        "text": "单个宽",
+        "showType": "dv_pixel",
+        "showExpress": "@[isCustomWH == true]",
+        "bindControlAttr": "singleWidth",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "单个高",
+        "showType": "dv_pixel",
+        "showExpress": "@[isCustomWH == true]",
+        "bindControlAttr": "singleHeight",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "显示名称",
+        "showType": "dv_switch",
+        "bindControlAttr": "isShowName",
+        "inCommonUse": true
+      },
+      {
+        "text": "名称",
+        "showType": "dv_text_style",
+        "showExpress": "@[isShowName == true]",
+        "bindControlAttr": "nameConfig",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "值",
+        "showType": "dv_text_style",
+        "bindControlAttr": "valueConfig",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "showExpress":"@[isRunningDataViewPage]",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "showExpress":"@[isRunningDataViewPage]",
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

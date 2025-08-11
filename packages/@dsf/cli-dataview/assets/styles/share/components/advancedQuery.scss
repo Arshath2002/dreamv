@@ -1,0 +1,132 @@
+.dv-advanced-query-wrapper {
+  .el-form-item {
+    width: 100%;
+    display: flex;
+
+    .el-form-item__label {
+      flex-shrink: 0;
+      color: var(--label-color);
+      font-family: var(--label-fontFamily);
+      font-size: var(--label-fontSize);
+      font-style: var(--label-fontStyle);
+      font-weight: var(--label-fontWeight);
+      text-decoration: var(--label-textDecoration);
+      text-shadow: var(--label-textShadow);
+      background-image: var(--label-backgroundImage, none);
+      --webkit-background-clip: var(--label--webkit-background-clip, border-box);
+      --moz-background-clip: var(--label--moz-background-clip, border-box);
+      background-clip: var(--label-backgroundClip, border-box);
+    }
+
+    .el-form-item__content {
+      flex: 1;
+
+      .el-input,
+      .el-select,
+      .el-date-editor {
+        width: 100%;
+
+        .el-range-separator {
+          top: 0px;
+        }
+      }
+    }
+
+    .advanced-input-wrapper {
+      display: flex;
+
+      .operation-select-input {
+        width: 120px;
+        margin-right: 10px;
+      }
+    }
+
+    .number-range {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .separate-span {
+        margin: 0 5px;
+        color: var(--dv-more-theme-default-tag-color);
+      }
+
+      .el-input {
+        flex: 1;
+
+        .el-input__inner {
+          box-sizing: border-box;
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .el-tab-wrapper {
+      line-height: 0;
+    }
+
+    .tag-wrapper {
+      .el-tag {
+        margin-right: 5px;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+    }
+
+
+  }
+
+  //控制行高
+  .el-form[size="small"] {
+    .el-form-item {
+      height: 40px;
+    }
+  }
+
+  .query-tab-box {
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+
+    &.has-collapse {
+      border-bottom: 1px solid var(--dv-more-theme-active-tag-bg);
+    }
+  }
+
+  .extend-btn {
+    background-color: var(--dv-more-theme-active-tag-bg);
+    ;
+    border-radius: 0 0 6px 6px;
+    height: 12px;
+    color: var(--dv-more-theme-active-tag-color);
+    position: relative;
+    width: 60px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 12px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .query-btn {
+    background-color: var(--dv-more-theme-active-tag-bg);
+    color: var(--dv-more-theme-active-tag-color);
+    border: none;
+    background-image: var(--dv-more-theme-active-tag-bgImg);
+    box-shadow: var(--dv-more-theme-active-tag-box-shadow);
+  }
+
+  .reset-btn {
+    background-color: transparent;
+    color: var(--dv-more-theme-default-tag-color);
+    border: 1px solid var(--dv-more-theme-default-tag-border-color);
+  }
+}
+
+.ds-designer .dv-advanced-query-wrapper {
+  .el-input--dv-small .el-input__inner {
+    height: 32px !important;
+  }
+}

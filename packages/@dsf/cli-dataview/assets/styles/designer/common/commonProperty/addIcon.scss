@@ -1,0 +1,22 @@
+.des-dv-icon-add {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(194, 207, 228, 1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 0 8px 8px 0;
+  cursor: pointer;
+
+  &:hover {
+    order: 1px solid var(--t--normal);
+  }
+
+  .add-btn {
+    font-size: 10px;
+    @include font-theme("normal");
+  }
+}

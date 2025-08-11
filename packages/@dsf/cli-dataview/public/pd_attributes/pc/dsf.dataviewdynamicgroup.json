@@ -1,0 +1,201 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "bindControlAttr": "width",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "bindControlAttr": "height",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "内边距",
+        "showType": "dv_margins",
+        "bindControlAttr": "padding",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "插槽设置",
+        "bindControlAttr": "slots",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVCarouselEdit",
+          "width": "1000px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      },
+      {
+        "text": "数据设置",
+        "bindControlAttr": "",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "class": "des-dv-data-setting-dialog",
+          "content": "DesDVDataSetting",
+          "width": "500px",
+          "height": "60vh"
+        }
+      }
+    ]
+  },
+  {
+    "name": "组件设置",
+    "attributes": [
+      {
+        "text": "对齐方式",
+        "showType": "dv_text_align",
+        "bindControlAttr": "align",
+        "config": {
+          "hMapData": [
+            {
+              "mapName": "flex-start",
+              "mapKey": "left"
+            },
+            {
+              "mapName": "center",
+              "mapKey": "center"
+            },
+            {
+              "mapName": "flex-end",
+              "mapKey": "right"
+            }
+          ]
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "自适应",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "sizeMode",
+        "dictionary": [
+          {
+            "text": "固定大小",
+            "value": "size"
+          },
+          {
+            "text": "一行个数",
+            "value": "fix"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "一行个数",
+        "bindControlAttr": "fixNum",
+        "showExpress": "@[sizeMode==='fix']",
+        "showType": "dv_number",
+        "itemClass": "float-one-row",
+        "config": {
+          "min": 1
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "单元大小",
+        "bindControlAttr": "size",
+        "showExpress": "@[sizeMode==='size']",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "行高",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "bindControlAttr": "rowHeight",
+        "inCommonUse": true
+      },
+      {
+        "text": "组件内边距",
+        "showType": "dv_margins",
+        "bindControlAttr": "innerPadding",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

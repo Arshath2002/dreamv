@@ -1,0 +1,16 @@
+.dv-export-wrap {
+  display: flex;
+  align-items: center;
+
+  .export-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .dv-export-text {
+    margin: 0 5px;
+    vertical-align: middle;
+  }
+}

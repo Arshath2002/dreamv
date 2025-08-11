@@ -1,0 +1,114 @@
+.ds-designer-property {
+  .dv-des-slider {
+    flex: 1;
+    &.el-slider {
+      .el-slider__bar,
+      .el-slider__runway {
+        height: 4px;
+        border-radius: 2px;
+      }
+      .el-slider__runway {
+        margin: 12px 0;
+      }
+      .el-slider__button {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  .property-dv-icon-radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .property-dv-icon-radio__wrapper {
+      display: flex;
+      background-color: var(--dv-des-btn-wrapper-bg);
+      border: 1px solid var(--dv-des-border-color-2);
+
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+    &__item {
+      flex-grow: 0;
+      padding: 2px 18px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid transparent;
+      color: var(--dv-des-text-color);
+      .el-divider {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        background-color: var(--dv-des-deep-color);
+      }
+      &.is-active {
+        border-radius: 4px;
+        background-color: var(--dv-des-btn-active-bg);
+        // @include background-theme("normal");
+        @include border-theme(1px, solid, var(--dv-des-border-color-2));
+        color: #fff;
+        .el-divider {
+          background-color: transparent;
+        }
+      }
+      > i {
+        display: inline-block;
+      }
+      &.small {
+        padding: 0 15px;
+      }
+    }
+    &__desc {
+      font-size: 12px;
+      color: var(--dv-des-text-color);
+      text-align: center;
+      line-height: 16px;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+  }
+  .property-ratio-tools-item {
+    display: flex;
+    flex: none;
+    align-items: center;
+    border: 1px solid var(--dv-des-input-border);
+    background-color: var(--dv-des-input-bg);
+
+    border-radius: 4px;
+    @include font_size(13);
+    color: var(--dv-des-text-color);
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    * {
+      box-sizing: border-box;
+    }
+    .el-dropdown {
+      font-size: inherit;
+      vertical-align: middle;
+    }
+    span.bt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 4px 0 2px;
+      padding: 2px 5px 2px 5px;
+      min-width: 36px;
+      cursor: pointer;
+      color: var(--dv-des-text-color);
+    }
+  }
+  .margin-left-1 {
+    margin-left: 30px;
+  }
+  .margin-left-2 {
+    margin-left: 60px;
+  }
+  .margin-left-3 {
+    margin-left: 90px;
+  }
+}

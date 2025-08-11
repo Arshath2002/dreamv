@@ -1,0 +1,60 @@
+.dsf_period_picker {
+  width: 292px;
+  height: 40xp;
+  position: relative;
+  margin: 0 auto;
+  .el-input {
+    width: 292px;
+    height: 40px;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.08);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    .el-input__prefix {
+      .el-input__icon {
+        display: none;
+      }
+      &::after {
+        content: "时间：";
+        font-family: "MicrosoftYaHei";
+        @include font-size(16);
+        color: #606266;
+        margin-left: 26px;
+        line-height: 40px;
+      }
+    }
+    .el-input__suffix {
+      display: none;
+    }
+    .el-input__inner {
+      border: none !important;
+      font-family: "MicrosoftYaHei";
+      text-align: center;
+      @include font-size(16);
+      color: #1167F1;
+      letter-spacing: 0;
+    }
+  }
+  svg,
+  .svgShade {
+    position: absolute;
+    top: 13px;
+    right: 50px;
+    width: 14px;
+    height: 14px;
+    &.svgShade {
+      z-index: 99;
+      cursor: pointer;
+    }
+  }
+  .all {
+    position: absolute;
+    top: 0;
+    right: calc((100% - 40px) / 2);
+    @include font-size(16);
+    color: #1167F1;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+}

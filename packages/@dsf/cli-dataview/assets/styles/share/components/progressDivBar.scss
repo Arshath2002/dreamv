@@ -1,0 +1,120 @@
+.dv-general-bar-progress {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+
+  .div-progress {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+    .percent-wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .outer-percent {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 50;
+      }
+
+      @keyframes innerWidth {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: var(--inner-width);
+        }
+      }
+
+      @keyframes shuLeft {
+        0% {
+          left: 0;
+        }
+
+        100% {
+          left: var(--shu-left);
+        }
+      }
+
+      .inner-percent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 100;
+        width: 0;
+      }
+
+      .animationWidth {
+        animation-name: innerWidth;
+        animation-duration: var(--animation-duration, 3s);
+      }
+
+      .progress-common-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 200;
+
+        &.line {
+          background-color: #fff;
+        }
+
+        &.point {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          top: 50%;
+          transform: translate(0, -50%);
+
+          @keyframes ripple {
+            0% {
+              transform: scale(0.5);
+              opacity: 0.5;
+            }
+
+            50% {
+              transform: scale(1);
+              opacity: 0.5;
+            }
+
+            80% {
+              opacity: 1;
+            }
+
+            100% {
+              opacity: 0.5;
+            }
+          }
+
+          .breathe-effect {
+            animation: ripple 2s infinite;
+          }
+
+          .point-inner {
+            border-radius: 50%;
+
+          }
+        }
+      }
+
+      .animationLeft {
+        animation-name: shuLeft;
+        animation-duration: var(--animation-duration, 3s);
+      }
+    }
+  }
+
+  .svg-bar-progress {
+    width: 100%;
+    height: 100%;
+  }
+}

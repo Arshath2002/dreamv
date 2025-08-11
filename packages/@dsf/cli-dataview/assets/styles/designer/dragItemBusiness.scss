@@ -1,0 +1,39 @@
+.ds-designer .ds-tool-itemBusiness {
+  width: 120px;
+  border: none;
+  .business_no_img {
+    width: 102px;
+    height: 70px;
+    background: url('~_dataview/assets/styles/themes/img/file-read-18688.png') no-repeat;
+    background-size: 100%;
+  }
+}
+
+.ds-tool-itemBusiness-height {
+  min-height: 100px;
+  min-width: 112px;
+
+  .itemBusiness {
+    position: relative;
+    height: 70px;
+    .sortImg {
+      max-width: 102px;
+      max-height: 70px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -50px;
+      transform: translateY(-50%);
+      background-size: 100% !important;
+    }
+  }
+
+  .itemBusinessName {
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    word-break: break-all;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}

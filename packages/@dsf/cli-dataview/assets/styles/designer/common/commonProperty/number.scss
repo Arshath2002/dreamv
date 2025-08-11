@@ -1,0 +1,125 @@
+.data-view-designer-frame {
+  .data-view-dsf-number {
+    width: 80px;
+    &.min {
+      width: 60px;
+      .el-input {
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+      }
+  
+      .el-input__inner {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .el-input {
+      width: 80px;
+      height: 32px;
+      line-height: 32px;
+    }
+  
+    .el-input__inner {
+      width: 80px;
+      text-align: left;
+    }
+  }
+ 
+}
+.data-view-dsf-number {
+  width: 120px;
+  height: 32px;
+  position: relative;
+  &.min {
+    width: 120px;
+    .el-input {
+      width: 100%;
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .el-input__inner {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .dsf-number__increase,
+  .dsf-number__decrease {
+    position: absolute;
+    right: 1px;
+    left: auto;
+    z-index: 999;
+    color: #999999;
+    height: 16px;
+    line-height: 16px;
+    width: 20px;
+    cursor: pointer;
+  }
+  .dsf-number__increase:hover ~ .el-input .el-input_inner {
+    outline: none;
+    border: 1px solid;
+    @include border-color-theme("normal");
+  }
+  .dsf-number__decrease:hover ~ .el-input .el-input_inner {
+    outline: none;
+    border: 1px solid;
+    @include border-color-theme("normal");
+  }
+  .dsf-number__decrease {
+    i {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 4px;
+    }
+  }
+  .dsf-number__increase {
+    bottom: 1px;
+    top: auto;
+    i {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 4px;
+    }
+  }
+  .el-input {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .el-input__inner {
+    width: 100%;
+    text-align: left;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .el-input__inner:hover,
+  .el-input__inner:focus {
+    outline: none;
+    border: 1px solid;
+    @include border-color-theme("normal");
+  }
+
+  .el-input__suffix {
+    height: 32px;
+    line-height: 32px;
+  }
+}
+.dsf-number-focus {
+  .el-input__inner {
+    outline: none;
+    border: 1px solid;
+    @include border-color-theme("normal");
+  }
+}

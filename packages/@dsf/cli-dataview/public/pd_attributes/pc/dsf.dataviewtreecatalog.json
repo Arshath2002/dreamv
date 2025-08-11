@@ -1,0 +1,323 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "外边距",
+        "showType": "dv_margins",
+        "bindControlAttr": "margin",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "showType": "dv_dialog",
+        "dialogType": "relation",
+        "bindControlAttr": "mapRelations",
+        "inCommonUse": true,
+        "config": {
+          "title": "设置",
+          "content": "DesDVMapRelationSetting",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "树结构数据",
+        "bindControlAttr": "isTreeData",
+        "showType": "dv_switch",
+        "inCommonUse": true,
+        "desc": "后端返回的结构为树形结构那么为true,则以树的方式展示反之则平铺;后端返回的不是树形结构,为false,如果能构造成树形结构则展示为树形,不能构成平铺,当为true的时候则平铺"
+      },
+      {
+        "text": "节点高度",
+        "bindControlAttr": "nodeHeight",
+        "showType": "dv_number",
+        "inCommonUse": true
+      },
+      {
+        "text": "显示复选框",
+        "bindControlAttr": "isCheckBox",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "边框颜色",
+        "bindControlAttr": "checkBoxProps.border",
+        "showExpress": "@[isCheckBox]",
+        "showType": "dv_color",
+        "spacingNumber": 1,
+        "inCommonUse": true,
+        "config": {
+          "type": "color"
+        }
+      },
+      {
+        "text": "勾选颜色",
+        "bindControlAttr": "checkBoxProps.iconColor",
+        "showExpress": "@[isCheckBox]",
+        "showType": "dv_color",
+        "spacingNumber": 1,
+        "inCommonUse": true,
+        "config": {
+          "type": "color"
+        }
+      },
+      {
+        "text": "默认展开项目",
+        "bindControlAttr": "defaultExpandedKeys",
+        "showType": "dv_text",
+        "inCommonUse": true
+      },
+      {
+        "text": "标签",
+        "showType": "dv_text_style",
+        "bindControlAttr": "labelTextStyle",
+        "config": {
+          "picker": {
+            "type": "color"
+          }
+        },
+        "inCommonUse": true
+      },
+      {
+        "showType": "dv_line",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "选中背景",
+        "inCommonUse": true
+      },
+      {
+        "text": "颜色",
+        "bindControlAttr": "selectBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "selectBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "高亮颜色",
+        "bindControlAttr": "highColor",
+        "showType": "dv_color",
+        "config": {
+          "type": "color"
+        },
+        "inCommonUse": true
+      },
+      {
+        "showType": "dv_line",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "展开图标",
+        "bindControlAttr": "extendIcon",
+        "showType": "icon",
+        "inCommonUse": true
+      },
+      {
+        "text": "展开图标样式",
+        "bindControlAttr": "extendIconStyle",
+        "showType": "dv_text_style",
+        "config": {
+          "isShowFontWeight": false,
+          "isShowItalics": false,
+          "isShowUnderline": false,
+          "isShowFontFamily": false,
+          "isMarginTop": false,
+          "picker": {
+            "type": "color"
+          }
+        },
+        "hiddenText": true,
+        "inCommonUse": true
+      },
+      {
+        "text": "目录图标",
+        "bindControlAttr": "parentIcon",
+        "showType": "icon",
+        "inCommonUse": true
+      },
+      {
+        "text": "目录图标样式",
+        "bindControlAttr": "parentIconStyle",
+        "showType": "dv_text_style",
+        "config": {
+          "isShowFontWeight": false,
+          "isShowItalics": false,
+          "isShowUnderline": false,
+          "isShowFontFamily": false,
+          "isMarginTop": false,
+          "picker": {
+            "type": "color"
+          }
+        },
+        "hiddenText": true,
+        "inCommonUse": true
+      },
+      {
+        "text": "节点图标",
+        "bindControlAttr": "childIcon",
+        "showType": "icon",
+        "inCommonUse": true
+      },
+      {
+        "text": "节点图标样式",
+        "bindControlAttr": "childIconStyle",
+        "showType": "dv_text_style",
+        "config": {
+          "isShowFontWeight": false,
+          "isShowItalics": false,
+          "isShowUnderline": false,
+          "isShowFontFamily": false,
+          "isMarginTop": false,
+          "picker": {
+            "type": "color"
+          }
+        },
+        "hiddenText": true,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1,
+          "backgroundTypes": [
+            "page"
+          ]
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+.dsf-dv-gauge-menu {
+  height: 100%;
+  .svg-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    .svg-wrapper_box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .svg-gauge-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        &-item {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+
+          &_svg_line {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          &_svg {
+            transition: 0.2s all;
+          }
+          .transition-none {
+            transition: none;
+          }
+
+          &_svg path {
+            pointer-events: all;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.ds-dv-radio-group {
+  .el-radio-button:first-child .el-radio-button__inner {
+    border-left: 1px solid var(--dv-des-input-border, #dcdfe6);
+  }
+  .el-radio-button__inner {
+    background: 1px solid var(--dv-des-input-bg, #fff);
+    border: 1px solid var(--dv-des-input-border, #dcdfe6);
+    color: var(--dv-des-text-color, #333);
+  }
+  &.ds-auto-fit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      flex-grow: 1;
+      flex-shrink: 0;
+
+      span {
+        width: 100%;
+      }
+    }
+  }
+
+  &.ds-stroke {
+    border-top: 1px solid var(--dv-des-input-border, #dbe3ef);
+    border-bottom: 1px solid var(--dv-des-input-border, #dbe3ef);
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    label {
+      &.is-active span.el-radio-button__inner {
+        color: #fff;
+        @include background-theme("normal");
+        @include outline-theme(1px, solid, "normal");
+        border-color: transparent;
+        border-radius: 4px;
+        z-index: 1;
+      }
+
+      &:last-child {
+        span.el-radio-button__inner {
+          border-right: 1px solid var(--dv-des-input-border, #dbe3ef);
+        }
+        &.is-active span.el-radio-button__inner {
+          border-right: 1px solid var(--t--normal);
+        }
+      }
+
+      span.el-radio-button__inner {
+        color: var(--dv-des-text-color);
+        border: none;
+        border-left: 1px solid var(--dv-des-input-border, #dbe3ef);
+        border-right: 1px solid transparent;
+        box-shadow: none;
+        box-sizing: border-box;
+        background-color: var(--dv-des-input-bg, #f5f7fa);
+      }
+    }
+  }
+
+  &.ds-nano {
+    height: 24px;
+
+    .el-radio-button--mini .el-radio-button__inner {
+      padding: 3px 15px;
+    }
+  }
+}

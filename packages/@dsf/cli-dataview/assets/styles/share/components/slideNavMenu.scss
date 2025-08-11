@@ -1,0 +1,52 @@
+.ds-slide-nav-menu {
+  width: auto;
+  height: 120px;
+  position: relative;
+
+  &-inner {
+    margin: auto;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: content-box;
+    user-select: none;
+  }
+
+  &.ds-designer-mode {
+    .ds-next,
+    .ds-prev {
+      min-height: 80px;
+      min-width: 60px;
+      border: 1px dashed #a7b1bd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .ds-next,
+  .ds-prev {
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ds-slide-container {
+    max-width: 100%;
+    position: relative;
+    height: 100%;
+    .ds-slide-item {
+      position: absolute;
+      top: 0;
+      opacity: 1;
+      border-radius: 5px;
+      transition:all 0.3s ease-in-out;
+      overflow: hidden;
+    }
+  }
+}

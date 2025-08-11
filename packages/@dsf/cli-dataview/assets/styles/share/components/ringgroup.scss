@@ -1,0 +1,59 @@
+.dsf-dataview-ringgroup {
+  display: flex;
+
+  .itembox {
+    display: flex;
+
+    .item {
+      width: 126px;
+      text-align: center;
+      position: relative;
+      margin-right: 48px;
+
+      .numbox {
+        height: 106px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .num {
+          width: 100%;
+          font-size: 30px;
+
+          .data-view-scroll-digital {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            .data-view-scroll-digital-inner {
+              padding: 0 !important;
+            }
+          }
+        }
+      }
+
+      .arrow {
+        display: inline-block;
+        border: 8px solid transparent;
+        margin-top: 7px;
+      }
+
+      .line {
+        position: absolute;
+        width: 111px;
+        height: 10px;
+        transform: rotate(41deg);
+        top: 56px;
+        right: -78px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

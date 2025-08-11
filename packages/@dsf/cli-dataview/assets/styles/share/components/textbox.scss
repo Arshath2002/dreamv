@@ -1,0 +1,110 @@
+.dsf-dv-input-text-box {
+  box-sizing: border-box;
+  height: 100%;
+  .confidentiality-text {
+    font-size: 22px;
+  }
+  &-wrap {
+    overflow: visible;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .align-center,
+  .align-flex-start,
+  .align-flex-end {
+    .ds-virtual-scroll-box {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .align-center {
+    .ds-virtual-scroll-box {
+      justify-content: center;
+    }
+  }
+  .align-flex-start {
+    .ds-virtual-scroll-box {
+      justify-content: flex-start;
+    }
+  }
+  .align-flex-end {
+    .ds-virtual-scroll-box {
+      justify-content: flex-end;
+    }
+  }
+}
+.dsf-dv-input-text-box-popover{
+  &.dark{
+    background-color: rgba(50,50,50,0.7);
+    border-color: #333333;
+    &[x-placement^=left]{
+      .popper__arrow{
+        border-left-color:rgba(50,50,50,0.7);
+        &::after{
+          border-left-color:rgba(50,50,50,0.7);
+        }
+      }
+    }
+    &[x-placement^=right]{
+      .popper__arrow{
+        border-right-color:rgba(50,50,50,0.7);
+        &::after{
+          border-right-color:rgba(50,50,50,0.7);
+        }
+      }
+    }
+    &[x-placement^=top]{
+      .popper__arrow{
+        border-top-color:rgba(50,50,50,0.7);
+        &::after{
+          border-top-color:rgba(50,50,50,0.7);
+        }
+      }
+    }
+    &[x-placement^=bottom]{
+      .popper__arrow{
+        border-bottom-color:rgba(50,50,50,0.7);
+        &::after{
+          border-bottom-color:rgba(50,50,50,0.7);
+        }
+      }
+    }
+  }
+  &.light{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    &[x-placement^=left]{
+      .popper__arrow{
+        border-left-color:#ffffff;
+        &::after{
+          border-left-color:#ffffff;
+        }
+      }
+    }
+    &[x-placement^=right]{
+      .popper__arrow{
+        border-right-color:#ffffff;
+        &::after{
+          border-right-color:#ffffff;
+        }
+      }
+    }
+    &[x-placement^=top]{
+      .popper__arrow{
+        border-top-color:#ffffff;
+        &::after{
+          border-top-color:#ffffff;
+        }
+      }
+    }
+    &[x-placement^=bottom]{
+      .popper__arrow{
+        border-bottom-color:#ffffff;
+        &::after{
+          border-bottom-color:#ffffff;
+        }
+      }
+    }
+  }
+  
+}

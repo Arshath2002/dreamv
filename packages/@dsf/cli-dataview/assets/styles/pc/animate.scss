@@ -1,0 +1,199 @@
+/*
+ * @Description: 以及公用背景,通用动画
+ * @Author: shenah
+ * @Date: 2024-08-08 09:46:00
+ * @LastEditors: shenah
+ * @LastEditTime: 2025-03-12 14:55:38
+ */
+.data-view-common-bg-effect {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; // 不要修改为-1要不然一些图片展示不出来
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color, inherit);
+    background-image: var(--background-image, none);
+    background-size: var(--background-size, auto auto);
+    background-repeat: var(--background-repeat, repeat);
+    background-position: var(--background-position, 0% 0%);
+    border-radius: var(--border-radius, 0);
+    animation: var(--animation, none);
+    box-sizing: border-box;
+    box-shadow: var(--data-view-box-shadow, none);
+    filter: var(--filter, none);
+    pointer-events: none;
+  }
+}
+
+.data-view-page {
+  // 动态渐变
+  @keyframes dvDynamicOpacity {
+    0%,
+    100% {
+      opacity: var(--dv-dynamic-opacity-range-1, 0.5);
+    }
+
+    50% {
+      opacity: var(--dv-dynamic-opacity-range-2, 1);
+    }
+  }
+
+  //上下跳动
+  @keyframes dvJumpUpDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(var(--dv-jump-up-down-jump-height, -15px));
+    }
+  }
+
+  // 顺时针旋转
+  @keyframes dvClockwiseRotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  // 逆时针旋转
+  @keyframes dvNotClockwiseRotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg);
+      /* 逆时针旋转360度 */
+    }
+  }
+}
+
+// 公用大屏弹窗
+.data-view-common-pop-dialog-animate {
+  overflow: hidden;
+  $animation-duration: 0.3s;
+  $animation-timing: 1ms;
+
+  // Mixins for common animation properties
+  @mixin common-animation($a, $b) {
+    animation-name: #{$a}-#{$b};
+    animation-duration: $animation-duration;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+
+  @mixin direction-animation($a, $b) {
+    @include common-animation($a, $b);
+  }
+
+  $directions: (left-to-right, left), (right-to-left, right),
+    (top-to-bottom, top), (bottom-to-top, bottom);
+
+  @keyframes left-enter {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes right-enter {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes top-enter {
+    from {
+      transform: translateY(-100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bottom-enter {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  // Keyframes for exiting animations
+  @keyframes left-exit {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes right-exit {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes top-exit {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes bottom-exit {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  @each $a, $b in $directions {
+    &.#{$a} {
+      @include direction-animation($b, enter);
+    }
+  }
+
+  &.data-view-common-pop-dialog-animate-close {
+    @each $a, $b in $directions {
+      &.#{$a} {
+        @include direction-animation($b, exit);
+      }
+    }
+  }
+}

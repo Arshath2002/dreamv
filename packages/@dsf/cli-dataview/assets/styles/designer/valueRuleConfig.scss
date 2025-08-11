@@ -1,0 +1,35 @@
+.data-view-value-rule-config {
+  .header-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .color-select {
+    .el-color-picker__trigger {
+      width: 120px;
+    }
+  }
+  .icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .show-icon {
+      position: relative;
+      font-size: 18px;
+      width: 40px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 6px;
+      .close {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #409eff;
+        font-size: 14px;
+      }
+    }
+  }
+}

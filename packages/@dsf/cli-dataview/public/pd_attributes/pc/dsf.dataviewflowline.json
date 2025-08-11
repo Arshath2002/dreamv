@@ -1,0 +1,163 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "宽度",
+        "bindControlAttr": "width",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高度",
+        "bindControlAttr": "height",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row ml20",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "折线数量",
+        "bindControlAttr": "",
+        "showType": "",
+        "inCommonUse": true
+      },
+      {
+        "text": "上",
+        "bindControlAttr": "topQuantity",
+        "showType": "dv_number",
+        "itemClass": "float-one-row ml40",
+        "config": {
+          "min": 0
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "下",
+        "bindControlAttr": "bottomQuantity",
+        "showType": "dv_number",
+        "itemClass": "float-one-row ml20",
+        "config": {
+          "min": 0
+        },
+        "inCommonUse": true
+      },
+
+      {
+        "text": "折线粗细",
+        "bindControlAttr": "strokeWidth",
+        "showType": "dv_number",
+        "config": {
+          "min": 1
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "节点宽度",
+        "bindControlAttr": "childrenLength",
+        "showType": "dv_number",
+        "config": {
+          "min": 0,
+          "unit": "%"
+        },
+        "inCommonUse": true
+      },
+
+      {
+        "text": "流线长度",
+        "bindControlAttr": "flowLength",
+        "showType": "dv_number",
+        "config": {
+          "min": 1
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "间隔长度",
+        "bindControlAttr": "dashedLength",
+        "showType": "dv_number",
+        "config": {
+          "min": 1
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "动画时长",
+        "bindControlAttr": "duration",
+        "showType": "dv_number",
+        "config": {
+          "min": 1
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "流线颜色",
+        "bindControlAttr": "dashedLineColor",
+        "showType": "dv_color",
+        "config": {
+          "type": "color"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "背景颜色",
+        "bindControlAttr": "lineColor",
+        "showType": "dv_color",
+        "config": {
+          "type": "color"
+        },
+        "inCommonUse": true
+      },
+
+      {
+        "text": "是否反向",
+        "bindControlAttr": "reverse",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

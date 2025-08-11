@@ -1,0 +1,25 @@
+@import "~_platform/assets/styles/common/themes.scss";
+
+$projectThemes: (
+  // demo-theme: (
+  //一级色
+  // main: #189a5a,
+  // //常规色
+  // normal: #4daf7b,
+  // //次要按钮鼠标背景色
+  // button_plain_bgcolor: #fff,
+  // //次要按钮鼠标边框色
+  // button_plain_bordercolor: #c9c9c9,
+  // //次要按钮鼠标悬浮颜色
+  // button_plain_fontcolor: #5f5f5f,
+  // // 导航激活背景色
+  // nav_active_bgColor: #4daf7b,
+  // //pc端底部默认颜色
+  // bottom_color: #fff,
+  // // 移动端底部默认颜色
+  // mobile_bottom_color: #fff,
+  // // 移动端底部边框线
+  // mobile_buttom_border: 1px none #fff
+  // ),
+);
+$themes:map-merge($themes,$projectThemes);

@@ -1,0 +1,165 @@
+.dsf-dv-carousel-panel {
+  width: 100%;
+  height: 100%;
+
+  &-wrap {
+    width: 100%;
+    height: 100%;
+
+    // 水平
+    &.horizontal {
+      display: flex;
+      align-items: center;
+
+      .carousel-wrapper {
+        width: 0;
+        flex: 1;
+        height: 100%;
+
+        .swiper-container__wrapper {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .pre-slider {
+            position: absolute;
+            height: 100%;
+            top: 0;
+          }
+
+          .swiper-slider {
+            height: 100%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+          }
+        }
+
+        .carousel-indicates {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 10px;
+          z-index: 100;
+          display: flex;
+
+          .indicate-dot {
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            background-color: var(--custom-indicate-not-select-color, rgb(153, 169, 191, 0.3));
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--custom-indicate-select-color, rgba(255, 255, 255, 0.5));
+            }
+
+            &.active {
+              background-color: var(--custom-indicate-select-color, rgba(255, 255, 255, 0.5));
+            }
+          }
+        }
+      }
+    }
+
+    &.vertical {
+      flex-direction: column;
+
+      .carousel-wrapper {
+        width: 100%;
+        overflow: hidden;
+
+        .swiper-container__wrapper {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .pre-slider {
+            position: absolute;
+            width: 100%;
+            left: 0;
+          }
+
+          .swiper-slider {
+            width: 100%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+          }
+        }
+
+        .carousel-indicates {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 10px;
+          z-index: 100;
+
+          .indicate-dot {
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            background-color: var(--custom-indicate-not-select-color, rgb(153, 169, 191, 0.3));
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--custom-indicate-select-color, rgba(255, 255, 255, 0.5));
+            }
+
+            &.active {
+              background-color: var(--custom-indicate-select-color, rgba(255, 255, 255, 0.5));
+            }
+          }
+        }
+      }
+    }
+
+    .carousel-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      >div {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .carousel-wrapper {
+      position: relative;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .swiper-container__wrapper_item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .empty-slot {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          text-align: center;
+          transform: translate(-50%, -50%);
+
+        }
+      }
+    }
+  }
+}
+
+.ds-designer .dsf-dv-carousel-panel .swiper-container__wrapper_item {
+  background-color: #c1c1c1;
+  border: 1px dashed #a7b1bd;
+  font-size: 20px;
+  box-sizing: border-box;
+}

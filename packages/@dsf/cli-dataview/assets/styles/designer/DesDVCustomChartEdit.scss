@@ -1,0 +1,58 @@
+.des-dv-custom-chart-edit {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__header {
+    display: flex;
+    .ds-button {
+      border-radius: 0;
+    }
+    > span {
+      width: 40px;
+      height: 100%;
+      line-height: 32px;
+      cursor: pointer;
+      text-align: center;
+      &:hover {
+        @include font-theme("normal");
+      }
+    }
+  }
+  &__monaco {
+    flex: 1;
+  }
+  .btn-item {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      @include font-theme("normal");
+    }
+  }
+}
+.dsf-dv-document-popper {
+  padding: 10px;
+  box-sizing: border-box;
+  .link-list {
+    .link-item {
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .text-link-wrap {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .text-link-item {
+          margin: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+}

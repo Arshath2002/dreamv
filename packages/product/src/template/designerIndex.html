@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="notranslate" translate="no" style="font-size:50px;">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="google" value="notranslate"/> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <%if(process.env.NODE_ENV=='production'){%>
+    <link rel="icon" href="<%= BASE_URL %>favicon1.ico">
+    <%}else{%>
+    <link rel="icon" href="data:;base64,=">
+    <%}%>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <%if(htmlWebpackPlugin.options.includeCss){
+      htmlWebpackPlugin.options.includeCss.forEach((el)=>{%>
+    <%if(el){%>
+    <link href="<%=el%>" rel="stylesheet">
+    <%}%>
+    <%})}%>
+    <!--后端插入css预留 start-->
+    <!--后端插入css预留 end-->
+  </head>
+  
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <%if(htmlWebpackPlugin.options.includeScripts){
+      htmlWebpackPlugin.options.includeScripts.forEach((el)=>{%>
+    <%if(el){%>
+    <script type="text/javascript" src="<%=el%>"></script>
+    <%}%>
+    <%})}%>
+    <!--后端插入js预留 start-->
+    <!--后端插入js预留 end-->
+  </body>
+  
+
+</html>

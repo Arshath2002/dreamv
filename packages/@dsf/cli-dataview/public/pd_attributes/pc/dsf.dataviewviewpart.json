@@ -1,0 +1,139 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "是否拉伸",
+        "bindControlAttr": "showModel",
+        "showType": "dv_radio_group",
+        "dictionary": [
+          { "text": "自动", "value": "none" },
+          { "text": "拉伸", "value": "full" }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "路径",
+        "bindControlAttr": "path",
+        "showType": "dv_url",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "isEffect": false,
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      
+      {
+        "text": "是否可见",
+        "showType": "dv_switch",
+        "bindControlAttr": "visible"
+  
+      },
+      {
+        "text": "强制隐藏(不受visible影响)",
+        "bindControlAttr": "forceHidden",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "强制只读",
+        "showType": "dv_switch",
+        "bindControlAttr": "readOnly",
+        "desc": "内嵌为表单时有效"
+      },
+      {
+        "text": "是否独立",
+        "showType": "dv_switch",
+        "bindControlAttr": "independent",
+        "desc": "独立视图用于表单保存时是否会将保存后的id更到到浏览器的url中"
+      },
+      {
+        "text": "路径变化重载",
+        "bindControlAttr": "forceUpdate",
+        "showType": "dv_switch",
+        "desc": "设置为否时会递归调用组件的reset函数和reloadData函数，所以能否正常更新取决于组件是否支持reset和reloadData"
+      },
+
+      {
+        "text": "渲染时机",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "defer",
+        "desc": "<p>按整数延迟加载组件<p>",
+        "itemClass": "property-item-radio-group_minute‌",
+        "dictionary": [
+          {
+            "text": "不渲染",
+            "value": "null"
+          },
+          {
+            "text": "初始化后",
+            "value": "inited"
+          },
+          {
+            "text": "数据加载后",
+            "value": "dataLoaded"
+          }
+        ]
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      }
+    ]
+  }
+]

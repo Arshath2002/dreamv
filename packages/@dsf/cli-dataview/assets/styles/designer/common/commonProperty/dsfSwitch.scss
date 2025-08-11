@@ -1,0 +1,31 @@
+.des-dv-switch {
+  height: 16px;
+  line-height: 16px;
+  width: 26px;
+
+  .el-switch__core {
+    height: 16px;
+    line-height: 16px;
+    width: 26px !important;
+    flex: none;
+  }
+  .el-switch__core:after {
+    width: 10px;
+    height: 10px;
+    left: 0;
+    transform: translateY(-50%);
+    margin-top: 0px;
+  }
+  &.el-switch.is-checked {
+    .el-switch__core:after {
+      margin-left: 14px;
+      left: 0;
+    }
+  }
+  &.el-switch.is-checked {
+    .el-switch__core::after {
+      margin-left: 14px;
+      left: 0;
+    }
+  }
+}

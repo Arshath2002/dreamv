@@ -1,0 +1,28 @@
+.dsf-index-key-trades-style {
+  width: 100%;
+  .dy-text-list {
+    width: 100%;
+    .dy-text-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+      &.active {
+        background-color: var(--dv-des-table-active-bg-color,#f0f7ff);
+      }
+      &:hover {
+        background-color: var(--dv-des-table-hover-bg-color,#f5f7fa);
+      }
+      .text {
+        color: var(--dv-des-table-text-color-1,#333333);
+        font-size: 14px;
+      }
+      .desc {
+        font-size: 14px;
+        color: var(--dv-des-table-text-color-2,#999999);
+        margin-left: 4px;
+      }
+    }
+    margin-bottom: 18px;
+  }
+}

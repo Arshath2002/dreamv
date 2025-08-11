@@ -1,0 +1,27 @@
+{
+  "prod": {
+    "pc": {
+      "css": ["modules/wf/css/dsf-dataview.common.css", "modules/dataview/css/dsf-dataview.pc.css"],
+      "js": ["modules/dataview/js/dsf-dataview.common.js", "modules/dataview/js/dsf-dataview.pc.js"]
+    },
+    "mobile": {
+      "css": ["modules/wf/css/dsf-dataview.common.css", "modules/wf/css/dsf-dataview.mobile.css"],
+      "js": ["modules/wf/css/dsf-dataview.common.js", "modules/wf/css/dsf-dataview.mobile.js"]
+    },
+    "designer": {
+      "css": ["modules/dataview/css/dsf-dataview.pc.css", "modules/dataview/css/dsf-dataview.designer.css"],
+      "js": ["modules/dataview/js/dsf-dataview.common.js", "modules/dataview/js/dsf-dataview.pc.js", "modules/dataview/js/dsf-dataview.designer.js"]
+    }
+  },
+  "dev": {
+    "pc": {
+      "js": ["index.common.js", "index.pc.js"]
+    },
+    "mobile": {
+      "js": ["index.common.js", "index.mobile.js"]
+    },
+    "designer": {
+      "js": ["index.common.js", "index.pc.js", "index.mobile.js", "index.designer.js"]
+    }
+  }
+}

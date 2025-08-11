@@ -1,0 +1,43 @@
+.data-view-more-ring-color {
+  .more-ring-color-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .more-ring-color-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .name {
+        margin-top: 10px;
+      }
+      .common-circle {
+        border-radius: 50%;
+        border-style: solid;
+        &.one-circle {
+          position: relative;
+        }
+      }
+    }
+  }
+  // 创建圆环
+  .data-view-create-svg-ring {
+    .common-circle {
+      fill: none;
+    }
+    .common-progress {
+      fill: none; //无内部颜色
+      transition: stroke-dashoffset 0.6s ease 0s;
+      &.show-progress {
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotate(180deg);
+      }
+    }
+    .progress-circle-text {
+      color: #333;
+    }
+  }
+}

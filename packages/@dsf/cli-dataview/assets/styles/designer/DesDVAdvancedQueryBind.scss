@@ -1,0 +1,26 @@
+.des-dv-advanced-query-bind {
+  .conditions-list {
+    padding: 20px;
+    .condition-item {
+      display: flex;
+      padding-bottom: 20px;
+      .el-checkbox {
+        margin-top: 5px;
+      }
+      .condition-item-info {
+        margin-left: 10px;
+        .field {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          .el-input {
+            width: 150px;
+          }
+          .edit-icon {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.dsf-more-mode-color-icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: -8px;
+  .color-icon-item {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 8px 0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .del-icon {
+    position: absolute;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 100;
+    color: var(--dv-des-text-color);
+    &:hover {
+      @include font-theme("normal");
+    }
+  }
+}
+
+// 颜色组单独
+.dsf-more-mode-color {
+  .ds-color-picker {
+    width: auto;
+  }
+  .color-icon-item {
+    border: 1px solid var(--dv-des-input-border);
+    .del-icon {
+      top: -14px;
+      right: -6px;
+      color: var(--dv-des-text-color);
+    }
+    .new-el-color {
+      width: 24px;
+      height: 24px;
+      opacity: 0;
+      .el-color-picker__trigger {
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+}
+
+// 图标组单独
+.dsf-more-icon {
+  .color-icon-item {
+    .del-icon {
+      top: -8px;
+      right: -8px;
+    }
+    .select-icon {
+      &:hover {
+        @include font-theme("normal");
+      }
+      font-size: 18px;
+    }
+  }
+}

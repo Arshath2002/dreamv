@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "dv-iconfont"; /* Project id 4800372 */
+  src: url('iconfont.woff2?t=1753169338248') format('woff2'),
+       url('iconfont.woff?t=1753169338248') format('woff'),
+       url('iconfont.svg?t=1753169338248#dv-iconfont') format('svg');
+}
+
+.dv-iconfont {
+  font-family: "dv-iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dv-icon-tiaosepan:before {
+  content: "\e784";
+}
+
+.dv-icon-seqia:before {
+  content: "\e610";
+}
+
+.dv-icon-wutianchongyanse:before {
+  content: "\e715";
+}
+
+.dv-icon-hengxiangjunyunfenbu:before {
+  content: "\e68f";
+}
+
+.dv-icon-zongxiangjunyunfenbu:before {
+  content: "\e693";
+}
+
+.dv-icon-shandian:before {
+  content: "\e61b";
+}
+
+.dv-icon-bim_donghua:before {
+  content: "\e6ef";
+}
+
+.dv-icon-a-5:before {
+  content: "\e90b";
+}
+
+.dv-icon-suozi:before {
+  content: "\e739";
+}
+
+.dv-icon-suo:before {
+  content: "\e6a6";
+}
+
+.dv-icon-auxiliaryLine:before {
+  content: "\e6cf";
+}
+
+.dv-icon-auxiliaryTool:before {
+  content: "\e6e2";
+}
+
+.dv-icon-equipment-pad:before {
+  content: "\e6e3";
+}
+
+.dv-icon-controlGroup:before {
+  content: "\e6d0";
+}
+
+.dv-icon-equipment-large:before {
+  content: "\e6e1";
+}
+
+.dv-icon-fullScreen:before {
+  content: "\e6de";
+}
+
+.dv-icon-largeScreen:before {
+  content: "\e6e0";
+}
+
+.dv-icon-module:before {
+  content: "\e6df";
+}
+
+.dv-icon-equipment-phone:before {
+  content: "\e6db";
+}
+
+.dv-icon-scale:before {
+  content: "\e6dd";
+}
+
+.dv-icon-equipment-pc:before {
+  content: "\e6d1";
+}
+
+.dv-icon-preview:before {
+  content: "\e6dc";
+}
+
+.dv-icon-templateSelection:before {
+  content: "\e6da";
+}
+
+.dv-icon-self-adaptation3:before {
+  content: "\e6d2";
+}
+
+.dv-icon-secondaryDevelopment:before {
+  content: "\e6d8";
+}
+
+.dv-icon-self-adaptation2:before {
+  content: "\e6d9";
+}
+
+.dv-icon-styleSwitching:before {
+  content: "\e6d7";
+}
+
+.dv-icon-self-adaptation4:before {
+  content: "\e6d6";
+}
+
+.dv-icon-self-adaptation1:before {
+  content: "\e6d5";
+}
+
+.dv-icon-outline:before {
+  content: "\e6d4";
+}
+
+.dv-icon-zoom:before {
+  content: "\e6d3";
+}
+
+.dv-icon-self-adaptation41:before {
+  content: "\e6e4";
+}
+
+.dv-icon-shangxiajuzhongduiqi:before {
+  content: "\e6ee";
+}
+
+.dv-icon-diduiqi:before {
+  content: "\e6ec";
+}
+
+.dv-icon-chuizhifenbu:before {
+  content: "\e6eb";
+}
+
+.dv-icon-dingduiqi:before {
+  content: "\e6ed";
+}
+
+.dv-icon-shangxiazuoyoujuzhongduiqi:before {
+  content: "\e6e7";
+}
+
+.dv-icon-zuhe:before {
+  content: "\e6e9";
+}
+
+.dv-icon-shuipingfenbu:before {
+  content: "\e6ea";
+}
+
+.dv-icon-zuoduiqi:before {
+  content: "\e6e8";
+}
+
+.dv-icon-youduiqi:before {
+  content: "\e6e6";
+}
+
+.dv-icon-zuoyoujuzhongduiqi:before {
+  content: "\e6e5";
+}
+

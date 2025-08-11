@@ -1,0 +1,278 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "内边距",
+              "bindControlAttr": "padding"
+            },
+            {
+              "text": "外边距",
+              "bindControlAttr": "margin"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段设置",
+        "showType": "dv_dialog",
+        "dialogType":"relation",
+        "bindControlAttr": "mapRelations",
+        "config": {
+          "title": "设置",
+          "content": "DesDVMapRelationSetting",
+          "width": "1100px",
+          "height": "60vh",
+          "buttonText": "设置"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "值格式",
+        "bindControlAttr": "valueFormat",
+        "showType": "dv_text",
+        "inCommonUse": true
+      },
+      {
+        "text": "角度",
+        "bindControlAttr": "angle",
+        "showType": "dv_number",
+        "inCommonUse": true,
+        "config": {
+          "min": 10
+        }
+      },
+      {
+        "text": "间距",
+        "bindControlAttr": "config.distance",
+        "showType": "dv_number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0
+        }
+      },
+      {
+        "text": "项目颜色",
+        "bindControlAttr": "config.itemColorArr",
+        "showType": "dv_more_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "项目圆的颜色",
+        "bindControlAttr": "config.itemCircleColorArr",
+        "showType": "dv_more_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "内容",
+        "showType": "dv_text_style",
+        "bindControlAttr": "config.contentTextConfig",
+        "inCommonUse": true
+      },
+      {
+        "text": "线颜色",
+        "showType": "dv_color",
+        "bindControlAttr": "config.textLineColor",
+        "inCommonUse": true,
+        "config": {
+          "type": "color"
+        }
+      },
+      {
+        "text": "图例",
+        "showType": "dv_switch",
+        "bindControlAttr": "config.isShowLegend",
+        "inCommonUse": true
+      },
+      {
+        "text": "位置",
+        "showType": "dv_text_align",
+        "bindControlAttr": "config.legendPosition",
+        "showExpress": "@[config.isShowLegend === true]",
+        "config": {
+          "isShowVAlign": false,
+          "isShowHAlign": false,
+          "isShowDirection": true
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "朝向",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "config.legendDirection",
+        "showExpress": "@[config.isShowLegend === true]",
+        "dictionary": [
+          {
+            "text": "水平",
+            "value": "row"
+          },
+          {
+            "text": "垂直",
+            "value": "column"
+          }
+        ],
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "水平位置",
+        "showType": "dv_text_align",
+        "showExpress": "@[config.legendDirection === 'row' && config.isShowLegend === true]",
+        "bindControlAttr": "config.legendDirectionH",
+        "config": {
+          "isShowVAlign": false,
+          "hMapData": [
+            {
+              "mapName": "flex-start",
+              "mapKey": "left"
+            },
+            {
+              "mapName": "center",
+              "mapKey": "center"
+            },
+            {
+              "mapName": "flex-end",
+              "mapKey": "right"
+            }
+          ]
+        },
+        "spacingNumber": 3,
+        "inCommonUse": true
+      },
+      {
+        "text": "垂直位置",
+        "showType": "dv_text_align",
+        "showExpress": "@[config.legendDirection === 'column' && config.isShowLegend === true]",
+        "bindControlAttr": "config.legendDirectionV",
+        "config": {
+          "isShowHAlign": false,
+          "vMapData": [
+            {
+              "mapName": "flex-start",
+              "mapKey": "top"
+            },
+            {
+              "mapName": "center",
+              "mapKey": "middle"
+            },
+            {
+              "mapName": "flex-end",
+              "mapKey": "bottom"
+            }
+          ]
+        },
+        "spacingNumber": 3,
+        "inCommonUse": true
+      },
+      {
+        "text": "文字",
+        "showType": "dv_text_style",
+        "showExpress": "@[config.isShowLegend === true]",
+        "bindControlAttr": "config.legendTextConfig",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "showExpress":"@[isRunningDataViewPage]",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "showExpress":"@[isRunningDataViewPage]",
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

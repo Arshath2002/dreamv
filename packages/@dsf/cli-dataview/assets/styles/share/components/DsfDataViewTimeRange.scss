@@ -1,0 +1,74 @@
+.dsf-dv-time-range {
+  width: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  .bar-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &.bar-align-left {
+      justify-content: flex-start;
+    }
+
+    &.bar-align-center {
+      justify-content: center;
+      padding: 0;
+    }
+
+    &.bar-align-right {
+      justify-content: flex-end;
+      padding: 0;
+    }
+    .name-left {
+      flex-shrink: 0;
+      margin-right: 5px;
+    }
+    .btn-item {
+      font-size: 14px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    .select-box {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+
+      .el-input__inner,
+      .el-range-input {
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      .el-input::-webkit-scrollbar-corner {
+        background-color: transparent !important;
+      }
+
+      .el-input {
+        .el-input__prefix {
+          right: 0;
+          width: 25px;
+          left: auto !important;
+        }
+      }
+
+      .el-date-editor--daterange,
+      .el-date-editor--monthrange {
+        .el-icon-arrow-down {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          height: 100%;
+          transform: translateY(-46%);
+        }
+
+        .el-range-separator {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.ds-video-upload {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    font-size: 10px;
+    cursor: pointer;
+
+    .add-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .del-icon {
+        position: absolute;
+        top: -16px;
+        right: -10px;
+        font-size: 16px;
+        cursor: pointer;
+        z-index: 100;
+
+        &:hover {
+            color: #409eff;
+        }
+    }
+
+    &:hover {
+        border-color: var(--t--normal);
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}

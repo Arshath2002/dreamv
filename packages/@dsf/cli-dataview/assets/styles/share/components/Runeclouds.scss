@@ -1,0 +1,12 @@
+.dsf-dv-rune-clouds {
+  height: 100%;
+  width: 100%;
+  &-data {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .canvas-box {
+      position: absolute;
+    }
+  }
+} 

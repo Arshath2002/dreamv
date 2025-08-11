@@ -1,0 +1,326 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "bindControlAttr": "chart",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "dialogType": "relation",
+        "config": {
+          "content": "DesDVPolarRelation",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "图例",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_chart_legend",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "系列类型",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_chart_polar_series",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "提示框",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_tooltip",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "坐标系样式",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_chart_polar_axis",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "动态配置",
+    "attributes": [
+      {
+        "text": "数据轮播",
+        "showType": "dv_switch",
+        "bindControlAttr": "isCycle",
+        "inCommonUse": true
+      },
+      {
+        "text": "轮播时长",
+        "showType": "dv_number",
+        "showExpress": "@[isCycle == true]",
+        "bindControlAttr": "cycleTime",
+        "spacingNumber": 1,
+        "inCommonUse": true,
+        "config": {
+          "unit": "毫秒"
+        }
+      },
+      {
+        "text": "动态递增",
+        "bindControlAttr": "timeline",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "控制循环次数",
+        "bindControlAttr": "isTimelineControlTimes",
+        "showExpress": "@[timeline == true]",
+        "showType": "dv_switch",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "循环播放",
+        "bindControlAttr": "timelineLoop",
+        "showExpress": "@[timeline == true && isTimelineControlTimes == false]",
+        "showType": "dv_switch",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "动态图表执行次数",
+        "bindControlAttr": "timelineControlTimes",
+        "showExpress": "@[timeline == true && isTimelineControlTimes == true]",
+        "showType": "dv_number",
+        "spacingNumber": 2,
+        "inCommonUse": true,
+        "config": {
+          "min": 1,
+          "unit": "次"
+        }
+      },
+      {
+        "text": "时间间隔",
+        "bindControlAttr": "timelineTimeDistance",
+        "showExpress": "@[timeline == true]",
+        "showType": "dv_number",
+        "spacingNumber": 1,
+        "inCommonUse": true,
+        "config": {
+          "min": 1,
+          "unit": "毫秒"
+        }
+      },
+      {
+        "text": "播放按钮",
+        "bindControlAttr": "timelinePlayBtn",
+        "showExpress": "@[timeline == true]",
+        "showType": "dv_switch",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "按钮大小",
+        "bindControlAttr": "timelineSize",
+        "showExpress": "@[timeline == true && timelinePlayBtn == true]",
+        "showType": "dv_number",
+        "spacingNumber": 2,
+        "inCommonUse": true,
+        "config": {
+          "min": 1,
+          "unit": "px"
+        }
+      },
+      {
+        "text": "水平对齐方式",
+        "bindControlAttr": "timelineAlign",
+        "showExpress": "@[timeline == true && timelinePlayBtn == true]",
+        "showType": "dv_text_align",
+        "config": {
+          "isShowVAlign": false
+        },
+        "spacingNumber": 2,
+        "inCommonUse": true
+      },
+      {
+        "text": "垂直对齐方式",
+        "bindControlAttr": "timelineVAlign",
+        "showExpress": "@[timeline == true && timelinePlayBtn == true]",
+        "showType": "dv_text_align",
+        "config": {
+          "isShowHAlign": false
+        },
+        "spacingNumber": 2,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "showExpress":"@[isRunningDataViewPage]",
+        "config": {
+          "title": "组件依赖事件",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "配置总览",
+        "bindControlAttr": "chart",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDVCustomChartEdit",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "切换图表",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showExpress":"@[isRunningDataViewPage]",
+        "showType": "dv_graph_change",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "showExpress":"@[isRunningDataViewPage]",
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

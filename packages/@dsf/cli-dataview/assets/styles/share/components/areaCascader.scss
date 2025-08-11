@@ -1,0 +1,79 @@
+// 级联选择框
+.data-view-area-cascader {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .inner-area-cascader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .area-label {
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+    .el-select-wrap {
+      position: relative;
+      z-index: 100;
+
+      .el-input-pro {
+        // height: inherit;
+        height: 100%;
+
+        .el-input__inner {
+          height: inherit;
+          color: var(--dv-input-text-color);
+          border-width: var(--dv-input-border-width, 1px);
+          border-style: var(--dv-input-border-style, solid);
+          border-color: var(--dv-input-border-color);
+          border-radius: var(--dv-input-border-radius);
+        }
+
+        .el-textarea__inner {
+          height: inherit;
+          display: flex;
+          align-items: center;
+        }
+
+        .el-input__suffix {
+          .el-input__icon {
+            transform: rotateZ(180deg);
+
+            &.is-reverse {
+              transform: rotateZ(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 级联下拉框
+.dataview-area-cascader-panel {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+
+  .el-autocomplete {
+    width: 100%;
+    min-width: 500px;
+    margin-bottom: 10px;
+
+    .el-select {
+      width: 80px;
+    }
+  }
+
+  .el-cascader-menu__wrap {
+    height: 240px;
+  }
+
+  .el-cascader-menu {
+    flex: auto;
+    width: 0;
+  }
+}

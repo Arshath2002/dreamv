@@ -1,0 +1,68 @@
+.des-dv-setting-advanced-query {
+  height: 100%;
+
+  &-side {
+    overflow: auto;
+    height: 100%;
+    flex: none;
+
+    .fields-list {
+      height: calc(100% - 78px);
+      margin-top: 78px;
+      box-sizing: border-box;
+      border: 1px solid #EBEEF5;
+
+      .fields-item {
+        width: 90%;
+        padding: 10px;
+        margin: 5px auto 5px auto;
+        box-sizing: border-box;
+        cursor: pointer;
+        @include border-theme(1px, solid, "normal");
+        border-radius: 2px;
+
+        p {
+          span {
+            @include font-theme("normal");
+          }
+
+          &:first-of-type {
+            margin-bottom: 5px;
+          }
+        }
+
+        &.selected {
+          @include background-theme("normal");
+          color: #FFF;
+
+          p {
+            span {
+              color: #FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 0;
+    flex: auto;
+
+    .demo-form-inline {
+      .el-input,
+      .el-select {
+        width: 180px;
+      }
+      .field-input {
+        width: 110px;
+        margin-right: 5px;
+      }
+      .op-symbol {
+        cursor: pointer;
+        margin-right: 5px;
+        @include font-theme("normal")
+      }
+    }
+  }
+}

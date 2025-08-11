@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "空底图",
+  "center": [512676.02177784906, 343826.9211548819],
+  "zoom": 15.0,
+  "metadata": {
+    "mapcenter": [505480.9556965434, 291999.3452616081],
+    "mapbounds": [
+      420101.6636251549, 252937.16907262369, 597872.1663208008,
+      432526.48071289059
+    ],
+    "indexbounds": [
+      -20037508.3427892, -20037508.3427892, 20037508.3427892, 20037508.3427892
+    ],
+    "mapscale": 0.00011076650420912885,
+    "topscale": 3.380327143205317e-9,
+    "epsgcode": 3857,
+    "init": true
+  },
+  "sprite": "zyzx://vector_darkBlue/sprites/sprite",
+  "glyphs": "zyzx://vector_darkBlue/fonts/{fontstack}/{range}.pbf",
+  "sources": {},
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(255,255,255,1)"
+      }
+    }
+  ]
+}

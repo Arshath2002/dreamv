@@ -1,0 +1,97 @@
+.dv-three-map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @import "./threeVisualWrap.scss";
+  .dv-three-tooltip {
+    position: absolute;
+    display: none;
+    z-index: 1000;
+  }
+
+  .dv-three-map-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .three-point-tag {
+      position: relative;
+      .three-label-name {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: max-content;
+        box-sizing: border-box;
+      }
+    }
+    .three-prism-tag {
+      .three-label-name {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        width: max-content;
+        box-sizing: border-box;
+        transform: translate(-50%, -100%);
+      }
+      .three-prism-perceive {
+        perspective: 1000px;
+        transform: translateY(-50%);
+        .prism {
+          position: relative;
+          transform-style: preserve-3d;
+          transform: rotateX(-20deg) rotateY(-30deg);
+          > div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 128, 255, 0.7);
+          }
+        }
+      }
+      .three-plat-perceive {
+        transform: translateY(-50%);
+      }
+      .three-cylinder-perceive {
+        position: relative;
+        transform: translateY(-50%);
+        > div {
+          position: absolute;
+          left: 0;
+          border-radius: 50%;
+          &.top-cy {
+            top: 0;
+            transform: translateY(-50%);
+          }
+          &.bottom-cy {
+            bottom: 0;
+            transform: translateY(50%);
+          }
+        }
+      }
+    }
+    .three-district-label {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+  .back-three-map {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .design-tip {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px;
+    background-color: #333;
+    p {
+      height: 25px;
+      line-height: 25px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+    }
+  }
+}

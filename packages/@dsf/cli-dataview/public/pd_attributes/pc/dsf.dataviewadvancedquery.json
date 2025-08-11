@@ -1,0 +1,261 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "inputHeight",
+        "inCommonUse": true
+      },
+      {
+        "text": "边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "内边距",
+              "bindControlAttr": "padding"
+            },
+            {
+              "text": "外边距",
+              "bindControlAttr": "margin"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "查询条件",
+        "bindControlAttr": "formItems",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVAdvancedQuery",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      },
+      {
+        "text": "绑定组件",
+        "bindControlAttr": "bindComponents",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVAdvancedQueryBind",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "尺寸选择",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "size",
+        "dictionary": [
+          {
+            "text": "迷你",
+            "value": "mini"
+          },
+          {
+            "text": "小",
+            "value": "small"
+          },
+          {
+            "text": "中",
+            "value": "medium"
+          },
+          {
+            "text": "大",
+            "value": "large"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "触发方式",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "trigger",
+        "dictionary": [
+          {
+            "text": "按钮",
+            "value": "btn"
+          },
+          {
+            "text": "自动",
+            "value": "auto"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "标签宽度",
+        "showType": "dv_pixel",
+        "bindControlAttr": "labelWidth",
+        "inCommonUse": true
+      },
+      {
+        "text": "标签样式",
+        "showType": "dv_text_style",
+        "bindControlAttr": "labelStyle",
+        "inCommonUse": true
+      },
+      {
+        "text": "标签样式",
+        "showType": "dv_text_align",
+        "hiddenText": true,
+        "bindControlAttr": "labelPosition",
+        "config": {
+          "isShowVAlign": false,
+          "iconType": "textContent"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "按钮布局",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "btnLayout",
+        "dictionary": [
+          {
+            "text": "整行",
+            "value": "24"
+          },
+          {
+            "text": "1/2",
+            "value": "12"
+          },
+          {
+            "text": "1/3",
+            "value": "8"
+          },
+          {
+            "text": "1/4",
+            "value": "6"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "查询按钮",
+        "showType": "dv_switch",
+        "bindControlAttr": "hasBtn",
+        "inCommonUse": true
+      },
+      {
+        "text": "按钮文字",
+        "showType": "dv_text",
+        "showExpress": "@[hasBtn]",
+        "bindControlAttr": "queryBtnText",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "重置按钮",
+        "showType": "dv_switch",
+        "bindControlAttr": "hasResetBtn",
+        "inCommonUse": true
+      },
+      {
+        "text": "按钮文字",
+        "showType": "dv_text",
+        "showExpress": "@[hasResetBtn]",
+        "spacingNumber": 1,
+        "bindControlAttr": "resetBtnText",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

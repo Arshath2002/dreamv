@@ -1,0 +1,222 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text",
+        "inCommonUse": true
+      },
+      {
+        "text": "高度",
+        "bindControlAttr": "height",
+        "showType": "dv_text",
+        "inCommonUse": true
+      },
+      {
+        "text": "外边距（上、右、下、左）",
+        "showType": "multipleText",
+        "bindControlAttr": "margin",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内边距（上、右、下、左）",
+        "showType": "multipleText",
+        "bindControlAttr": "padding",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "上"
+            },
+            {
+              "placeholder": "右"
+            },
+            {
+              "placeholder": "下"
+            },
+            {
+              "placeholder": "左"
+            }
+          ]
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "组件设置",
+    "attributes": [
+      {
+        "text": "字体",
+        "showType": "select",
+        "bindControlAttr": "config.fontFamily",
+        "loadExceFunction": "addFonts",
+        "dictionary": [],
+        "inCommonUse": true
+      },
+      {
+        "text": "风格",
+        "showType": "select",
+        "bindControlAttr": "config.selectStyle",
+        "dictionary": [
+          {
+            "text": "常规",
+            "value": "default"
+          },
+          {
+            "text": "简约",
+            "value": "simple"
+          },
+          {
+            "text": "箭头",
+            "value": "arrow"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "自定义显示内容",
+        "bindControlAttr": "config.btnList",
+        "showExpress": "@[config.selectStyle === 'default']",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVPageCustom",
+          "width": "600px",
+          "height": "300px"
+        }
+      },
+      {
+        "text": "每页展示数据条数",
+        "showType": "number",
+        "bindControlAttr": "queryParam.pageSize",
+        "inCommonUse": true,
+        "config": {
+          "min": 5
+        }
+      },
+      {
+        "text": "箭头排列",
+        "showType": "select",
+        "showExpress": "@[config.selectStyle === 'arrow']",
+        "bindControlAttr": "config.arrowDirection",
+        "dictionary": [
+          {
+            "text": "横向",
+            "value": "row"
+          },
+          {
+            "text": "纵向",
+            "value": "column"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "箭头类型",
+        "showType": "select",
+        "showExpress": "@[config.selectStyle === 'arrow']",
+        "bindControlAttr": "config.arrowType",
+        "dictionary": [
+          {
+            "text": "圆形",
+            "value": "circle"
+          },
+          {
+            "text": "方块",
+            "value": "block"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "图标的间隔",
+        "showType": "number",
+        "showExpress": "@[config.selectStyle === 'arrow']",
+        "bindControlAttr": "config.arrowDistance",
+        "inCommonUse": true,
+        "config": {
+          "min": 5
+        }
+      },
+      {
+        "text": "水平对齐方式",
+        "showType": "select",
+        "bindControlAttr": "config.hAlign",
+        "dictionary": [
+          {
+            "text": "居左",
+            "value": "flex-start"
+          },
+          {
+            "text": "居中",
+            "value": "center"
+          },
+          {
+            "text": "居右",
+            "value": "flex-end"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "垂直对齐方式",
+        "showType": "select",
+        "bindControlAttr": "config.vAlign",
+        "dictionary": [
+          {
+            "text": "居上",
+            "value": "flex-start"
+          },
+          {
+            "text": "居中",
+            "value": "center"
+          },
+          {
+            "text": "居下",
+            "value": "flex-end"
+          }
+        ],
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  }
+]

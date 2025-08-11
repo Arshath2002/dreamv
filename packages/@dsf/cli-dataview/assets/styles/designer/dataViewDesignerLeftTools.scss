@@ -1,0 +1,211 @@
+// 重写设计器左侧的工具箱的内容
+.dv-designer-left-wrapper {
+  width: 280px;
+  height: 100%;
+  border-right: 1px solid var(--dv-des-border-color);
+  .switch-bar {
+    height: 48px;
+    border-bottom: 1px solid var(--dv-des-border-color);
+    box-sizing: border-box;
+    display: flex;
+    background-color: var(--dv-des-shallow-color);
+    color: var(--dv-des-text-color);
+    .switch-bar-item {
+      width: 60px;
+      height: 100%;
+      border-left: 1px solid var(--dv-des-border-color);
+
+      box-sizing: border-box;
+      line-height: 48px;
+      text-align: center;
+      background: var(--dv-des-deep-color);
+      cursor: pointer;
+      i {
+        font-size: 16px;
+      }
+    }
+    .switch-bar-item_active {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      box-sizing: border-box;
+      i {
+        margin-right: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+  .dv-designer-left-tools {
+    transition: all 0.5s;
+    height: calc(100% - 48px);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dv-des-collapse-color);
+    color: var(--dv-des-text-color);
+    &-tabs {
+      height: 100%;
+      .tab-label {
+        padding-left: 4px;
+        position: relative;
+        font-weight: 600;
+        &::after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          height: 2px;
+          width: 30px;
+          margin-left: -15px;
+          background-color: transparent;
+        }
+        &.is-active {
+          color:var(--dv-des-text-active-color);
+          &::after {
+            animation-name: arrow;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            @include background-theme("normal");
+          }
+        }
+      }
+      @keyframes arrow {
+        from {
+          left: 0;
+        }
+        to {
+          left: 50%;
+        }
+      }
+      .el-tabs__nav {
+        justify-content: center;
+        .el-tabs__item {
+          flex: none;
+          &:not(.is-active) {
+            color: var(--dv-des-text-color);
+          }
+        }
+      }
+      .el-tabs__nav-wrap::after {
+        background-color: transparent;
+      }
+      .el-tabs__active-bar {
+        display: none;
+      }
+      .el-tabs__content {
+        height: calc(100% - 48px);
+        .el-tab-pane {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          .dv-design-search-box {
+            margin-top: 20px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            display: flex;
+            .design-search-input {
+              .el-input__inner {
+                background-color: var(--dv-des-input-bg);
+                color: var(--dv-des-text-color);
+                border: 1px solid var(--dv-des-input-border-2);
+              }
+            }
+          }
+          .dv-design-ctrl-box {
+            flex: 1;
+            height: 0;
+            position: relative;
+            &-inner {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+              bottom: 0px;
+              overflow: auto;
+              .el-collapse {
+                border: none;
+              }
+              .el-collapse:not(.ds-collapse_control) .el-collapse-item__header {
+                background-color: transparent;
+                border: none;
+                font-size: 14px;
+                color: var(--dv-des-text-color);
+                font-weight: 500;
+                height: 30px;
+                line-height: 30px;
+                margin: 10px 0;
+              }
+            }
+            .el-collapse-item {
+              position: relative;
+              .el-collapse-item__wrap {
+                background-color: var(--dv-des-collapse-color);
+                border-bottom: 1px solid var(--dv-des-border-color);
+                .ds-tool-item {
+                  background-color: var(--dv-des-collapse-item-color);
+                  color: var(--dv-des-text-color);
+                }
+              }
+
+              .remove-item-icon {
+                position: absolute;
+                right: 30px;
+                top: 0px;
+                color: #d4d4d4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .dv-designer-left-outline {
+    background-color: var(--dv-des-collapse-color);
+    width: 100%;
+    height: calc(100% - 48px);
+    position: relative;
+    z-index: 100;
+    .dv-design-search-box {
+      padding: 20px 10px 0 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      .design-search-input {
+        flex: 1;
+        margin-right: 10px;
+        .el-input__inner {
+          background-color: var(--dv-des-input-bg);
+          color: var(--dv-des-text-color);
+          border: 1px solid var(--dv-des-input-border);
+        }
+      }
+      .filter-icon {
+        color: var(--dv-des-text-color);
+        cursor: pointer;
+        &.is-active{
+          color:var(--t--normal);
+        }
+      }
+    }
+    .ds-virtual-scroll-box {
+      padding: 0;
+    }
+    .composition-name-read {
+      max-width: 80px;
+      overflow: hidden; //超出的文本隐藏
+      text-overflow: ellipsis; //溢出用省略号显示
+      white-space: nowrap; //溢出不换行
+      color: var(--dv-des-text-color, #333);
+      user-select: none;
+    }
+    .composition-name {
+      width: 95px;
+      padding: 0 5px;
+      box-sizing: border-box;
+      color: var(--dv-des-text-color);
+      background-color: var(--dv-des-input-bg);
+      @include border-theme(1px, dashed, "normal");
+    }
+    @import "./designerLeftOutlineTree.scss";
+  }
+}

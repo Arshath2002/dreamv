@@ -1,0 +1,31 @@
+.dsf-dv-list-group {
+  padding: 0;
+  height: 100%;
+  .item-box {
+    height: 100%;
+    .item {
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+    }
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .list-group-slot-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+}
+.ds-designer .designer-ctrl-proxy .dsf-dv-list-group .list-group-slot-content {
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+}

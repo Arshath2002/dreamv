@@ -1,0 +1,73 @@
+.des-dv-nav-color-icon-config {
+  .header-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  $commonWidth: 140px;
+  .common-width {
+    width: $commonWidth;
+  }
+  .color-icon-config-form {
+    .el-form-item {
+      margin-bottom: 0;
+      line-height: 0;
+    }
+  }
+  .color-select {
+    position: relative;
+    top: 4px;
+    .el-color-picker__trigger {
+      width: $commonWidth;
+    }
+  }
+  .icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .show-icon {
+      position: relative;
+      font-size: 18px;
+      width: 40px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 6px;
+      .close {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #409eff;
+        font-size: 14px;
+      }
+    }
+  }
+  .img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .show-img {
+      position: relative;
+      max-height: 40px;
+      margin-right: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .show-img-now {
+        width: 50px;
+        margin-right: 4px;
+      }
+      .close {
+        cursor: pointer;
+        color: #409eff;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+      .upload-btn {
+        margin-left: 4px;
+      }
+    }
+  }
+}

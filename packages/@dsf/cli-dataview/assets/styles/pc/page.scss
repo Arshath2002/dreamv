@@ -1,0 +1,137 @@
+.data-view-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .empty-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .load-animate {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dv-active-input-text-color);
+    .load_1 {
+      display: inline-block;
+      width: 64px;
+      height: 64px;
+    }
+    .load_1:after {
+      content: " ";
+      display: block;
+      width: 46px;
+      height: 46px;
+      margin: 1px;
+      border-radius: 50%;
+
+      border: 5px solid var(--dv-active-input-border-color);
+      border-color: var(--dv-active-input-border-color) transparent var(--dv-active-input-border-color) transparent;
+      animation: load_1 1.2s linear infinite;
+    }
+    @keyframes load_1 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .data-view-page-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .data-view-item-wrap-inner-box {
+      position: absolute;
+    }
+  }
+
+  .dsf-drag-view-tools-item-toggles {
+    padding: 0 2px;
+    .dsf-drag-view-tools-item-toggles-icon-active {
+      display: block;
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+.data-view-no-padding {
+  padding: 0;
+}
+.data-view-item-wrap {
+  width: 100%;
+}
+
+.data-view-inner-page,
+.data-view-full-page {
+  box-sizing: border-box;
+}
+.data-view-page-scroll.run-scroll {
+  > .ds-virtual-scroll-box >.ds-virtual-scroll-box_warp {
+    height: 0;
+  }
+}
+
+// 设计器下页面样式
+.design-center {
+  .data-view-page-scroll {
+    > .ds-virtual-scroll-box {
+      > .ds-virtual-scroll-box_warp {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .data-view-inner-page,
+  .data-view-full-page {
+    height: 100%;
+  }
+
+  .data-view-full-page {
+    .ds-page-head .head-inner {
+      padding: 0;
+      .placeholder-title {
+        @include font-theme("normal");
+        font-size: 25px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+    }
+
+    .data-view-item-wrap {
+      min-height: 20px;
+      width: 100%;
+    }
+  }
+}
+
+.data-view-designer-frame .designer-ctrl-proxy .data-view-item-wrap.ds-control {
+  padding: 0;
+}
+.data-view-designer-frame .designer-ctrl-proxy {
+  width: 100%;
+}
+
+.data-view-designer-frame .data-view-page .designer-ctrl-proxy .designer-btns.designer-mask {
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+}

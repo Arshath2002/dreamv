@@ -1,0 +1,79 @@
+.dsf-dv-level-pond-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  .dsf-dv-level-box-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    .dsf-dv-level-box {
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      height: 200px;
+      margin: 0 10px 10px 0;
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+
+      .canvas-wrap {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+
+        svg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+
+          text {
+            font-weight: bold;
+            text-anchor: middle;
+            dominant-baseline: middle;
+          }
+
+          ellipse,
+          rect {
+            fill: none;
+            stroke-width: 3;
+          }
+        }
+
+        .water-canvas {
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .des-text {
+        width: 100%;
+        font-size: 24px;
+        margin-top: 10px;
+        color: #3de7c9;
+        text-align: center;
+        flex-shrink: 0;
+        height: 40px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "./DesDVUniversalRuleConfig.scss";
+.des-dv-universal-rule-config {
+  &.des-dv-data-font-style-rules {
+    .rule-value-item {
+      &.text-style-item {
+        position: relative;
+        left: -30px;
+        margin-bottom: 0;
+        .ds-text-style {
+          width: auto !important;
+          flex-direction: row-reverse;
+          .font-wrap {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

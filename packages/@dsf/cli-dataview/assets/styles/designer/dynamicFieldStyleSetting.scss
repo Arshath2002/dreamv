@@ -1,0 +1,66 @@
+/*
+ * @Description: 
+ * @Author: shenah
+ * @Date: 2023-10-23 17:17:33
+ * @LastEditors: zhanghang
+ * @LastEditTime: 2024-04-03 13:55:20
+ */
+.des-dv-dynamic-field-style-setting {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  .data-setting {
+    width: 400px;
+    flex-shrink: 0;
+  }
+  .config-wrap {
+    flex: 1;
+    border: 1px solid #ebebeb;
+    padding: 0 10px 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .dynamic-field-style {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100%;
+      .ds-table {
+        height: 100%;
+        box-sizing: border-box;
+        .el-table__body-wrapper {
+          height: calc(100% - 60px) !important;
+        }
+      }
+    }
+  }
+  .common-width {
+    width: 200px;
+  }
+  .common-width-color {
+    .el-color-picker__trigger {
+      width: 200px;
+    }
+  }
+  .header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  .no-margin-bottom {
+    margin-bottom: 0;
+  }
+  .dynamic-field-style-expend-style-item {
+    .expend-item-form {
+      background-color: #f8f8f8;
+      padding: 10px 0;
+      .el-form-item {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,341 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "内边距",
+              "bindControlAttr": "padding"
+            },
+            {
+              "text": "外边距",
+              "bindControlAttr": "margin"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "showType": "dv_dialog",
+        "bindControlAttr": "mapRelations",
+        "dialogType": "relation",
+        "inCommonUse": true,
+        "config": {
+          "title": "设置",
+          "content": "DesDVMapRelationSetting",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "字体样式",
+        "showType": "dv_text_style",
+        "bindControlAttr": "digitalStyle",
+        "config": {},
+        "inCommonUse": true
+      },
+      {
+        "text": "对齐方式",
+        "hiddenText": true,
+        "showType": "dv_text_align",
+        "bindControlAttr": "textAlign",
+        "inCommonUse": true,
+        "config": {
+          "isShowVAlign": false,
+          "hMapData": [
+            {
+              "mapName": "flex-start",
+              "mapKey": "left"
+            },
+            {
+              "mapName": "center",
+              "mapKey": "center"
+            },
+            {
+              "mapName": "flex-end",
+              "mapKey": "right"
+            }
+          ]
+        }
+      },
+      {
+        "showType": "dv_line",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "背景颜色",
+        "bindControlAttr": "singleBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景图片",
+        "bindControlAttr": "singleBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "数字整体",
+        "bindControlAttr": "isTotalDigital",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "数字宽度",
+        "bindControlAttr": "digitalStyle.numberWidth",
+        "showType": "dv_pixel",
+        "desc": "可以不设置，防止某些字体同大小宽度不一致导致容器抖动",
+        "inCommonUse": true
+      },
+      {
+        "text": "分割符号",
+        "bindControlAttr": "separator",
+        "showType": "dv_text",
+        "inCommonUse": true
+      },
+      {
+        "text": "符号颜色",
+        "bindControlAttr": "separatorColor",
+        "showExpress": "@[!isTotalDigital]",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "数字边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "内边距",
+              "bindControlAttr": "fontPadding"
+            },
+            {
+              "text": "数字间距",
+              "bindControlAttr": "fontMargin"
+            }
+          ]
+        }
+      },
+      {
+        "text": "自动滚动",
+        "bindControlAttr": "config.autoplay",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "滚动时长",
+        "bindControlAttr": "config.duration",
+        "showExpress": "@[config.autoplay]",
+        "showType": "dv_number",
+        "spacingNumber": 1,
+        "config": {
+          "min": 1000,
+          "unit": "ms"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "循环滚动",
+        "bindControlAttr": "isCycle",
+        "showExpress": "@[config.autoplay]",
+        "showType": "dv_switch",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "间隔时长",
+        "bindControlAttr": "cycleSpaceTime",
+        "showExpress": "@[config.autoplay && isCycle]",
+        "showType": "dv_number",
+        "spacingNumber": 2,
+        "config": {
+          "min": 1000,
+          "unit": "ms"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内容前缀",
+        "bindControlAttr": "prefixConfig",
+        "itemCss": {
+          "margin-bottom": 0
+        },
+        "textCss": {
+          "min-width": 0,
+          "margin-right": 0
+        },
+        "hiddenText": true,
+        "showType": "dv_prefix_suffix",
+        "config": {
+          "title": "内容前缀 ：",
+          "textCss": {
+            "min-width": 0
+          }
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内容后缀",
+        "bindControlAttr": "suffixConfig",
+        "itemCss": {
+          "margin-bottom": 0
+        },
+        "textCss": {
+          "min-width": 0,
+          "margin-right": 0
+        },
+        "hiddenText": true,
+        "showType": "dv_prefix_suffix",
+        "config": {
+          "title": "内容后缀 ：",
+          "textCss": {
+            "min-width": 0
+          }
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "config": {
+          "title": "组件依赖事件",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

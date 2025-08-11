@@ -1,0 +1,35 @@
+{
+  "name": "@dsf/cli-dataview",
+  "version": "6.1.0",
+  "description": "大屏设计器",
+  "keywords": [
+    "dsf",
+    "product",
+    "产品"
+  ],
+  "license": "ISC",
+  "author": "zhanghang",
+  "main": "./build/webpack.build.js",
+  "scripts": {
+    "build": "webpack --config ./build/webpack.dll.js",
+    "build:extra": "webpack --config ./build/webpack.dll.js --env extra "
+  },
+  "dependencies": {
+    "@terraformer/wkt": "^2.2.0",
+    "@turf/turf": "^6.5.0",
+    "@tweenjs/tween.js": "^21.0.0",
+    "d3": "^7.9.0",
+    "echarts": "v5.4.3",
+    "gsap": "^3.12.5",
+    "jodit": "^3.24.4",
+    "three": "^0.150.1",
+    "tinycolor2": "^1.6.0",
+    "vue-i18n": "^8.24.3",
+    "vue-virtual-scroller": "^1.1.2"
+  },
+  "publishConfig": {
+    "registry": "http://cd.dreamdt.cn:23106/",
+    "tag": "alpha"
+  },
+  "NPMPackageName": "@dsf/cli-dataview"
+}

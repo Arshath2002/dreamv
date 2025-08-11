@@ -1,0 +1,328 @@
+.ds-dv-chart-edit-container.chart-edit-container {
+  padding: 0px 15px;
+  box-sizing: border-box;
+
+  .left {
+    position: relative;
+  }
+
+  .right {
+    width: 800px;
+    height: 450px;
+
+    .preview-btn-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    div {
+      box-sizing: border-box;
+      line-height: 39px;
+    }
+
+    .chart {
+      height: 370px;
+    }
+  }
+
+  .extra-inspective {
+    position: absolute;
+    top: 45px;
+    width: 1240px;
+    left: 0px;
+    height: 500px;
+  }
+}
+
+.ds-common-chart-config {
+  .pl12 {
+    padding-left: 12px;
+  }
+  .jc-fe {
+    justify-content: flex-end !important;
+  }
+  .ds-section-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+
+    & + .axis-list {
+      padding-left: 12px;
+    }
+  }
+
+  .el-card {
+    position: relative;
+
+    &.is-always-shadow.no-shadow {
+      box-shadow: none;
+      border: none;
+
+      .series-info {
+        display: none;
+      }
+    }
+
+    & + .el-card {
+      margin-top: 5px;
+    }
+
+    .el-card__body {
+      width: 100%;
+    }
+
+    .fixed-right-top {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+    }
+
+    .series-info {
+      color: #666;
+    }
+  }
+
+  .axis-list {
+    position: relative;
+    box-sizing: border-box;
+    .el-dropdown {
+      .select-input {
+        .el-input__inner {
+          cursor: pointer;
+          padding-right: 15px;
+        }
+      }
+    }
+    .el-select {
+      .el-input__inner {
+        padding-right: 15px;
+      }
+    }
+    .fixed-right-top {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+    }
+    .two-width {
+      width: 80px;
+    }
+    .dataview-chart-color-single-wrapper {
+      &.two-width {
+        width: auto;
+        .el-color-picker__trigger {
+          width: 80px;
+        }
+      }
+    }
+    .cell-item,
+    .cell-item-2 {
+      width: 90%;
+      margin-bottom: 15px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .flex-row {
+        display: flex;
+        align-items: center;
+      }
+      .gis-show-img {
+        position: relative;
+        max-height: 40px;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .show-img-now {
+          width: 50px;
+          margin-right: 4px;
+        }
+
+        .close {
+          cursor: pointer;
+          color: #409eff;
+          font-size: 14px;
+          flex-shrink: 0;
+        }
+
+        .upload-btn {
+          margin-left: 4px;
+        }
+      }
+
+      .config-title {
+        color: #000;
+        margin-bottom: 7px;
+
+        .config-title-outer {
+          display: flex;
+          align-items: center;
+
+          .graph-icon-tip {
+            position: relative;
+            top: 2px;
+            margin-left: 2px;
+            color: #409eff;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .config-legend-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .config-legend-right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+      }
+
+      .shape-custom-title {
+        align-self: baseline;
+      }
+
+      .shape-custom-comtrol {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .location-wrap {
+        width: 92%;
+        display: flex;
+        flex-direction: column;
+
+        .location-wrap-item {
+          margin-top: 7px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &.location-input {
+            justify-content: flex-end;
+            margin-top: 0;
+          }
+
+          .location-input-item {
+            margin-right: 4px;
+            margin-left: 1px;
+            width: 25%;
+          }
+
+          .location-input-item:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .el-color-picker__trigger {
+        border: none;
+        .el-color-picker__icon {
+          font-size: 0px;
+        }
+      }
+
+      .mtext,
+      .el-select.el-select--small,
+      .el-cascader--small {
+        max-width: 187px;
+
+        &.maxSize {
+          max-width: 100%;
+        }
+      }
+
+      .rowMaxSizeRing {
+        width: 100%;
+      }
+
+      &.cell-item-flex {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .color-range-items {
+        display: flex;
+      }
+    }
+    .no-margin-bottom {
+      margin-bottom: 0 !important;
+    }
+    .categorie-map {
+      .el-card__body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &.axis-data-setting {
+      width: 90%;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .el-switch__core {
+      width: 24px !important;
+      height: 14px;
+      flex: none;
+    }
+
+    .el-switch__core::after {
+      width: 14px !important;
+      height: 14px;
+      margin-top: -7px;
+    }
+
+    .el-switch.is-checked .el-switch__core::after {
+      margin-left: -12px;
+    }
+  }
+
+  .dataview-data-map-setting {
+    .dataview-data-map-title {
+      font-size: 14px;
+      color: #222222;
+      font-weight: 520;
+      margin-bottom: 10px;
+    }
+
+    .dataview-data-map-content {
+      width: 90%;
+
+      .cell-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .config-title {
+          width: 40%;
+          margin-left: 10px;
+          margin-bottom: 0px;
+        }
+
+        .el-dropdown {
+          .select-input {
+            .el-input__inner {
+              cursor: pointer;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

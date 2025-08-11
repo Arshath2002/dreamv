@@ -1,0 +1,72 @@
+.dsf-dv-more-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .img-wrap {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 0 8px 8px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dv-des-input-border, #dcdfe6);
+    &:hover:not(.no-img-text) {
+      border-color: var(--t--normal);
+    }
+    .btn-list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+      z-index: 100000;
+      align-items: center;
+      justify-content: center;
+
+      display: none;
+      .attr-icon {
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+    &:hover .btn-list {
+      display: flex;
+    }
+    .no-img-text {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 10px;
+      color: var(--t--normal);
+      z-index: 1000;
+    }
+    .del-icon {
+      position: absolute;
+      top: -16px;
+      right: -10px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 100;
+      color: var(--dv-des-text-color, #333);
+      &:hover {
+        @include font-theme("normal");
+      }
+    }
+    .add-btn {
+      @include font-theme("normal");
+      z-index: 1;
+    }
+  }
+}

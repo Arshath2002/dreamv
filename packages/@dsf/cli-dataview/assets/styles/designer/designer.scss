@@ -1,0 +1,355 @@
+@import "~_platform/assets/styles/common/variable.scss";
+@import "~_platform/assets/styles/common/mixins.scss";
+@import "~_platform/assets/styles/common/themes.scss";
+
+@import "./setting.scss";
+@import "./changeGraph.scss";
+
+@import "./chartEdit.scss";
+
+// 公用属性组件css
+@import "./common/commonProperty/index.scss";
+
+// 按钮悬浮属性
+@import "./configHoverAtrr.scss";
+
+// 大屏警告提示样式
+.des-dv-warn-tip {
+  font-size: 12px;
+  color: red;
+}
+.data-view-designer-frame {
+  .designer-head {
+    background-color: var(--dv-des-deep-color);
+    border-bottom: 1px solid var(--dv-des-border-color);
+  }
+
+  @import "./dataViewDesignerLeftTools.scss";
+  @import "./dataViewDesignerRightAttr.scss";
+  // 公用组件
+  @import "./common/common.scss";
+
+  .drag-proxy {
+    @include border-theme(1px, solid, "normal");
+    @include background-theme-opacity("normal");
+  }
+}
+
+.des-dv-drawer__wrapper {
+  pointer-events: none;
+  .des-dv-drawer {
+    pointer-events: all;
+    .el-drawer__body {
+      display: flex;
+      flex-direction: column;
+      .des-dv-drawer__content {
+        flex: 1;
+      }
+      .des-dv-drawer__footer {
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.data-replace-text-input {
+  height: 100%;
+
+  .el-textarea__inner {
+    height: 100%;
+  }
+}
+
+.ds-designer {
+  // 插槽公共样式
+  .slot-dv-name {
+    border: 1px dashed #a7b1bd;
+    box-sizing: border-box;
+  }
+}
+
+// 图表数据设置样式
+.ds-dv-chart-edit-container {
+  .ds-common-chart-config-data {
+    display: flex;
+    flex-direction: row;
+
+    .des-dv-data-origin {
+      width: 100%;
+      min-width: 420px;
+    }
+  }
+}
+
+// colorSingle组件
+.dataview-chart-color-single-wrapper {
+  display: flex;
+  align-items: center;
+
+  .el-color-picker__trigger {
+    width: 105px;
+    border: none;
+
+    .el-color-picker__icon {
+      font-size: 0px;
+    }
+  }
+
+  .el-color-picker-title {
+    font-size: 14px;
+    color: #606266;
+    // margin-right: 8px;
+    font-weight: 400;
+  }
+}
+
+.ds-designer-property .select-input {
+  width: 100%;
+
+  .mtext input {
+    padding: 0 15px;
+    text-align: left;
+  }
+}
+
+// 文字样式功能
+.ds-text-style {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .text-more-icon {
+    display: flex;
+    align-items: center;
+    color: var(--dv-des-text-color, #333);
+  }
+
+  .common-item {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    cursor: pointer;
+    color: var(--dv-des-text-color, #333);
+    border-radius: 4px;
+  }
+
+  .active-icon {
+    background-color: #e6e6e6;
+    @include font-theme("normal");
+  }
+
+  .font-wrap {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    .font-size-input {
+      margin-left: 10px;
+      width: 80px;
+    }
+  }
+
+  .shadow-wrap {
+    margin-top: 14px;
+    font-size: 14px;
+
+    .shadow-offset {
+      display: flex;
+      align-items: center;
+
+      .ds-word-color {
+        margin-right: 5px;
+      }
+
+      > .data-view-dsf-number {
+        margin-right: 5px;
+      }
+    }
+
+    .shadow-blur {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+
+      .el-slider {
+        flex: 1;
+        margin-left: 5px;
+
+        .el-slider__button {
+          border: none;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+
+  &.min {
+    .font-size-input {
+      width: 60px;
+    }
+  }
+}
+
+.echarts-text-style {
+  flex-wrap: nowrap;
+
+  &.cell-item-text-style.ds-text-style {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  &.ds-text-style {
+    width: 90%;
+    margin-bottom: 5px;
+
+    .font-wrap {
+      margin-top: 0;
+    }
+
+    .common-item {
+      margin-right: 10px;
+    }
+  }
+}
+
+.echarts-text-align {
+  &.des-dv-text-align {
+    .align-wrap {
+      margin-top: 0;
+    }
+  }
+}
+
+// word颜色功能
+.ds-word-color {
+  position: relative;
+
+  .ds-color-picker {
+    height: 24px;
+
+    .ds-preview-content {
+      .ds-preview-color {
+        width: 64px;
+      }
+    }
+  }
+
+  .dataview-chart-color-single-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+
+    .el-color-picker {
+      height: 100%;
+      width: 100%;
+
+      .el-color-picker__trigger {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dsf-pixel-select-popper {
+  transform: translateX(-15px) translateY(-5px);
+
+  .popper__arrow {
+    display: none;
+  }
+
+  .el-select-dropdown {
+    .el-scrollbar {
+      box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      .el-select-dropdown__item {
+        height: 24px;
+        line-height: 24px;
+      }
+
+      .el-select-dropdown__item.hover,
+      .el-select-dropdown__item:hover {
+        background: rgba(60, 141, 219, 0.1);
+      }
+    }
+  }
+}
+
+.data-view-style-theme-popover {
+  max-height: 600px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    // display: none;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      display: block;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 4px;
+    background-color: #888;
+  }
+
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+  .data-view-style-theme-wrap {
+    width: 100%;
+
+    .data-view-style-color-series {
+      width: 100%;
+      box-sizing: border-box;
+
+      .style-color-series-title {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .style-color-series-content {
+        margin-top: 20px;
+        width: 100%;
+
+        .style-color-series-content-items {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 16px;
+          box-sizing: border-box;
+          border: 1px solid rgba(221, 221, 221, 1);
+          border-radius: 4px;
+          cursor: pointer;
+          margin-bottom: 16px;
+
+          &.active {
+            border: 2px solid rgba(60, 141, 219, 1);
+          }
+
+          .style-color-series-content-item {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

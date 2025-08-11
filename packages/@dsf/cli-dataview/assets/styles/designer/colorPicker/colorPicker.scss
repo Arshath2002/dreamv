@@ -1,0 +1,117 @@
+.ds-color-picker {
+  width: 100%;
+
+  .ds-preview-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.active {
+      .ds-preview-color {
+        pointer-events: none;
+       
+        .arrow-down-up {
+          transform: translateX(100%) rotateZ(180deg);
+          border-radius: inherit;
+        }
+      }
+    }
+
+    &.ds-no-arrow {
+      .ds-preview-color {
+        width: 86px;
+        border-radius: 4px;
+
+        .arrow-down-up {
+          display: none;
+        }
+      }
+
+      .ds-hex-input {
+        margin-left: 10px;
+      }
+    }
+
+    .ds-preview-color {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-radius: 4px 0 0 4px;
+      width: 66px;
+      height: 26px;
+      line-height: 26px;
+      border: 1px solid var(--dv-des-input-border, #dcdfe6);
+      box-sizing: border-box;
+      flex-shrink: 0;
+      color: var(--dv-des-text-color, #606266);
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            45deg,
+            #ddd 25%,
+            transparent 25%,
+            transparent 75%,
+            #ddd 75%
+          ),
+          linear-gradient(
+            45deg,
+            #ddd 25%,
+            transparent 25%,
+            transparent 75%,
+            #ddd 75%
+          );
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px;
+        border-radius: inherit;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        z-index: 1;
+      }
+      .arrow-down-up {
+        height: 100%;
+        padding: 0 4px;
+        font-size: 12px;
+        border: inherit;
+        border-color: var(--dv-des-collapse-color, #fff);
+        background-color: var(--dv-des-input-bg, #fff);
+        outline: 1px solid var(--dv-des-input-border, #dcdfe6);
+        box-sizing: border-box;
+        border-radius: 0 4px 4px 0;
+        position: relative;
+        z-index: 10;
+        color: var(--dv-des-text-color);
+        transform: translateX(100%);
+      }
+    }
+    .ds-hex-input {
+      min-width: 86px;
+      max-width: calc(100% - 130px);
+      margin-left: 32px;
+      width: auto;
+      &.el-input.el-input--mini {
+        .el-input__inner {
+          padding: 0 6px;
+          height: 26px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+@import "_dataview/assets/styles/designer/colorPicker/picker.scss";

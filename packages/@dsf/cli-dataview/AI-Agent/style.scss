@@ -1,0 +1,10 @@
+.dsf-dv-ai-chat {
+  opacity: 1;
+   &.is-dragging {
+    opacity: 0;
+    pointer-events: none;
+    * {
+      pointer-events: none;
+    }
+  }
+}

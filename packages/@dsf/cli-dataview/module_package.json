@@ -1,0 +1,30 @@
+{
+  "name": "dataview",
+  "rule": [
+    "/^\/(pc|mobile)\/dataview\//"
+  ],
+  "request": {},
+  "libPathVar": "__DSF_DATAVIEW_PATH__",
+  "libsPath": "",
+  "libs": {
+    "pc": [
+      "modules/dataview/css/dsf-dataview.pc.css",
+      "modules/dataview/js/dsf-dataview.common.js",
+      "modules/dataview/js/dsf-dataview.pc.js"
+    ],
+    "mobile": [
+      "modules/dataview/css/dsf-dataview.mobile.css",
+      "modules/dataview/js/dsf-dataview.common.js",
+      "modules/dataview/js/dsf-dataview.mobile.js"
+    ],
+    "designer": [
+      "modules/dataview/css/dsf-dataview.pc.css",
+      "modules/dataview/css/dsf-dataview.mobile.css",
+      "modules/dataview/js/dsf-dataview.common.js",
+      "modules/dataview/js/dsf-dataview.pc.js",
+      "modules/dataview/js/dsf-dataview.mobile.js",
+      "modules/dataview/js/dsf-dataview.designer.js"
+    ]
+  },
+  "version": ""
+}

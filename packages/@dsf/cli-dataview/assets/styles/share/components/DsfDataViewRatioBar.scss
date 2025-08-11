@@ -1,0 +1,41 @@
+// 占比条
+.dsf-dv-ratio-bar {
+  width: 100%;
+  .ratio-bar-box {
+    .ratio-bar-content {
+      position: relative;
+      z-index: 100;
+      .ratio-bar-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title-item {
+          span {
+            cursor: inherit;
+
+            * {
+              cursor: inherit;
+            }
+          }
+        }
+      }
+
+      .ratio-bar-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .bar-item {
+          margin: auto 5px;
+          width: 0;
+          height: 20px;
+          background-color: #ddd;
+          transform: skewX(-25deg);
+          border-radius: 5px;
+          transition: all 2s;
+        }
+      }
+    }
+  }
+}

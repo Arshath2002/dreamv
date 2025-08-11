@@ -1,0 +1,102 @@
+.data-view-pagination {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  z-index: 1000;
+  .default-page {
+    .page-slot {
+      display: inline-block;
+      height: 28px;
+      line-height: 28px;
+      i {
+        margin: 0 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .simple-page {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 14px;
+    .current-page {
+      display: flex;
+      align-items: center;
+      margin: 0 16px;
+      cursor: pointer;
+      i {
+        margin-left: 10px;
+      }
+    }
+    .prev-page,
+    .next-page {
+      padding: 5px 10px;
+      border: 1px solid;
+      border-radius: 4px;
+      cursor: pointer;
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .arrow-page {
+    display: flex;
+    .prev-page {
+      transform: rotate(180deg);
+    }
+    .common-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      border: 1px solid;
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+.data-view-pagination-dropdown {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px 0;
+  .popper__arrow {
+    display: none;
+  }
+  .scroller {
+    max-height: 200px;
+    overflow-y: auto;
+    min-width: 120px;
+    .el-dropdown-menu__item {
+      text-align: center;
+      padding: 0;
+      .page-item {
+        padding: 0 20px;
+      }
+    }
+    /* 鼠标移动到元素上时显示滚动条 */
+    &:hover::-webkit-scrollbar-thumb {
+      opacity: 1;
+    }
+    /* 定义滚动条整体样式 */
+    &::-webkit-scrollbar {
+      width: 6px; /* 滚动条宽度 */
+      height: 6px; /* 滚动条高度 */
+      background-color: transparent; /* 滚动条背景颜色 */
+    }
+    /* 定义滚动条轨道样式 */
+    &::-webkit-scrollbar-track {
+      background-color: transparent; /* 滚动条轨道背景颜色 */
+      opacity: 0; /* 默认隐藏滚动条 */
+    }
+    /* 定义滚动条滑块样式 */
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px; /* 滚动条滑块圆角 */
+      opacity: 0; /* 默认隐藏滚动条 */
+    }
+  }
+}

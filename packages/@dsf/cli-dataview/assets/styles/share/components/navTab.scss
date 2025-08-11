@@ -1,0 +1,201 @@
+.dsf-dataview-nav-tab {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .slot-top-left,
+  .slot-top-right {
+    position: absolute;
+    z-index: 100;
+
+    .slot-content-wrap {
+      position: relative;
+
+      .transparent-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        pointer-events: none;
+        /* 透明区域，不接受点击事件 */
+      }
+    }
+  }
+
+  .el-tabs {
+    position: relative;
+    z-index: 101;
+    /* 选项卡的z-index低于插槽内容 */
+  }
+
+  .el-tabs__header {
+    margin: 0 0 10px;
+  }
+
+  .nav-tab-title {
+    position: absolute;
+    line-height: 30px;
+  }
+
+  .el-tabs--left {
+    height: 100%;
+
+    .el-tabs__content {
+      height: 100%;
+    }
+
+    .el-tabs__content {
+      height: 100%;
+
+      .el-tab-pane {
+        height: 100%;
+      }
+    }
+  }
+
+  .el-tabs--right {
+    height: 100%;
+
+    .el-tabs__content {
+      height: 100%;
+
+      .el-tab-pane {
+        height: 100%;
+      }
+    }
+  }
+
+  .el-tabs--top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .el-tabs__content {
+      flex: 1;
+
+      .el-tab-pane {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .business-nav-tab-default {
+    .el-tabs__nav-prev {
+      line-height: 32px;
+    }
+
+    .el-tabs__nav-next {
+      line-height: 32px;
+    }
+
+    .el-tabs__item {
+      padding: 0;
+      height: auto;
+      line-height: normal;
+    }
+
+    .el-tabs__active-bar {
+      display: none;
+    }
+
+    .el-tabs__nav-wrap:after {
+      display: none;
+    }
+
+    .el-tabs__item.is-top .panel-label {
+      // border-top: 1px solid #077abd;
+      // border-bottom: 1px solid #077abd;
+      // border-right: 1px solid #077abd;
+      color: #dcf0ff;
+      text-align: center;
+      padding: 6px 19px;
+      box-sizing: border-box;
+    }
+
+    .el-tabs__item.is-top:nth-child(2) .panel-label {
+      border-left: 1px solid #077abd;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .el-tabs__item.is-top:last-of-type .panel-label {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &.tab_positions_center {
+
+      >.is-top .el-tabs__nav-wrap,
+      >.is-left .el-tabs__nav-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &.tab_positions_start {
+      >.is-top .el-tabs__nav-wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      >.is-left .el-tabs__nav-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+
+    &.tab_positions_end {
+      >.is-top .el-tabs__nav-wrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      >.is-left .el-tabs__nav-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    .el-tabs__item.is-left .panel-label {
+      border: 1px solid #117bdd;
+      color: #dcf0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .is-left .is-actived {
+      background-image: linear-gradient(180deg,
+          rgba(43, 155, 255, 0) 36%,
+          rgba(19, 98, 255, 0.18) 100%);
+      box-shadow: inset 0 0 5px 2px transparent;
+    }
+  }
+
+  .business-nav-tab-default-none {
+    >.el-tabs__header {
+      display: none;
+    }
+  }
+
+  >.el-tabs {
+    &.dv_auto {
+      >.el-tabs__content {
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+.designer-ctrl-proxy .data-view-business-nav-tab .el-tabs__content {
+  border: 1px dashed #a7b1bd;
+}

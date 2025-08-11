@@ -1,0 +1,16 @@
+.des-dv-text-align {
+  width: 100%;
+  margin-bottom: 10px;
+  .align-wrap {
+    display: flex;
+    align-items: center;
+    .horizontal-items {
+      margin-right: 10px;
+    }
+  }
+}
+.property-item {
+  .des-dv-text-align {
+    margin-bottom: 0;
+  }
+}

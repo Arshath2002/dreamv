@@ -1,0 +1,138 @@
+.des-dv-event-editor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .event-editor-left {
+    width: 385px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .com-event {
+      margin-top: 10px;
+    }
+
+    .event-editor-page {
+      margin: 20px 0 0 20px;
+      width: calc(100% - 20px);
+      display: flex;
+      flex-direction: column;
+
+      .event-editor-page-content {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .event-editor-scroll {
+          height: 300px;
+          width: 100%;
+
+          .el-scrollbar__view {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+          }
+
+          .el-scrollbar__wrap {
+            overflow-x: hidden;
+          }
+        }
+
+        .event-editor-page-content-item {
+          cursor: pointer;
+          margin-top: 10px;
+          min-width: 100px;
+          padding: 0 10px;
+          height: 32px;
+          line-height: 32px;
+          box-sizing: border-box;
+          text-align: center;
+          background: #F1F3F5;
+          border-radius: 4px;
+          font-size: 14px;
+          color: #333333;
+          font-weight: 400;
+        }
+
+        .com-item {
+          min-width: 156px;
+
+          .com-item-name {
+            font-size: 14px;
+            color: #333333;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .end-box {
+      flex: 1;
+    }
+  }
+
+  .monaco-editor-fn {
+    flex: 1;
+    height: 100%;
+
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 10001;
+
+    .monaco-editor-fn-tool {
+      display: flex;
+      align-items: center;
+
+      >i {
+        margin: 10px;
+        width: 20px;
+        cursor: pointer;
+      }
+
+      span {
+        @include font-theme('normal');
+      }
+
+    }
+
+  }
+
+  &.visualization-editor {
+    .event-editor-left  {
+      width: 430px;
+    }
+  }
+}
+
+.dv-comps-list-item {
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.dv-comps-list-item-drop {
+  max-height: 200px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc; // 滑块颜色
+    border-radius: 5px; // 滑块圆角
+  }
+
+
+  &>li {
+    line-height: 26px;
+  }
+}

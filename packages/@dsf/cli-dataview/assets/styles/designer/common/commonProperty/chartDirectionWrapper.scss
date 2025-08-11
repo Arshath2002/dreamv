@@ -1,0 +1,43 @@
+// 方向组件
+.des-dv-chart-custom-direction-wrapper {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  max-width: 180px;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  .direction-item {
+    flex: 1 1 auto;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid var(--dv-des-input-border, #ddd);
+
+    &.active {
+      border-color: #3c8ddb;
+    }
+
+    &.leftActive {
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    &.rightActive {
+      border-radius: 0px 4px 4px 0px;
+    }
+
+    .direction-item-img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+.property-item {
+  .des-dv-chart-custom-direction-wrapper {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,136 @@
+.dsf-dv-time-info {
+  width: 100%;
+  height: 100%;
+  .time-info-inner {
+    width: 100%;
+    height: 100%;
+    // 纵向
+
+    @mixin common-scroll-var {
+      &::-webkit-scrollbar {
+        width: var(--dv-time-info-scroll-w-h, 10px);
+        height: var(--dv-time-info-scroll-w-h, 10px);
+        display: var(--dv-time-info-scroll-is-h-display, block);
+      }
+      &:hover {
+        &::-webkit-scrollbar {
+          display: block;
+        }
+      }
+      &::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: var(--dv-time-info-scroll-thumb-border-radius, 5px);
+        background: var(
+          --dv-time-info-scroll-thumb-bg,
+          rgba(140, 140, 140, 0.14)
+        );
+      }
+
+      &::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        border-radius: var(--dv-time-info-scroll-track-border-radius, 0);
+        background: var(
+          --dv-time-info-scroll-track-bg,
+          rgba(133, 133, 133, 0.05)
+        );
+      }
+    }
+
+    .time-info-vertical {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      @include common-scroll-var();
+      .time-info-item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .line {
+          height: 100%;
+          flex-shrink: 0;
+          position: absolute;
+          height: 100%;
+          top: 0;
+        }
+        .time-point-wrap {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          .point {
+            position: relative;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+          }
+          .time {
+            margin-left: 28px;
+            font-size: 12px;
+            color: #666;
+            flex: 1;
+          }
+        }
+        .time-content-wrap {
+          width: 100%;
+          display: flex;
+          .content {
+            flex: 1;
+            .dsf-dv-input-text-box {
+              * {
+                cursor: inherit !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 横向
+    .time-info-horizontal {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      overflow-x: auto;
+      @include common-scroll-var();
+      .time-info-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .content {
+          box-sizing: border-box;
+          .dsf-dv-input-text-box {
+            * {
+              cursor: inherit !important;
+            }
+          }
+        }
+        .point-wrap {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          flex-shrink: 0;
+          .point {
+            border-radius: 50%;
+          }
+          .line {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+          }
+        }
+        .time {
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

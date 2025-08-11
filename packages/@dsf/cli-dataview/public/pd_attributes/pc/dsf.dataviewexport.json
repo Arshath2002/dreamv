@@ -1,0 +1,252 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "宽度",
+        "bindControlAttr": "width",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高度",
+        "bindControlAttr": "height",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row ml20",
+        "inCommonUse": true
+      },
+      {
+        "text": "外边距",
+        "bindControlAttr": "margin",
+        "showType": "dv_margins",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "显示文字",
+        "showType": "dv_switch",
+        "bindControlAttr": "showText",
+        "inCommonUse": true
+      },
+      {
+        "text": "文字",
+        "showType": "dv_text",
+        "bindControlAttr": "text",
+        "showExpress": "@[showText]",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "字体",
+        "hiddenText": true,
+        "showType": "dv_text_style",
+        "bindControlAttr": "textStyle",
+        "showExpress": "@[showText]",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "显示图标",
+        "showType": "dv_switch",
+        "bindControlAttr": "showIcon",
+        "inCommonUse": true
+      },
+      {
+        "text": "排列",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "iconAlign",
+        "showExpress": "@[showIcon]",
+        "spacingNumber": 1,
+        "dictionary": [
+          {
+            "text": "左侧",
+            "value": "left"
+          },
+          {
+            "text": "右侧",
+            "value": "right"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "图标",
+        "showType": "dv_more_icon",
+        "bindControlAttr": "iconName",
+        "showExpress": "@[showIcon]",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "颜色",
+        "showType": "dv_color",
+        "bindControlAttr": "iconColor",
+        "showExpress": "@[showIcon]",
+        "spacingNumber": 1,
+        "config": {
+          "type": "color"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "大小",
+        "showType": "dv_number",
+        "bindControlAttr": "iconSize",
+        "showExpress": "@[showIcon]",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "背景颜色",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "背景图片",
+        "bindControlAttr": "controlBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "圆角",
+        "showType": "dv_border_radius",
+        "bindControlAttr": "radius",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "导出",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "showType": "dv_radio_group",
+        "bindControlAttr": "exportType",
+        "dictionary": [
+          {
+            "text": "导出页面",
+            "value": "page"
+          },
+          {
+            "text": "导出数据",
+            "value": "data"
+          }
+        ],
+        "config": {
+          "autoFit": true,
+          "stroke": true
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "导出为",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "fileType",
+        "showExpress": "@[exportType=='page']",
+        "dictionary": [
+          {
+            "text": "图片",
+            "value": "image"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "导出组件",
+        "showType": "dv_select",
+        "bindControlAttr": "componentName",
+        "loadExceFunction": "addComponents",
+        "showExpress": "@[exportType=='data']",
+        "dictionary": [],
+        "config": {
+          "multiple": true
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "导出为",
+        "showType": "dv_radio_group",
+        "bindControlAttr": "fileDataType",
+        "showExpress": "@[exportType=='data']",
+        "dictionary": [
+          {
+            "text": "文本",
+            "value": "text"
+          },
+          {
+            "text": "Excel",
+            "value": "excel"
+          },
+          {
+            "text": "word",
+            "value": "word"
+          },
+          {
+            "text": "pdf",
+            "value": "pdf"
+          },
+          {
+            "text": "csv",
+            "value": "csv"
+          }
+        ],
+        "itemClass": "property-item-radio-group_minute‌",
+        "inCommonUse": true
+      },
+      {
+        "text": "文件名称",
+        "showType": "dv_text",
+        "bindControlAttr": "fileName",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

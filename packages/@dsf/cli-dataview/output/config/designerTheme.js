@@ -1,0 +1,128 @@
+/*
+ * @Editor: zhanghang
+ * @Description:
+ * @Date: 2024-12-09 10:55:30
+ * @LastEditors: 雨时 bishy@dreamdt.cn
+ * @LastEditTime: 2025-01-17 16:24:03
+ */
+export default {
+  darked: {
+    "--dv-des-deep-color": "#333333",
+    "--dv-des-shallow-color": "#212121",
+    "--dv-des-text-color": "#999999",
+    "--dv-des-text-active-color": "#EAEBED",
+    "--dv-des-border-color": "#111111",
+    "--dv-des-border-color-2": "transparent",
+    "--dv-des-btn-bg": "#545556",
+    "--dv-des-btn-active-bg": "#606266",
+    "--dv-des-btn-wrapper-bg": "#2E2E2E",
+
+    "--dv-des-collapse-color": "#212121",
+    "--dv-des-collapse-item-color": "#2E2E2E",
+    "--dv-des-collapse-head-color": "#333333",
+
+    "--dv-des-container-head": "#212121",
+    "--dv-des-container-bg": "#131415",
+    "--dv-des-container-bg-1": "#191B1C",
+    "--dv-des-container-bg-2": "rgb(24, 24, 28)",
+
+    "--dv-des-input-bg": "#2E2E2E",
+    "--dv-des-input-border": "rgba(80,82,83,1)",
+    "--dv-des-input-border-2": "transparent",
+    "--dv-des-input-text-color": "#EAEBED5",
+    "--dv-des-btn-icon-color": "#EAEBED",
+
+    "--dv-des-select-dropdown-bg": "#222222",
+    "--dv-des-select-dropdown-active-bg": "#3C8DDB",
+    "--dv-des-select-dropdown-hover-bg": "#333333",
+    "--dv-des-select-dropdown-text-color": "#EAEBED",
+    "--dv-des-select-dropdown-border-color": "rgba(80,82,83,1)",
+
+    "--dv-des-dialog-header-bg": "#333333",
+    "--dv-des-dialog-body-bg-1": "#212121",
+    "--dv-des-dialog-body-bg-2": "#131415",
+    "--dv-des-dialog-border-color": "#212121",
+    "--dv-des-dialog-btn-border-color": "transparent",
+    "--dv-des-dialog-btn-active-border-color": "transparent",
+    "--dv-des-dialog-btn-bg-1": "#333333",
+    "--dv-des-dialog-btn-bg-2": "#606266",
+    "--dv-des-dialog-btn-active-bg-1": "#3C8DDB",
+    "--dv-des-dialog-btn-active-bg-2": "#606266",
+    "--dv-des-dialog-text-color-1": "#999999",
+    "--dv-des-dialog-text-color-2": "#EAEBED",
+    "--dv-des-dialog-text-active-color": "#FFF",
+    "--dv-des-dialog-layout-border-color":"#131415",
+    "--dv-des-dialog-tabs-nav-border-color":"#rgba(80,82,83,1)",
+    "--dv-des-table-text-color-1":"#EAEBED",
+    "--dv-des-table-text-color-2":"#999999",
+    "--dv-des-table-active-bg-color":"#333333",
+    "--dv-des-table-hover-bg-color":"#333333",
+    "--dv-des-table-bg-color":"#212121",
+    "--dv-des-margins-rectangle-bg":"#2E2E2E",
+    "--dv-des-margins-rectangle-border-color":"rgba(80,82,83,1)",
+
+    "--dv-des-rule-bg":"#333333",
+    "--dv-des-popover-border-color":"#2E2E2E",
+    "--dv-des-popover-arrow-color":"#212121",
+  },
+  light: {
+    "--dv-des-deep-color": "#f0f3f8",
+    "--dv-des-shallow-color": "#FFF",
+    "--dv-des-text-color": "#606266",
+    "--dv-des-text-active-color": "#3c8ddb",
+    "--dv-des-border-color": "#dde5ed",
+    "--dv-des-border-color-2": "#dde5ed",
+    "--dv-des-btn-bg": "#FFF",
+    "--dv-des-btn-active-bg": "#3c8ddb",
+    "--dv-des-btn-wrapper-bg": "#FFF",
+
+    "--dv-des-collapse-color": "#FFF",
+    "--dv-des-collapse-item-color": "#f5f5f5",
+    "--dv-des-collapse-head-color": "#f0f3f8",
+
+    "--dv-des-container-head": "#FFF",
+    "--dv-des-container-bg": "#FFF",
+    "--dv-des-container-bg-1": "#ddd",
+    "--dv-des-container-bg-2": "#ccc",
+
+    "--dv-des-input-bg": "#FFF",
+    "--dv-des-input-border": "#dcdfe6",
+    "--dv-des-input-border-2": "#dcdfe6",
+    "--dv-des-input-text-color": "#454545",
+    "--dv-des-btn-icon-color": "#3c8ddb",
+
+    "--dv-des-select-dropdown-bg": "#FFF",
+    "--dv-des-select-dropdown-active-bg": "#FFF",
+    "--dv-des-select-dropdown-hover-bg": "#F5F7FA",
+    "--dv-des-select-dropdown-text-color": "#606266",
+    "--dv-des-select-dropdown-border-color": "#E4E7ED",
+
+    "--dv-des-dialog-header-bg": "#f5f5f6",
+    "--dv-des-dialog-body-bg-1": "#fff",
+    "--dv-des-dialog-body-bg-2": "#fff",
+    "--dv-des-dialog-border-color": "#eee",
+    "--dv-des-dialog-btn-border-color": "rgb(238, 238, 238)",
+    "--dv-des-dialog-btn-active-border-color": "#3c8ddb",
+    "--dv-des-dialog-btn-bg-1": "#f5f7fa",
+    "--dv-des-dialog-btn-bg-2": "#fff",
+    "--dv-des-dialog-btn-active-bg-1": "#fff",
+    "--dv-des-dialog-btn-active-bg-2": "#fff",
+    "--dv-des-dialog-text-color-1": "#9ba3af",
+    "--dv-des-dialog-text-color-2": "#333333",
+    "--dv-des-dialog-text-active-color": "rgb(60, 141, 219)",
+    "--dv-des-dialog-layout-border-color":"rgb(194, 207, 228)",
+    "--dv-des-dialog-tabs-nav-border-color":"#E4E7ED",
+    "--dv-des-table-text-color-1":"#333333",
+    "--dv-des-table-text-color-2":"#999999",
+    "--dv-des-table-active-bg-color":"#f0f7ff",
+    "--dv-des-table-hover-bg-color":"#f5f7fa",
+    "--dv-des-table-bg-color":"#FFF",
+
+    "--dv-des-margins-rectangle-bg":"#F4F4F4",
+    "--dv-des-margins-rectangle-border-color":"rgba(155, 163, 175, 1)",
+
+    "--dv-des-rule-bg":"rgb(242, 242, 242)",
+    "--dv-des-popover-border-color":"#EBEEF5",
+    "--dv-des-popover-arrow-color":"#fff",
+  },
+};

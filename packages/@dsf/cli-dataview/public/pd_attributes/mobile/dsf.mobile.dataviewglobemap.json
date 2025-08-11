@@ -1,0 +1,246 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "bindControlAttr": "chart",
+        "showType": "dv_dialog",
+        "dialogType":"relation",
+        "inCommonUse": true,
+        "config": {
+          "content": "DesDVGlobeMapRelation",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_map_gl_style",
+        "showExpress": "@[chart.globe.baseTextureType === 'default']",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "系列类型",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showExpress": "@[chart.globe.baseTextureType === 'default' || (chart.globe.baseTextureType !== 'default' && chart.series.length)]",
+        "showType": "dv_map_gl_series",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "球体",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "",
+        "showType": "dv_map_gl_globe",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "showExpress":"@[isRunningDataViewPage]",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "配置总览",
+        "bindControlAttr": "chart",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDVCustomChartEdit",
+          "width": "1000px",
+          "height": "60vh"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "插槽",
+    "attributes": [
+      {
+        "text": "左上插槽",
+        "bindControlAttr": "isSlotTopLeft",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotTopLeftWidth",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotTopLeft == true]"
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotTopLeftHeight",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotTopLeft == true]"
+      },
+      {
+        "text": "右上插槽",
+        "bindControlAttr": "isSlotTopRight",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotTopRightWidth",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotTopRight == true]"
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotTopRightHeight",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotTopRight == true]"
+      },
+      {
+        "text": "左下插槽",
+        "bindControlAttr": "isSlotBottomLeft",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotBottomLeftWidth",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotBottomLeft == true]"
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotBottomLeftHeight",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotBottomLeft == true]"
+      },
+      {
+        "text": "右下插槽",
+        "bindControlAttr": "isSlotBottomRight",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotBottomRightWidth",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotBottomRight == true]"
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "slotBottomRightHeight",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "showExpress": "@[isSlotBottomRight == true]"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "showExpress":"@[isRunningDataViewPage]",
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

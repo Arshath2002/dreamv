@@ -1,0 +1,184 @@
+.des-dv-left-layout-composition-grids {
+  padding: 5px 10px;
+  @include border-theme(1px, dashed, "normal");
+  margin: 10px 0;
+  color: var(--dv-des-text-color);
+
+  .composition-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.closed {
+      .composition-head__left > .indicator {
+        transform: rotate(-90deg);
+      }
+      & ~ .des-dv-left-layout-grids {
+        display: none;
+      }
+    }
+    &__left {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .indicator {
+        color: var(--dv-des-text-color);
+        transform: rotate(0);
+        transition: transform 0.2s linear;
+      }
+      i {
+        margin-right: 5px;
+      }
+    }
+    &__right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i {
+        font-size: 14px;
+        @include font-theme("normal");
+        cursor: pointer;
+        margin: 0 2px;
+      }
+      .drag-handler {
+        cursor: move;
+      }
+    }
+    .hover-show {
+      display: none;
+      @include font-theme("normal");
+    }
+  }
+  &:hover {
+    @include border-theme(1px, solid, "normal");
+    background-color: var(--dv-des-deep-color);
+    .hover-show {
+      display: block;
+    }
+  }
+  &.is-active {
+    @include border-theme(1px, solid, "normal");
+    background-color: var(--dv-des-deep-color);
+  }
+}
+.des-dv-left-layout-grids {
+  padding: 5px 10px;
+  @include border-theme(1px, dashed, "normal");
+  margin: 10px 0;
+  min-height: 20px;
+  position: relative;
+  .composition-icon {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    i {
+      font-size: 14px;
+      @include font-theme("normal");
+      cursor: pointer;
+      margin: 0 2px;
+    }
+    .hover-show {
+      display: none;
+    }
+    .drag-handler {
+      cursor: move;
+    }
+  }
+  .des-dv-left-layout-grids-tree {
+    &-item {
+      &.closed {
+        > .label-wrapper > .indicator {
+          transform: rotate(-90deg);
+        }
+        > .des-dv-left-layout-grids-tree {
+          display: none;
+        }
+      }
+      &__label {
+        display: flex;
+        align-items: center;
+        width: auto;
+        white-space: nowrap;
+        position: relative;
+
+        &.is-root {
+          padding-right: 70px;
+          box-sizing: border-box;
+        }
+        > .indicator {
+          color: var(--dv-des-text-color);
+          transform: rotate(0);
+          transition: transform 0.2s linear;
+        }
+        .label-text {
+          font-size: 14px;
+          color: var(--dv-des-text-color);
+          font-weight: 400;
+          padding: 6px 6px;
+          max-width: calc(100% - 16px);
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          user-select: none;
+          > span {
+            overflow: hidden; //超出的文本隐藏
+            text-overflow: ellipsis; //溢出用省略号显示
+            white-space: nowrap; //溢出不换行
+          }
+          @mixin __icon {
+            margin-left: 5px;
+            flex-shrink: 0;
+
+            font-size: 14px;
+            @include font-theme("normal");
+          }
+
+          .delete-icon {
+            @include __icon;
+            display: none;
+          }
+
+          .common-icon {
+            @include __icon;
+          }
+          &.is-active {
+            background-color: var(--dv-des-deep-color);
+            @include font-theme("normal");
+          }
+          &:hover {
+            background-color: var(--dv-des-deep-color);
+            @include font-theme("normal");
+            .delete-icon {
+              display: block;
+            }
+          }
+        }
+      }
+      > .des-dv-left-layout-grids-tree {
+        padding-left: 1.5em;
+      }
+    }
+  }
+  &:hover {
+    @include border-theme(1px, solid, "normal");
+    background-color: var(--dv-des-deep-color);
+    .hover-show {
+      display: block;
+    }
+  }
+  &.is-active {
+    @include border-theme(1px, solid, "normal");
+    background-color: var(--dv-des-deep-color);
+
+    .hover-show {
+      display: block;
+    }
+  }
+  &.ghost {
+    opacity: 0.1;
+  }
+}

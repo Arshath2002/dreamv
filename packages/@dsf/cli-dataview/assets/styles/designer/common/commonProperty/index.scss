@@ -1,0 +1,286 @@
+/*
+ * @Description: 公用属性组件
+ * @Author: shenah
+ * @Date: 2024-03-11 09:25:13
+ * @LastEditors: zhanghang
+ * @LastEditTime: 2025-02-12 16:30:46
+ */
+@mixin common-property-badge {
+  .common-property-badge {
+    line-height: normal;
+    &.button-badge {
+      // 像动态属性这种按钮
+      .el-badge__content {
+        top: 4px;
+        right: 2px;
+      }
+    }
+    // 直接是文字
+    .el-badge__content {
+      background-color: var(--t--normal);
+      width: 4px;
+      height: 4px;
+    }
+  }
+}
+.data-view-designer-frame {
+  .designer-props-box {
+    .ds-designer-property-wrap {
+      // 公用提示
+      @include common-property-badge();
+      @import "./addIcon.scss";
+      .property-flex-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        .ds-designer-property.property-item {
+          width: auto;
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+          .property-item-name {
+            color: var(--dv-des-text-color);
+            &.two {
+              min-width: 0;
+            }
+          }
+        }
+      }
+
+      .property-item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        &.margin-left-0 {
+          margin-left: 0;
+        }
+        &.margin-left-1 {
+          margin-left: 30px;
+        }
+        &.margin-left-2 {
+          margin-left: 60px;
+        }
+
+        &.float-one-row {
+          width: auto;
+          float: left;
+          overflow: hidden;
+          &:not(:first-child) {
+            .property-item-name {
+              color: var(--dv-des-text-color);
+              min-width: auto;
+              margin-left: 14px;
+            }
+          }
+        }
+
+        .cube-color {
+          width: 30px;
+          height: 30px;
+          .ds-preview-color {
+            width: 100%;
+          }
+        }
+
+        .property-item-name {
+          color: var(--dv-des-text-color);
+          text-align: right;
+          margin-right: 10px;
+          padding-top: 2px;
+          font-size: 14px;
+          font-weight: 400;
+          flex-shrink: 0;
+          margin-bottom: 0;
+          min-width: 75px;
+
+          &.ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 75px;
+          }
+
+          &.flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+        }
+
+        .cube-single-list {
+          flex: 1;
+
+          .cube-single-list-item {
+            display: flex;
+            color: var(--dv-des-text-color, #333);
+          }
+        }
+
+        .plus-text {
+          @include font-theme("normal");
+          cursor: pointer;
+          font-size: 12px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .plus-text-icon {
+            font-size: 12px;
+          }
+
+          span {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 2px 5px;
+          }
+
+          & > span:hover {
+            @include border-theme(1px, solid, "normal");
+          }
+        }
+
+        .property-item-desc-tip {
+          font-size: 14px;
+          color: #999;
+          align-self: end;
+        }
+
+        // 属性里面公用的css
+        .left-right-flex {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          &.no-margin-bottom {
+            margin-bottom: 0px;
+          }
+
+          .label {
+            font-size: 14px;
+            color: var(--dv-des-text-color, #333);
+            flex-shrink: 0;
+            margin-right: 10px;
+          }
+        }
+
+        &.data-view-dialog-btn {
+          width: 102px;
+        }
+
+        .el-input__inner {
+          padding: 6px;
+          height: 32px;
+          line-height: 32px;
+          border: 1px solid var(--dv-des-input-border);
+          background-color: var(--dv-des-input-bg);
+          border-radius: 4px;
+          font-size: 14px;
+          color: var(--dv-des-text-color);
+          font-weight: 400;
+        }
+
+        .data-view-text {
+          width: auto;
+          &.el-textarea {
+            width: 100%;
+          }
+          .el-input {
+            width: auto;
+            .el-input__inner {
+              min-width: 180px;
+              width: inherit;
+            }
+          }
+        }
+
+        .data-view-select {
+          width: 160px;
+
+          .el-input {
+            width: 160px;
+            .el-input__inner {
+              width: 160px;
+            }
+          }
+
+          &.min {
+            width: 80px;
+            .el-input {
+              width: 80px;
+              .el-input__inner {
+                width: 80px;
+              }
+            }
+          }
+
+          .el-input__icon {
+            line-height: 32px;
+            color: #999999;
+          }
+
+          .popper__arrow {
+            display: none;
+          }
+
+          .el-select-dropdown {
+            top: 24px !important;
+
+            .el-scrollbar {
+              box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+              border-radius: 4px;
+
+              .el-select-dropdown__item {
+                height: 30px;
+                line-height: 30px;
+              }
+
+              .el-select-dropdown__item.hover,
+              .el-select-dropdown__item:hover {
+                background: rgba(60, 141, 219, 0.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 属性组件：色彩组件不能放在组件里面
+@import "_dataview/assets/styles/designer/colorPicker/colorPicker.scss";
+// 属性组件：颜色与颜色公用一部分属性就不提了
+@import "./moreModeColorIcon.scss";
+.dsf-tool-tips-icon {
+  &.el-tooltip__popper {
+    pointer-events: auto;
+  }
+}
+// 属性组件:弹框按钮(很多地方都在用不提)
+.data-view-dialog-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dv-des-text-color, #333);
+  background: var(--dv-des-input-bg, #fff);
+  border: 1px solid var(--dv-des-input-border, rgba(221, 221, 221, 1));
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 102px;
+  height: 28px;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include common-property-badge();
+  &:hover {
+    .dialog-icon {
+      color: var(--t--normal);
+    }
+
+    border: 1px solid var(--t--normal);
+  }
+
+  .dialog-icon {
+    font-size: 15px;
+    color: #999;
+  }
+}

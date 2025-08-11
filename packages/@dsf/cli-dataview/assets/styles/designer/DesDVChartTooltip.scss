@@ -1,0 +1,56 @@
+.des-dv-chart-tooltip-wrap{
+  width: 100%;
+  height: auto;
+  position: relative;
+  .title-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dv-des-text-color,#606266);
+    margin-bottom: 10px;
+    .title-tip {
+      opacity: 0.4;
+    }
+  }
+  .editor-bg-set {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--dv-des-text-color,#606266);
+  }
+  .btn-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .common-editor-btn {
+      padding: 4px 10px 0 0;
+    }
+    margin-top: 6px;
+  }
+  .editor-div {
+    border: 1px solid #ccc;
+    width: 100%;
+    min-height: 200px;
+    word-break: break-all;
+    word-wrap:break-word;
+    padding: 5px;
+    box-sizing: border-box;
+    .tag {
+      font-weight: 600;
+      color: #f00;
+      padding: 0 5px;
+    }
+
+    &.editor_theme_dark {
+      background-color: #575757;
+      color: #d1cccc;
+    }
+  }
+
+  .tip-list {
+    position: absolute;
+  }
+}
+

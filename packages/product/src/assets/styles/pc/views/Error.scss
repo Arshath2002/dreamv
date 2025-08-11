@@ -1,0 +1,33 @@
+//默认错误页
+.ds-error-wrap {
+  background-color: #fff;
+  color: #999;
+  .redict-content {
+    // margin-top: 15%;
+    text-align: center;
+    .error-img {
+      width: 600px;
+      margin-bottom: 18px;
+    }
+    .sub-title {
+      font-size: 20px;
+      @include font-size(20);
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .sub-button {
+      display: flex;
+      justify-content: space-between;
+      width: 480px;
+      margin: 0 auto;
+      i {
+        color: #999;
+      }
+      span {
+        // font-size: 16px;
+        @include font_4;
+        color: #999;
+      }
+    }
+  }
+}

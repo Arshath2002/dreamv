@@ -1,0 +1,26 @@
+.dsf-dv-view-part{
+  &.full {
+    position: relative;
+    height: 100%;
+  }
+
+  .ds-dv-view-part-designer-panel {
+    vertical-align: middle;
+    text-align: center;
+    font-style: italic;
+    color: #c0c0c0;
+    & > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.full .ds-dv-view-part-designer-panel {
+    height: 100%;
+    padding: 0px 0px !important;
+    vertical-align: middle;
+  }
+}

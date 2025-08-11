@@ -1,0 +1,559 @@
+[
+  {
+    "name": "基础属性",
+    "attributes": [
+      {
+        "text": "",
+        "bindControlAttr": "designActive",
+        "showType": "dv_icon_radio",
+        "dictionary": [
+          {
+            "value": ">=1920",
+            "icon": "dv-icon-equipment-large",
+            "desc": "适用于1920以及更大的屏幕",
+            "contentMenu": [
+              {
+                "name": "【应用至所有布局】",
+                "handler": "changeDeviceRatio"
+              }
+            ]
+          },
+          {
+            "value": ">=1200",
+            "icon": "dv-icon-equipment-pc",
+            "desc": "1200像素到1366像素，适用于14寸屏幕",
+            "contentMenu": [
+              {
+                "name": "【应用至所有布局】",
+                "handler": "changeDeviceRatio"
+              }
+            ]
+          },
+          {
+            "value": ">=768",
+            "icon": "dv-icon-equipment-pad",
+            "desc": "768像素到1200 像素，适用于平板",
+            "contentMenu": [
+              {
+                "name": "【应用至所有布局】",
+                "handler": "changeDeviceRatio"
+              }
+            ]
+          },
+          {
+            "value": "<768",
+            "icon": "dv-icon-equipment-phone",
+            "desc": "<768像素，适用于手机屏幕",
+            "contentMenu": [
+              {
+                "name": "【应用至所有布局】",
+                "handler": "changeDeviceRatio"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "align": "center",
+          "descType": "hover"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "设备",
+        "bindControlAttr": "designerRatio",
+        "showType": "dv_designer_ratio",
+        "showExpress": "@[designActive=='>=1920'||designActive=='>=1200']",
+        "dictionary": [
+          {
+            "name": "1k屏 (16:9)",
+            "width": 1920,
+            "height": 1080,
+            "divided": true
+          },
+          {
+            "name": "1k屏 (16:9)",
+            "width": 1366,
+            "height": 768
+          },
+          {
+            "name": "2k屏 (16:9)",
+            "width": 2560,
+            "height": 1440
+          },
+          {
+            "name": "2.5k屏 (16:10)",
+            "width": 2560,
+            "height": 1600
+          },
+          {
+            "name": "4k屏 (16:9)",
+            "width": 3840,
+            "height": 2160
+          },
+          {
+            "name": "2k超宽屏 (21.5:9)",
+            "width": 3440,
+            "height": 1440
+          },
+          {
+            "name": "1k超宽屏 (32:9)",
+            "width": 3840,
+            "height": 1080
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "设备",
+        "bindControlAttr": "designerRatio",
+        "showType": "dv_designer_ratio",
+        "showExpress": "@[designActive=='>=768']",
+        "dictionary": [
+          {
+            "name": "iPad Air",
+            "width": 1180,
+            "height": 820,
+            "divided": true
+          },
+          {
+            "name": "iPad Mini",
+            "width": 1024,
+            "height": 768
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "设备",
+        "bindControlAttr": "designerRatio",
+        "showType": "dv_designer_ratio",
+        "showExpress": "@[designActive=='<768']",
+        "dictionary": [
+          {
+            "name": "iPhone SE",
+            "width": 375,
+            "height": 667,
+            "divided": true
+          },
+          {
+            "name": "iPhone XR",
+            "width": 414,
+            "height": 896
+          },
+          {
+            "name": "iPhone 12 Pro",
+            "width": 390,
+            "height": 844
+          },
+          {
+            "name": "Pixel 5",
+            "width": 393,
+            "height": 851
+          },
+          {
+            "name": "Samsung Galaxy S8+",
+            "width": 360,
+            "height": 740
+          },
+          {
+            "name": "Samsung Galaxy S80 Ultra",
+            "width": 412,
+            "height": 915
+          }
+        ],
+        "inCommonUse": true
+      },
+
+      {
+        "text": "适应方式",
+        "bindControlAttr": "fitType",
+        "showType": "dv_icon_radio",
+        "dictionary": [
+          {
+            "value": "default",
+            "icon": "dv-icon-self-adaptation2",
+            "desc": "自动适配，根据布局比例适配容器"
+          },
+          {
+            "value": "vertical",
+            "icon": "dv-icon-self-adaptation41",
+            "desc": "横向铺满，纵向自适应滚动"
+          },
+          {
+            "value": "horizontal",
+            "icon": " dv-icon-self-adaptation3",
+            "desc": "纵向铺满，横向自适应滚动"
+          },
+          {
+            "value": "fit",
+            "icon": "dv-icon-self-adaptation4",
+            "desc": "横向纵向均拉伸铺满，强制适应"
+          },
+          {
+            "value": "ratio",
+            "icon": "dv-icon-self-adaptation1",
+            "desc": "固定比例，固定页面纵横比例，跟随窗口缩放"
+          }
+        ],
+        "config": {
+          "size": "small"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "缩放对齐",
+        "bindControlAttr": "horizontalAlign",
+        "showExpress": "@[fitType==='horizontal']",
+        "showType": "dv_radio_group",
+        "dictionary": [
+          {
+            "text": "左侧",
+            "value": "left"
+          },
+          {
+            "text": "居中",
+            "value": "center"
+          },
+          {
+            "text": "居右",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "text": "缩放对齐",
+        "bindControlAttr": "verticalAlign",
+        "showExpress": "@[fitType==='vertical']",
+        "showType": "dv_radio_group",
+        "dictionary": [
+          {
+            "text": "上侧",
+            "value": "top"
+          },
+          {
+            "text": "居中",
+            "value": "middle"
+          },
+          {
+            "text": "下测",
+            "value": "bottom"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "backgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "backgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "isEffect": false,
+          "isFilter": false,
+          "limitImg": 1
+        }
+      },
+      {
+        "text": "波纹动效",
+        "bindControlAttr": "waveSetting.show",
+        "showExpress": "@[backgroundConfig[backgroundConfig.active].image]",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "波纹设置",
+        "bindControlAttr": "waveSetting",
+        "showExpress": "@[waveSetting.show]",
+        "showType": "dv_dialog",
+        "inCommonUse": true,
+        "config": {
+          "title": "波纹设置-按住鼠标左键滑动产生波纹",
+          "content": "DesDVPaintImage",
+          "width": "1000px",
+          "height": "600px",
+          "isClear": true,
+          "clearClose": false,
+          "valueExpress": "@[maskImage]"
+        }
+      },
+      {
+        "text": "特效",
+        "showType": "dv_select",
+        "inCommonUse": true,
+        "bindControlAttr": "effectsName",
+        "dictionary": [
+          {
+            "text": "无",
+            "value": "none"
+          },
+          {
+            "text": "粒子",
+            "value": "granule"
+          },
+          {
+            "text": "星云",
+            "value": "starCloud"
+          },
+          {
+            "text": "星空",
+            "value": "starSky"
+          },
+          {
+            "text": "穿梭",
+            "value": "transform"
+          },
+          {
+            "text": "漩涡",
+            "value": "vortex"
+          },
+          {
+            "text": "波浪",
+            "value": "wave"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "滤镜",
+    "attributes": [
+      {
+        "text": "开启滤镜",
+        "bindControlAttr": "isFilter",
+        "showType": "dv_switch",
+        "desc": "开启时，设计器内缩放可能出现模糊，预览时页面不会存在该问题",
+        "inCommonUse": true
+      },
+      {
+        "text": "色相",
+        "showExpress": "@[isFilter]",
+        "bindControlAttr": "filterConfig.hueRotate",
+        "showType": "dv_slider",
+        "spacingNumber": 1,
+        "config": {
+          "trigger": "input",
+          "min": 0,
+          "max": 360
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "饱和度",
+        "showExpress": "@[isFilter]",
+        "bindControlAttr": "filterConfig.saturate",
+        "showType": "dv_slider",
+        "spacingNumber": 1,
+        "config": {
+          "trigger": "input",
+          "min": 0,
+          "max": 2,
+          "step": 0.01
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "对比度",
+        "showExpress": "@[isFilter]",
+        "bindControlAttr": "filterConfig.contrast",
+        "showType": "dv_slider",
+        "spacingNumber": 1,
+        "config": {
+          "trigger": "input",
+          "min": 0,
+          "max": 2,
+          "step": 0.01
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "亮度",
+        "showExpress": "@[isFilter]",
+        "bindControlAttr": "filterConfig.brightness",
+        "showType": "dv_slider",
+        "spacingNumber": 1,
+        "config": {
+          "trigger": "input",
+          "min": 0,
+          "max": 2,
+          "step": 0.01
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "页面字体",
+        "bindControlAttr": "pageFontFamily",
+        "showType": "dv_select",
+        "loadExceFunction": "addFonts",
+        "dictionary": [],
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "大屏弹框属性",
+    "attributes": [
+      {
+        "text": "弹框设置",
+        "bindControlAttr": "dialogConfig",
+        "showType": "dv_dialog",
+        "config": {
+          "width": "1100px",
+          "height": "650px",
+          "content": "DesDVDialogSetting",
+          "title": "大屏弹框属性"
+        }
+      },
+      {
+        "text": "悬浮框设置",
+        "bindControlAttr": "popupConfig",
+        "showType": "dv_dialog",
+        "config": {
+          "width": "1100px",
+          "height": "600px",
+          "content": "DesDVPopupSetting",
+          "title": "大屏悬浮框属性"
+        }
+      }
+    ]
+  },
+  {
+    "name": "访问权限",
+    "attributes": [
+      {
+        "text": "【免登录访问】",
+        "bindControlAttr": "noSign",
+        "showType": "dv_switch"
+      }
+    ]
+  },
+  {
+    "name": "高级属性",
+    "attributes": [
+      {
+        "text": "窗口标题",
+        "bindControlAttr": "title",
+        "showType": "dv_text"
+      },
+      {
+        "text": "风格",
+        "bindControlAttr": "theme",
+        "showExpress": "false",
+        "showType": "dv_text"
+      },
+      {
+        "text": "初始化事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "initDealDataFunction",
+        "config": {
+          "title": "初始化事件",
+          "content": "DesDVDealDataFunction",
+          "width": "700px",
+          "height": "400px",
+          "buttonText": "设置",
+          "type": "initPage"
+        }
+      },
+      {
+        "text": "定时刷新",
+        "bindControlAttr": "isRefreshData",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "间隔时长（分钟）",
+        "bindControlAttr": "refreshTime",
+        "showExpress": "@[isRefreshData==true]",
+        "showType": "dv_number",
+        "config": {
+          "min": 5
+        }
+      },
+      {
+        "text": "是否在gis一张图下运行",
+        "bindControlAttr": "isGisViewPart",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "是否依赖于项目的gis组件",
+        "bindControlAttr": "dependExtendGis",
+        "showExpress": "@[isGisViewPart]",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "gis事件设置",
+        "showType": "dv_dialog",
+        "bindControlAttr": "gisEventRelative",
+        "showExpress": "@[isGisViewPart]",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVPageGisEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "标题区域",
+        "showType": "dv_switch",
+        "bindControlAttr": "hasDataViewHead"
+      },
+      {
+        "text": "显示水印",
+        "bindControlAttr": "waterMark",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "监听尺寸",
+        "bindControlAttr": "isResizeObserve",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "监听元素",
+        "bindControlAttr": "resizeObserveDom",
+        "@showExpress":"@[isResizeObserve]",
+        "showType": "dv_text"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate",
+        "config": {
+          "pageType": "page"
+        }
+      }
+    ]
+  }
+]

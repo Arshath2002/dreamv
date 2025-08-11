@@ -1,0 +1,10 @@
+@import "../../fonts/iconfont/iconfont.css";
+
+[class*=" dv-icon-"],
+[class^="dv-icon-"] {
+  font-family: "dv-iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,22 @@
+.dsf-dv-list-tree-index-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  align-items: center;
+  > span {
+    color: var(--dv-des-text-color);
+  }
+  border: 1px dashed var(--dv-des-input-border);
+  .add {
+    color: var(--t--normal);
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .close {
+    cursor: pointer;
+    color: var(--dv-des-text-color);
+  }
+}

@@ -1,0 +1,229 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "宽",
+        "showType": "dv_pixel",
+        "bindControlAttr": "width",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      },
+      {
+        "text": "高",
+        "showType": "dv_pixel",
+        "bindControlAttr": "height",
+        "itemClass": "float-one-row",
+        "spacingNumber": 1,
+        "inCommonUse": true
+      },
+      {
+        "text": "边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "内边距",
+              "bindControlAttr": "padding"
+            },
+            {
+              "text": "外边距",
+              "bindControlAttr": "margin"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "数据",
+    "attributes": [
+      {
+        "text": "映射字段",
+        "showType": "dv_dialog",
+        "bindControlAttr": "mapRelations",
+        "dialogType":"relation",
+        "inCommonUse": true,
+        "config": {
+          "title": "设置",
+          "content": "DesDVMapRelationSetting",
+          "width": "1100px",
+          "height": "60vh",
+          "showBtnType": "common"
+        },
+        "textCss": {
+          "display": "none"
+        }
+      }
+    ]
+  },
+  {
+    "name": "组件设置",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "richTextContent",
+        "showType": "dv_rich_text",
+        "noCopy": true,
+        "config": {
+          "title": "文本设置",
+          "styleKey": "titleTextStyle"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "进度池配色",
+        "bindControlAttr": "config.colors",
+        "showType": "dv_more_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "边框宽度",
+        "bindControlAttr": "config.borderWidth",
+        "showType": "dv_number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0
+        }
+      },
+      {
+        "text": "边框间隙",
+        "bindControlAttr": "config.borderGap",
+        "showType": "dv_number",
+        "inCommonUse": true,
+        "config": {
+          "min": 0
+        }
+      },
+      {
+        "text": "线条间隙",
+        "bindControlAttr": "config.lineDash",
+        "desc": "",
+        "showType": "multipleText",
+        "config": {
+          "inputs": [
+            {
+              "placeholder": "宽"
+            },
+            {
+              "placeholder": "间隙"
+            }
+          ]
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "文字",
+        "showType": "dv_text_style",
+        "bindControlAttr": "titleTextStyle",
+        "config": {
+          "picker": {
+            "type": "color"
+          }
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "边框半径",
+        "showType": "dv_number",
+        "bindControlAttr": "config.borderRadius",
+        "inCommonUse": true,
+        "config": {
+          "min": 0
+        }
+      },
+      {
+        "text": "局部渐变",
+        "showType": "dv_switch",
+        "bindControlAttr": "config.localGradient",
+        "inCommonUse": true
+      },
+      {
+        "text": "进度条动效设置",
+        "bindControlAttr": "isAnimate",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "动效时长",
+        "showType": "dv_number",
+        "showExpress": "@[isAnimate == true]",
+        "bindControlAttr": "animateTime",
+        "config": {
+          "unit": "ms"
+        },
+        "spacingNumber": 1,
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      },
+      {
+        "text": "数据处理函数",
+        "bindControlAttr": "dealDataFunction",
+        "showType": "dv_dialog",
+        "showExpress": "@[dataType !=='excel'&&dataType !=='static' ]",
+        "config": {
+          "content": "DesDVDealDataFunction",
+          "width": "1000px",
+          "height": "400px"
+        }
+      },
+      {
+        "text": "懒加载",
+        "showType": "dv_switch",
+        "bindControlAttr": "isHandlerRefresh"
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]

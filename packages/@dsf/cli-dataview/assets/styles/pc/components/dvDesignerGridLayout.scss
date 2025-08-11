@@ -1,0 +1,144 @@
+.designer-grid-layout__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .select-grid-bound-wrapper {
+    position: absolute;
+    border: 1px dashed red;
+    z-index: 999;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+  .vue-grid-item {
+    box-sizing: border-box;
+
+    //设计器布局激活单元
+    &.active {
+      background-color: rgba(248, 223, 112, 0.2);
+      border: 1px solid rgba(248, 223, 112, 1);
+    }
+    //设计器锁住
+    &.locked {
+      background-color: transparent;
+      border: 1px solid rgba(241, 57, 103, 1);
+      &.active {
+        background-color: rgba(169, 169, 169, 0.2);
+      }
+    }
+    &.composition {
+      &.active {
+        background-color: rgba(169, 169, 169, 0.2);
+      }
+    }
+    // 框选范围
+    &.selected {
+      .vue-resizable-handle {
+        display: none;
+      }
+    }
+  }
+
+  .dv-grid-item-box {
+    border: 1px solid transparent;
+    overflow: hidden;
+    position: absolute;
+    color: #fff;
+    background-color: #7f8084;
+    border-radius: 2px;
+    padding: 10px;
+    left: 100%;
+    top: 50%;
+    width: max-content;
+    transform: translate(10px, -50%);
+    &__size {
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+        width: 100px;
+        span {
+          width: 20px;
+        }
+      }
+      .size-input {
+        width: 60px;
+        padding: 2px 5px;
+        box-sizing: border-box;
+        color: #333;
+      }
+    }
+    &.top-left {
+      left: -10px;
+      top: 50%;
+      width: max-content;
+      transform: translate(-100%, -50%);
+    }
+    &.inner {
+      left: 0;
+    }
+  }
+  .dv-grid-item-composition {
+    box-sizing: border-box;
+    &.active {
+      background-color: transparent;
+      border: 1px solid rgba(248, 223, 112, 1);
+    }
+  }
+  .dv-grid-item-select-composition {
+    box-sizing: border-box;
+  }
+  .horizontal-line-helper {
+    position: absolute;
+    height: 1px;
+    background-color: red;
+    z-index: 10000;
+    .tag {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      color: red;
+      transform: translate(-50%, -100%);
+    }
+  }
+  .vertical-line-helper {
+    position: absolute;
+    width: 1px;
+    background-color: red;
+    z-index: 10000;
+    .tag {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-left: 10px;
+      color: red;
+      transform: translate(0, -50%);
+    }
+  }
+  .x-center-line-helper {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    z-index: 10000;
+  }
+  .y-center-line-helper {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: red;
+    z-index: 10000;
+  }
+}

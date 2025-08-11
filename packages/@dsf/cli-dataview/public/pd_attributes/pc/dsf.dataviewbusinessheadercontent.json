@@ -1,0 +1,250 @@
+[
+  {
+    "name": "布局",
+    "attributes": [
+      {
+        "text": "高",
+        "bindControlAttr": "height",
+        "showType": "dv_pixel",
+        "itemClass": "float-one-row",
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "样式",
+    "attributes": [
+      {
+        "text": "标题名称",
+        "bindControlAttr": "title",
+        "showType": "dv_text",
+        "noCopy": true,
+        "inCommonUse": true,
+        "desc": "<div>支持：路径参数、全局参数、page、弹窗参数、cookie、sessionStorage、localStorage</div><div>示例：@[路径参数.name]</div>"
+      },
+      {
+        "text": "样式",
+        "showType": "dv_text_style",
+        "bindControlAttr": "titleTextStyle",
+        "inCommonUse": true
+      },
+      {
+        "text": "标题对齐",
+        "hiddenText": true,
+        "showType": "dv_text_align",
+        "bindControlAttr": "titleTextAlign",
+        "config": {
+          "iconType": "textContent"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "副标题",
+        "bindControlAttr": "showSubTitle",
+        "showType": "dv_switch",
+        "inCommonUse": true
+      },
+      {
+        "text": "名称",
+        "bindControlAttr": "subTitle",
+        "showExpress": "@[showSubTitle]",
+        "showType": "dv_text",
+        "spacingNumber": 1,
+        "noCopy": true,
+        "inCommonUse": true,
+        "desc": "<div>支持：路径参数、全局参数、page、弹窗参数、cookie、sessionStorage、localStorage</div><div>示例：@[路径参数.name]</div>"
+      },
+      {
+        "text": "样式",
+        "showType": "dv_text_style",
+        "bindControlAttr": "subTitleTextStyle",
+        "spacingNumber": 1,
+        "showExpress": "@[showSubTitle]",
+        "inCommonUse": true
+      },
+      {
+        "text": "排列方式",
+        "showType": "dv_radio_group",
+        "hiddenText": true,
+        "bindControlAttr": "subTitleDirect",
+        "spacingNumber": 1,
+        "showExpress": "@[showSubTitle]",
+        "dictionary": [
+          {
+            "text": "标题右侧",
+            "value": "row"
+          },
+          {
+            "text": "标题下方",
+            "value": "column"
+          }
+        ],
+        "inCommonUse": true
+      },
+      {
+        "text": "边距",
+        "showType": "dv_margins_group",
+        "inCommonUse": true,
+        "config": {
+          "options": [
+            {
+              "text": "标题外",
+              "bindControlAttr": "titleMargin"
+            },
+            {
+              "text": "标题内",
+              "bindControlAttr": "titlePadding"
+            },
+            {
+              "text": "副标题内",
+              "bindControlAttr": "subTitlePadding",
+              "showExpress": "@[showSubTitle]"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "背景",
+    "attributes": [
+      {
+        "text": "颜色",
+        "bindControlAttr": "titleBackgroundConfig",
+        "showType": "dv_color",
+        "inCommonUse": true
+      },
+      {
+        "text": "图片",
+        "bindControlAttr": "titleBackgroundConfig",
+        "showType": "dv_more_img",
+        "inCommonUse": true,
+        "config": {
+          "limitImg": 1,
+          "backgroundTypes": [
+            "model",
+            "title"
+          ]
+        }
+      },
+      {
+        "text": "外阴影",
+        "bindControlAttr": "boxOutsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "outset"
+        },
+        "inCommonUse": true
+      },
+      {
+        "text": "内阴影",
+        "bindControlAttr": "boxInsetShadowConfig",
+        "showType": "dv_shadow",
+        "config": {
+          "subType": "inset"
+        },
+        "inCommonUse": true
+      }
+    ]
+  },
+  {
+    "name": "属性",
+    "attributes": [
+      {
+        "text": "组件标识",
+        "bindControlAttr": "caption",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件名称",
+        "bindControlAttr": "fakeCodeName",
+        "showType": "dv_text"
+      },
+      {
+        "text": "组件依赖事件",
+        "showType": "dv_dialog",
+        "bindControlAttr": "eventRelativeDeal",
+        "config": {
+          "title": "组件依赖事件",
+          "valueExpress": "@[mounted.fn] || @[click.fn] || @[load.fn] || @[dataLoad.fn]",
+          "content": "DesDVEventEditor",
+          "width": "1200px",
+          "height": "60vh",
+          "buttonText": "设置"
+        }
+      },
+      {
+        "text": "动态属性绑定",
+        "bindControlAttr": "development",
+        "showType": "dv_dialog",
+        "config": {
+          "content": "DesDevelopment",
+          "width": "1000px",
+          "height": "60vh",
+          "valueExpress": "!dsf.isEmptyObject(@[attrs]) || @[slots]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "插槽",
+    "attributes": [
+      {
+        "text": "左上插槽",
+        "isFirstText": true,
+        "bindControlAttr": "isSlotTopLeft",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "宽",
+        "bindControlAttr": "slotTopLeftWidth",
+        "showExpress": "@[isSlotTopLeft == true]",
+        "itemClass": "float-one-row",
+        "showType": "dv_pixel",
+        "spacingNumber": 1
+      },
+      {
+        "text": "高",
+        "bindControlAttr": "slotTopLeftHeight",
+        "showExpress": "@[isSlotTopLeft == true]",
+        "itemClass": "float-one-row ml20",
+        "showType": "dv_pixel",
+        "spacingNumber": 1
+      },
+      {
+        "text": "右上插槽",
+        "isFirstText": true,
+        "bindControlAttr": "isSlotTopRight",
+        "showType": "dv_switch"
+      },
+      {
+        "text": "宽",
+        "bindControlAttr": "slotTopRightWidth",
+        "showExpress": "@[isSlotTopRight == true]",
+        "itemClass": "float-one-row",
+        "showType": "dv_pixel",
+        "spacingNumber": 1
+      },
+      {
+        "text": "高",
+        "bindControlAttr": "slotTopRightHeight",
+        "showExpress": "@[isSlotTopRight == true]",
+        "itemClass": "float-one-row ml20",
+        "showType": "dv_pixel",
+        "spacingNumber": 1
+      }
+    ]
+  },
+  {
+    "name": "入场动画",
+    "attributes": [
+      {
+        "text": "",
+        "hiddenText": true,
+        "bindControlAttr": "enterAnimate",
+        "showType": "dv_animate_list",
+        "showTabType": "animate"
+      }
+    ]
+  }
+]
